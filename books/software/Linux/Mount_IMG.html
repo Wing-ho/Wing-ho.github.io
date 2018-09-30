@@ -1,0 +1,651 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>挂载镜像文件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Shell.html" />
+    
+    
+    <link rel="prev" href="docker.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="sed.html">
+            
+                <a href="sed.html">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Find&Grep.html">
+            
+                <a href="Find&Grep.html">
+            
+                    
+                    find & grep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="awk.html">
+            
+                <a href="awk.html">
+            
+                    
+                    awk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="ssh.html">
+            
+                <a href="ssh.html">
+            
+                    
+                    ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="dd.html">
+            
+                <a href="dd.html">
+            
+                    
+                    dd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="cat.html">
+            
+                <a href="cat.html">
+            
+                    
+                    cat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="vim.html">
+            
+                <a href="vim.html">
+            
+                    
+                    vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="GNOME3.html">
+            
+                <a href="GNOME3.html">
+            
+                    
+                    GNOME 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="Pandoc.html">
+            
+                <a href="Pandoc.html">
+            
+                    
+                    Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="Tesseract.html">
+            
+                <a href="Tesseract.html">
+            
+                    
+                    Tesseract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="Mplayer.html">
+            
+                <a href="Mplayer.html">
+            
+                    
+                    Mplayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="rdesktop.html">
+            
+                <a href="rdesktop.html">
+            
+                    
+                    rdesktop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="rsync.html">
+            
+                <a href="rsync.html">
+            
+                    
+                    rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="tar.html">
+            
+                <a href="tar.html">
+            
+                    
+                    tar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="unzip.html">
+            
+                <a href="unzip.html">
+            
+                    
+                    unzip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="xdotool.html">
+            
+                <a href="xdotool.html">
+            
+                    
+                    xdotool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="iptables.html">
+            
+                <a href="iptables.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.20" data-path="Mount_IMG.html">
+            
+                <a href="Mount_IMG.html">
+            
+                    
+                    挂载镜像文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="Shell.html">
+            
+                <a href="Shell.html">
+            
+                    
+                    Shell编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="Restore.html">
+            
+                <a href="Restore.html">
+            
+                    
+                    备份和恢复系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Android/README.md">
+            
+                <span>
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Android/screencap.html">
+            
+                <a href="../Android/screencap.html">
+            
+                    
+                    截图命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >挂载镜像文件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="linux&#x6302;&#x8F7D;img&#x955C;&#x50CF;&#x6587;&#x4EF6;">linux&#x6302;&#x8F7D;img&#x955C;&#x50CF;&#x6587;&#x4EF6;</h1>
+<ol>
+<li>&#x5148;&#x67E5;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;loop&#x8BBE;&#x5907; </li>
+</ol>
+<pre><code class="lang-shell">sudo losetup -f
+/dev/loop0
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x6B65;&#x5F97;&#x5230;&#x7684;&#x8BBE;&#x5907;&#x540D;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x521B;&#x5EFA;loop&#x8BBE;&#x5907; </li>
+</ol>
+<pre><code class="lang-shell">sudo losetup /dev/loop0 archlinux-2008.06-core-i686.img
+</code></pre>
+<ol>
+<li>&#x67E5;&#x770B;&#x4FE1;&#x606F; </li>
+</ol>
+<pre><code class="lang-shell">sudo fdisk -lu /dev/loop0
+
+Disk /dev/loop0: 322 MB, 322469376 bytes 
+53 heads, 12 sectors/track, 990 cylinders, total 629823 sectors 
+Units = sectors of 1 * 512 = 512 bytes 
+Disk identifier: 0x00000000 
+
+      Device Boot      Start         End      Blocks   Id  System 
+/dev/loop0p1   *          63      629822      314880   83  Linux 
+Partition 1 has different physical/logical beginnings (non-Linux?): 
+     phys=(0, 1, 1) logical=(0, 5, 4) 
+Partition 1 has different physical/logical endings: 
+     phys=(39, 52, 12) logical=(990, 15, 3)
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8BE5;&#x955C;&#x50CF;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5206;&#x533A;(loop0p1)&#xFF0C;&#x4ECE;&#x7B2C;63&#x6247;&#x533A;&#x5F00;&#x59CB;(Start&#x5217;)&#xFF0C;&#x6BCF;&#x6247;&#x533A;512&#x5B57;&#x8282;(Units = sectors of 1 * 512 = 512 bytes)&#xFF0C;&#x6211;&#x4EEC;&#x7B97;&#x51FA;offset&#xFF0C;&#x4E0B;&#x9762;mout&#x547D;&#x4EE4;&#x4F1A;&#x7528;&#x5230;&#xFF1A; </p>
+<pre><code class="lang-shell">63*512=32256
+</code></pre>
+<ol>
+<li>mout </li>
+</ol>
+<pre><code class="lang-shell">sudo losetup -o 32256 /dev/loop1 archlinux-2008.06-core-i686.img 
+sudo mount -o loop /dev/loop1 /mnt/ 
+ls /mnt/ 
+addons  archlive.sqfs  boot  lost+found
+</code></pre>
+<p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;fdisk&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x67E5;&#x770B;img&#x6587;&#x4EF6;(&#x867D;&#x7136;&#x529F;&#x80FD;&#x4E0D;&#x5168;&#xFF0C;&#x4E0B;&#x9762;&#x4F1A;&#x8BF4;&#x5230;)&#xFF0C;mount&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x521B;&#x5EFA;loop&#x8BBE;&#x5907;&#xFF0C;&#x6240;&#x4EE5;&#x4E0A;&#x9762;&#x6B65;&#x9AA4;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x4E3A;&#xFF1A; 
+I. &#x67E5;&#x770B;&#x4FE1;&#x606F; </p>
+<pre><code class="lang-shell">sudo fdisk -lu archlinux-2008.06-core-i686.img 
+You must set cylinders. 
+You can do this from the extra functions menu. 
+
+Disk archlinux-2008.06-core-i686.img: 0 MB, 0 bytes 
+53 heads, 12 sectors/track, 0 cylinders, total 0 sectors 
+Units = sectors of 1 * 512 = 512 bytes 
+Disk identifier: 0x00000000 
+
+                Device Boot      Start         End      Blocks   Id  System 
+archlinux-2008.06-core-i686.img1   *          63      629822      314880   83  Linux 
+Partition 1 has different physical/logical beginnings (non-Linux?): 
+     phys=(0, 1, 1) logical=(0, 5, 4) 
+Partition 1 has different physical/logical endings: 
+     phys=(39, 52, 12) logical=(990, 15, 3)
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x884C;&#x62B1;&#x6028;&#x4E0D;&#x80FD;&#x5F97;&#x5230;cylinders&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x666E;&#x901A;&#x6587;&#x4EF6;&#x4E0A;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;ioctl&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;0 cylinders&#xFF0C;&#x4F46;&#x8FD9;&#x5BF9;&#x6211;&#x4EEC;&#x4E0D;&#x91CD;&#x8981;&#xFF0C;&#x5173;&#x952E;&#x662F;&#x6211;&#x4EEC;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#xFF08;archlinux-2008.06-core-i686.img1&#xFF09;&#x7684;&#x504F;&#x79FB;&#x503C; </p>
+<p>II. &#x76F4;&#x63A5;mount </p>
+<pre><code class="lang-shell">sudo mount -o loop,offset=32256 archlinux-2008.06-core-i686.img /mnt/ 
+ls /mnt/ 
+addons  archlive.sqfs  boot  lost+found
+</code></pre>
+<h1 id="&#x9AD8;&#x7EA7;&#x7248;">&#x9AD8;&#x7EA7;&#x7248;</h1>
+<p>&#x67E5;&#x770B;&#x5206;&#x533A;|&#x8FC7;&#x6EE4;&#x524D;&#x9762;&#x662F;&#x4E09;&#x4E2A;&#x7A7A;&#x683C;&#x7684;&#x884C;|&#x683C;&#x5F0F;&#x5316;&#x6210;&#x5355;&#x4E2A;&#x7A7A;&#x683C;&#x5206;&#x5272;|&#x53BB;&#x6389;&#x884C;&#x5F00;&#x59CB;&#x7684;&#x7A7A;&#x683C;|&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x884C;|&#x7B2C;2&#x5217;&#x6570;&#x636E;</p>
+<pre><code class="lang-shell">StartSector=`gdisk -l usb.img | grep &quot;^   &quot; | fmt -u -s | sed -e &apos;s/^[ \t]*//&apos; | head -1 | cut -d &quot; &quot; -f 2`
+sudo mount -o loop,offset=$((StartSector*512)) usb.img /mnt/boot
+</code></pre>
+<p><a href="https://askubuntu.com/questions/498801/mount-single-logical-partition-from-image-of-entire-disk-device" target="_blank">Mount single logical partition from image of entire disk (device)</a></p>
+<h1 id="&#x5229;&#x7528;&#x5185;&#x6838;&#x6A21;&#x5757;&#x52A0;&#x8F7D;&#x53C2;&#x6570;&#x52A0;&#x8F7D;">&#x5229;&#x7528;&#x5185;&#x6838;&#x6A21;&#x5757;&#x52A0;&#x8F7D;&#x53C2;&#x6570;&#x52A0;&#x8F7D;</h1>
+<p>&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x5185;&#x6838;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x5206;&#x533A;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;nbd&#x6A21;&#x5757;&#x4E0D;&#x662F;&#x5167;&#x5EFA;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x52A0;&#x8F7D;&#x548C;&#x5378;&#x8F7D;&#xFF0C;loop&#x6A21;&#x5757;&#x5982;&#x679C;&#x662F;&#x5167;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;nbd&#x6A21;&#x5757;&#x6765;&#x52A0;&#x8F7D;</p>
+<pre><code class="lang-shell">rmmod loop
+modprobe loop max_part=8
+losetup -f debian.img
+rmmod nbd
+modprobe nbd max_part=8
+qemu-nbd -c /dev/nbd0 win10.vhd
+</code></pre>
+<h1 id="&#x5229;&#x7528;kpartx&#x6302;&#x8F7D;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">&#x5229;&#x7528;kpartx&#x6302;&#x8F7D;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h1>
+<p>&#x5BF9;&#x4E8E;&#x5167;&#x5EFA;&#x7684;loop&#x6A21;&#x5757;&#xFF0C;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x5206;&#x533A;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x5185;&#x6838;&#x6A21;&#x5757;&#x53C2;&#x6570;&#x52A0;&#x8F7D;&#x7684;&#x65B9;&#x6CD5;&#x7B97;&#x662F;&#x6700;&#x597D;&#x7684;</p>
+<pre><code class="lang-shell">sudo apt-get install kpartx
+sudo kpartx -av debian.img
+sudo kpartx -d debian.img
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="docker.html" class="navigation navigation-prev " aria-label="Previous page: docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Shell.html" class="navigation navigation-next " aria-label="Next page: Shell编程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"挂载镜像文件","level":"1.2.20","depth":2,"next":{"title":"Shell编程","level":"1.2.21","depth":2,"path":"Linux/Shell.md","ref":"Linux/Shell.md","articles":[]},"previous":{"title":"docker","level":"1.2.19","depth":2,"path":"Linux/docker.md","ref":"Linux/docker.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Linux/Mount_IMG.md","mtime":"2018-09-10T02:24:18.099Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-30T04:38:03.416Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
