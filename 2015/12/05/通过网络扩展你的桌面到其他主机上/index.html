@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Wing's Blog"><title>通过网络扩展你的桌面到其他主机上 | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">通过网络扩展你的桌面到其他主机上</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">通过网络扩展你的桌面到其他主机上</h1><div class="post-meta">Dec 5, 2015<span> | </span><span class="category"><a href="/categories/Linux/">Linux</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2015/12/05/通过网络扩展你的桌面到其他主机上/" href="/2015/12/05/通过网络扩展你的桌面到其他主机上/#disqus_thread"></a><div class="post-content"><div id="content">
+<p>
+&#x6211;&#x6709;&#x4E00;&#x53F0;&#x5F88;&#x8001;&#x7684;&#x4E0A;&#x7F51;&#x672C;Acer AOA150&#xFF0C;&#x867D;&#x8BF4;&#x662F;&#x4E0A;&#x7F51;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x57FA;&#x672C;&#x4E0A;&#x5DF2;&#x7ECF;&#x4E0D;&#x80FD;&#x7528;&#x6765;&#x4E0A;&#x7F51;&#x4E86;&#xFF0C;&#x5B9E;&#x5728;&#x662F;&#x592A;&#x6162;&#x4E86;&#xFF0C;&#x4F46;&#x7231;&#x6298;&#x817E;&#x7684;&#x6211;&#xFF0C;&#x8FD8;&#x662F;&#x7ED9;&#x5B83;&#x5B89;&#x88C5;&#x4E86;Windwos 10&#x548C;Arch Linux&#xFF0C;&#x4F46;&#x662F;&#x5E73;&#x5E38;&#x57FA;&#x672C;&#x4E0A;&#x53EA;&#x7528;Arch Linux&#xFF0C;Windows 10&#x7528;&#x8D77;&#x6765;&#x5B9E;&#x5728;&#x592A;&#x6162;&#x4E86;&#x3002;&#x4F46;&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x597D;&#x7684;8.9&#x5BF8;&#x5C4F;&#x5E55;&#xFF0C;&#x4E0D;&#x7528;&#x767D;&#x4E0D;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x505A;&#x7B2C;&#x4E8C;&#x4E2A;&#x5C4F;&#x5E55;&#x4E5F;&#x633A;&#x597D;&#x7684;&#x3002;&#x5176;&#x5B9E;&#x7528;synergy&#x6765;&#x5171;&#x4EAB;&#x9F20;&#x6807;&#x952E;&#x76D8;&#xFF0C;&#x5DF2;&#x7ECF;&#x80FD;&#x5B9E;&#x73B0;&#x6211;&#x7684;&#x57FA;&#x672C;&#x9700;&#x6C42;&#x4E86;&#x3002;&#x4F46;&#x662F;&#x77E5;&#x9053;&#x6709;xdmx&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x80FD;&#x5C06;&#x4E24;&#x4E2A;&#x663E;&#x793A;&#x5668;&#xFF0C;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x684C;&#x9762;&#xFF0C;&#x5FC3;&#x91CC;&#x75D2;&#x75D2;&#x7684;&#xFF0C;&#x603B;&#x662F;&#x60F3;&#x80FD;&#x591F;&#x81EA;&#x5DF1;&#x4EB2;&#x624B;&#x4F53;&#x9A8C;&#x4E00;&#x628A;&#x3002;
+&#x8BD5;&#x4E86;&#x5F88;&#x957F;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x7EC8;&#x4E8E;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x7528;xdmx&#x6765;&#x6269;&#x5C55;&#x684C;&#x9762;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x7535;&#x8111;&#x4E0A;&#x3002;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x544A;&#x8BC9;&#x5927;&#x5BB6;&#x7ED3;&#x679C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6848;&#x6709;&#x5F88;&#x591A;&#x4E0D;&#x5B8C;&#x5584;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x5FC5;&#x8981;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x5FC5;&#x5C1D;&#x8BD5;&#x4E86;&#x3002;&#x5BF9;&#x4E8E;&#x6211;&#x6765;&#x8BF4;&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x95EE;&#x9898;&#x5C31;&#x662F;gui&#x63A7;&#x4EF6;&#x7684;&#x6587;&#x5B57;&#x90FD;&#x65E0;&#x6CD5;&#x663E;&#x793A;&#x3002;&#x5982;&#x679C;&#x4F60;&#x662F;&#x4E00;&#x4E2A;terminal&#x7684;&#x91CD;&#x5EA6;&#x7528;&#x6237;&#xFF0C;urxvt&#x662F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x663E;&#x793A;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x80FD;&#x591F;&#x5B8C;&#x7F8E;&#x652F;&#x6301;xdmx&#x7684;gui&#x7A0B;&#x5E8F;&#x3002;&#x4F7F;&#x7528;xdmx&#x7684;&#x4F53;&#x9A8C;&#x786E;&#x5B9E;&#x5F88;&#x4E00;&#x822C;&#xFF0C;&#x800C;&#x4E14;&#x5BF9;&#x7F51;&#x7EDC;&#x8981;&#x6C42;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x7F51;&#x7EBF;&#x8FDE;&#x63A5;&#x4E24;&#x53F0;&#x7535;&#x8111;&#xFF0C;&#x4F60;&#x624D;&#x80FD;&#x6709;&#x6D41;&#x7545;&#x7684;&#x4F53;&#x9A8C;&#xFF0C;&#x8FD8;&#x4E0D;&#x5982;&#x7528;synergy&#x5171;&#x4EAB;&#x9F20;&#x6807;&#x952E;&#x76D8;&#xFF0C;&#x7528;wifi&#x5C31;&#x80FD;&#x6D41;&#x7545;&#x4F7F;&#x7528;&#x3002;&#x60F3;&#x7528;xdmx&#x8FD9;&#x6837;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x65E0;&#x975E;&#x5C31;&#x662F;&#x60F3;&#x65E0;&#x75DB;&#x5730;&#x4F7F;&#x7528;&#x4E3B;&#x673A;&#x7684;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#x3002;&#x5176;&#x5B9E;&#x4E0D;&#x9700;&#x8981;xdmx&#xFF0C;X window&#x7684;&#x8BBE;&#x8BA1;&#x4E5F;&#x662F;&#x8DB3;&#x4EE5;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FDC;&#x7A0B;&#x673A;&#x5668;&#x4E0A;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x7A0B;&#x5E8F;&#x3002;
+</p>
+<div id="outline-container-org58c82ed" class="outline-2">
+<h2 id="org58c82ed"><span class="section-number-2">1</span> &#x5229;&#x7528;Xserver&#x548C;synergy&#x65E0;&#x969C;&#x788D;&#x8BBF;&#x95EE;&#x4E3B;&#x673A;&#x7684;&#x8D44;&#x6E90;</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+synergy&#x662F;&#x5F88;&#x7B80;&#x5355;&#x7684;gui&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x505A;&#x8BF4;&#x660E;&#x4E86;&#x3002;&#x4E3B;&#x8981;&#x662F;&#x600E;&#x4E48;&#x5229;&#x7528;Xserver&#x8BBF;&#x95EE;&#x4E3B;&#x673A;&#x7684;&#x8D44;&#x6E90;&#x3002;
+&#x6B65;&#x9AA4;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5728;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x5C31;&#x6709;&#x6743;&#x9650;&#x8BBF;&#x95EE;&#x4E3B;&#x673A;&#x7684;Xserver&#x3002;
+</p>
+
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xhost + <span class="variable">$remote_host_ip_address</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5728;&#x8FDC;&#x7A0B;&#x673A;&#x5668;&#x7684;&#x7EC8;&#x7AEF;&#x4E0A;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> DISPLAY=<span class="variable">$remote_host_ip_address</span>:<span class="number">0.0</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+emacs&#x5C31;&#x51FA;&#x73B0;&#x5728;&#x8FDC;&#x7A0B;&#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x8BBF;&#x95EE;&#x7684;&#x662F;&#x4E3B;&#x673A;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x723D;&#x554A;&#xFF01;
+&#x8BF4;&#x90A3;&#x4E48;&#x591A;&#xFF0C;&#x90FD;&#x5FEB;&#x8981;&#x8DD1;&#x9898;&#x4E86;&#x3002;&#x56DE;&#x5230;&#x6587;&#x7AE0;&#x7684;&#x4E3B;&#x9898;&#x5427;&#xFF0C;&#x90A3;&#x662F;&#x8BE5;&#x5982;&#x4F55;&#x914D;&#x7F6E;xdmx&#x5462;&#xFF1F;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;Arch Linux&#x7684;wiki&#x6587;&#x7AE0;<a href="https://wiki.archlinux.org/index.php/Extreme_Multihead" target="_blank" rel="noopener">Extreme Multihead</a>
+xdmx&#x662F;X&#x7684;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x628A;&#x591A;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x663E;&#x793A;&#x5668;&#x5F53;&#x6210;&#x4E00;&#x4E2A;&#x663E;&#x793A;&#x5668;&#x6216;&#x8005;&#x4E00;&#x9762;&#x663E;&#x793A;&#x5668;&#x5899;&#x3002; &#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;xdmx&#x684C;&#x9762;&#xFF0C;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#xFF1A;
+</p>
+<ol class="org-ol">
+<li>&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684;X Session&#xFF0C;&#x652F;&#x6301;xdmx&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#x4E4B;&#x6709;fvwm&#x548C;twm&#x3002;</li>
+</ol>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fvwm+</span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/wing-ho/fvwm-tiling.git</span><br></pre></td></tr></table></figure>
+</div>
+<ol class="org-ol">
+<li>&#x5728;&#x4E3B;&#x673A;&#x4E0A;&#x8FD0;&#x884C;xhost + &lt;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;IP&#x5730;&#x5740;&gt;&#xFF0C;&#x6DFB;&#x52A0;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x8BBF;&#x95EE;X resources&#x7684;&#x6743;&#x9650;</li>
+<li>&#x5728;&#x4E3B;&#x673A;&#x4E0A;&#x5B89;&#x88C5;xorg-server-xdmx</li>
+<li>&#x914D;&#x7F6E;&#x767B;&#x9646;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x8BA9;xserver&#x76D1;&#x542C;&#x7AEF;&#x53E3;6000</li>
+</ol>
+<p>
+&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x767B;&#x5F55;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/etc/X11/xinit/xserverrc&#x5220;&#x9664;-nolisten tcp&#x9009;&#x9879;&#x3002;
+&#x6211;&#x7528;slim&#x767B;&#x9646;&#x7BA1;&#x7406;&#x5668;&#x7684;&#xFF0C;&#x4FEE;&#x6539;&#x5B83;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/etc/slim.conf
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#&#x6CE8;&#x91CA;&#x6389;&#x8FD9;&#x4E00;&#x884C;</span></span><br><span class="line"><span class="comment">#xserver_arguments -nolisten tcp vt07</span></span><br><span class="line">xserver_arguments -listen tcp vt07 </span><br></pre></td></tr></table></figure>
+</div>
+<ol class="org-ol">
+<li>&#x4FEE;&#x6539;&#x4E3B;&#x673A;&#x7684;.xinitrc&#x6587;&#x4EF6;&#xFF0C;&#x8BA9;&#x4E3B;&#x673A;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x7684;&#x8BDD;&#x7684;X Session</li>
+</ol>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">&quot;@im=fcitx&quot;</span></span><br><span class="line"><span class="built_in">export</span> BROWSER=<span class="string">&quot;firefox&quot;</span></span><br><span class="line"><span class="built_in">export</span> EDITOR=<span class="string">&quot;emacs&quot;</span></span><br><span class="line"><span class="built_in">exec</span> fvwm  <span class="operator">-f</span> /home/wing/.fvwm/blank</span><br></pre></td></tr></table></figure>
+</div>
+
+<ol class="org-ol">
+<li>&#x542F;&#x52A8;&#x4E00;&#x4E2A;xdmx Session</li>
+</ol>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">touch xdmx.sh</span><br><span class="line">chmod +x xdmx.sh</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5047;&#x5982;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;ip&#x5730;&#x5740;&#x4E3A;192.168.1.101&#xFF0C;xdmx.sh&#x5982;&#x4E0B;&#xFF1A;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">startx -- /usr/bin/Xdmx :<span class="number">1</span>   -display <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">0</span> -display <span class="number">192.168</span>.<span class="number">1.101</span>:<span class="number">0</span> +xinerama -noglxproxy </span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org3829be9" class="outline-2">
+<h2 id="org3829be9"><span class="section-number-2">2</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li><a href="http://blogs.unbolt.net/index.php/brinley/2007/09/17/simple_xdmx_setup_with_gdm" target="_blank" rel="noopener">Simple Xdmx setup with GDM on Ubuntu</a></li>
+<li><a href="http://www.piwall.co.uk/information/installation" target="_blank" rel="noopener">&#x901A;&#x8FC7;&#x6811;&#x8393;&#x6D3E;&#x6784;&#x5EFA;&#x7535;&#x89C6;&#x5899;</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/opensource/os-mltihed/index.html" target="_blank" rel="noopener">Linux &#x548C; Xdmx &#x7684;&#x5206;&#x5E03;&#x5F0F;&#x591A;&#x7EBF;&#x7A0B;&#x652F;&#x6301;</a></li>
+<li><a href="http://www.geekfan.net/9849/" target="_blank" rel="noopener">&#x6811;&#x8393;&#x6D3E;&#x548C;&#x8DEF;&#x7531;&#xFF1A;&#x5C06;&#x6811;&#x8393;&#x6D3E;&#x6253;&#x9020;&#x6210;&#x4E00;&#x53F0;&#x8DEF;&#x7531;&#x5668;</a></li>
+<li><a href="https://askubuntu.com/questions/34657/how-to-make-x-org-listen-to-remote-connections-on-port-6000" target="_blank" rel="noopener">How to make X.org listen to remote connections on port 6000?</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+Last Updated <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-12-05 &#x516D; 01:37&gt;</span></span>#.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
+</div>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2015/12/08/Spacemacs中文字体解决方案/">Spacemacs中文字体终极解决方案</a><a class="next" href="/2015/11/20/实现简单的ASP MVC框架/">实现简单的ASP MVC框架</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://wing-ho.github.io/2015/12/05/通过网络扩展你的桌面到其他主机上/';
+    this.page.identifier = '2015/12/05/通过网络扩展你的桌面到其他主机上/';
+    this.page.title = '通过网络扩展你的桌面到其他主机上';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//wing-ho.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  (d.head || d.body).appendChild(s);
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//wing-ho.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://wing-ho.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://wing-ho.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rapberry-Pi/">Rapberry Pi</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Router/">Router</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VirtualBox/">VirtualBox</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/02/把镜像从KVM迁移到VirtualBox/">把镜像从KVM迁移到VirtualBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/打造兼容BIOS和UEFI的启动盘/">打造兼容BIOS和UEFI的启动盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/批量下载喜马拉雅的免费专辑/">批量下载喜马拉雅的免费专辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/把电纸书打造成护眼开发神器/">把电纸书打造成护眼开发神器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/17/Hexo博客集成GitBook/">Hexo博客集成GitBook</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/用Wine运行那些你离不开的应用/">用Wine运行那些你离不开的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/将Emacs写作环境转移到Windows/">将Emacs写作环境转移到Windows</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/17/玩转Window 10 Bash/">玩转Window 10 Bash</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//wing-ho.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/genrong" title="本人CSDN博客" target="_blank">本人CSDN博客</a><ul></ul><a href="https://blog.codingnow.com" title="云风" target="_blank">云风</a><ul></ul><a href="http://www.ruanyifeng.com/blog" title="阮一峰" target="_blank">阮一峰</a><ul></ul><a href="http://www.yinwang.org" title="王垠" target="_blank">王垠</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Wing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="/js/toc4org.js?v=0.0.0"></script></div></body></html>

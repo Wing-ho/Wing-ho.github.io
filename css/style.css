@@ -1464,3 +1464,21 @@ em.search-keyword {
   list-style: none; }
   .post-copyright li {
     margin: 8px 0; }
+
+#table-of-contents {
+  line-height: 1em;
+  float: right; }
+  #table-of-contents h2 {
+    font-weight: normal;
+    padding-top: 0;
+    margin: 0;
+    border-bottom-width: 0; }
+  #table-of-contents li {
+    list-style: none; }
+    #table-of-contents li a {
+      color: #6E7173; }
+
+#text-table-of-contents .toc {
+  padding: 0;
+  margin: 0.5em;
+  line-height: 1.8em; }
