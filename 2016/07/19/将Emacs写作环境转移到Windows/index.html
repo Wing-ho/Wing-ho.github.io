@@ -3,25 +3,25 @@
 <h2>&#x76EE;&#x5F55;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org51f40e3">1. &#x5B89;&#x88C5;windows&#x7248;&#x672C;&#x7684;node</a></li>
-<li><a href="#org7c12398">2. &#x914D;&#x7F6E;mingw64&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li>
-<li><a href="#org1bef995">3. &#x5B89;&#x88C5;python2,python3</a></li>
-<li><a href="#org388563f">4. &#x5B89;&#x88C5;git</a></li>
-<li><a href="#org381ac60">5. &#x5B89;&#x88C5;Hexo</a></li>
-<li><a href="#org0a70590">6. &#x5B89;&#x88C5;&#x4E3B;&#x9898;maupassant</a></li>
-<li><a href="#org5506736">7. &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x63D2;&#x4EF6;</a></li>
-<li><a href="#orgb38e776">8. &#x914D;&#x7F6E;blog-admin</a></li>
-<li><a href="#org6eff5b5">9. &#x914D;&#x7F6E;Emacs&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;</a></li>
-<li><a href="#org160342b">10. &#x5B89;&#x88C5;&#x5B57;&#x4F53;</a></li>
-<li><a href="#org2bc9677">11. &#x540E;&#x8BB0;</a></li>
+<li><a href="#org526373d">1. &#x5B89;&#x88C5;windows&#x7248;&#x672C;&#x7684;node</a></li>
+<li><a href="#org4fb86ff">2. &#x914D;&#x7F6E;mingw64&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li>
+<li><a href="#org3beb511">3. &#x5B89;&#x88C5;python2,python3</a></li>
+<li><a href="#org779ed93">4. &#x5B89;&#x88C5;git</a></li>
+<li><a href="#org718e48f">5. &#x5B89;&#x88C5;Hexo</a></li>
+<li><a href="#org42b2a8b">6. &#x5B89;&#x88C5;&#x4E3B;&#x9898;maupassant</a></li>
+<li><a href="#org51d33ba">7. &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x63D2;&#x4EF6;</a></li>
+<li><a href="#org61a7d58">8. &#x914D;&#x7F6E;blog-admin</a></li>
+<li><a href="#org0bfdb34">9. &#x914D;&#x7F6E;Emacs&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;</a></li>
+<li><a href="#orgefeeada">10. &#x5B89;&#x88C5;&#x5B57;&#x4F53;</a></li>
+<li><a href="#org3cb5227">11. &#x540E;&#x8BB0;</a></li>
 </ul>
 </div>
 </div>
 <p>
 Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4E86;&#xFF0C;&#x968F;&#x7740;&#x8FD9;&#x4E2A;subsystem&#x7684;&#x53D1;&#x5E03;&#x548C;&#x5B8C;&#x5584;&#xFF0C;&#x4F30;&#x8BA1;&#x4EE5;&#x540E;&#x4F1A;&#x865A;&#x62DF;&#x673A;&#x8DD1;Linux&#x7684;&#x65F6;&#x5149;&#x3002;&#x6211;&#x5F53;&#x7136;&#x5E0C;&#x671B;&#x7528;WSL&#x6765;&#x642D;&#x5EFA;&#x5199;&#x4F5C;&#x73AF;&#x5883;&#xFF0C;&#x4F46;WSL&#x9ED8;&#x8BA4;&#x53EA;&#x63D0;&#x4F9B;&#x5BF9;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;GUI&#x7A0B;&#x5E8F;&#xFF0C;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B89;&#x88C5;xming&#xFF0C;Xmanger&#x7B49;Xserver&#x65B9;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;WSL&#x7684;GUI&#x7A0B;&#x5E8F;&#x8DD1;&#x5728;Windows&#x4E0A;&#x3002;emacs&#x4E5F;&#x80FD;&#x6210;&#x529F;&#x5B89;&#x88C5;&#x548C;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;Bash&#x4E0B;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x4E2D;&#x6587;&#x8F93;&#x5165;&#x3002;&#x8BA9;emacs&#x8DD1;&#x5728;xserver&#x4E0A;&#xFF0C;&#x540C;&#x6837;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x8C03;&#x51FA;&#x8F93;&#x5165;&#x6CD5;&#x3002;&#x4F30;&#x8BA1;&#x4EE5;&#x540E;&#x6210;&#x719F;&#x4E86;GUI&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x80FD;&#x591F;&#x8DD1;&#x8D77;&#x6765;&#x7684;&#xFF0C;&#x5148;&#x653E;&#x5F03;WSL&#xFF0C;&#x6682;&#x65F6;&#x7528;msys2&#x642D;&#x5EFA;&#x73AF;&#x5883;&#xFF0C;&#x4ECE;&#x7ED3;&#x679C;&#x6765;&#x770B;&#x8FD8;&#x662F;&#x633A;&#x6EE1;&#x610F;&#x7684;&#x3002;
 </p>
-<div id="outline-container-org51f40e3" class="outline-2">
-<h2 id="org51f40e3"><span class="section-number-2">1</span> &#x5B89;&#x88C5;windows&#x7248;&#x672C;&#x7684;node</h2>
+<div id="outline-container-org526373d" class="outline-2">
+<h2 id="org526373d"><span class="section-number-2">1</span> &#x5B89;&#x88C5;windows&#x7248;&#x672C;&#x7684;node</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 &#x5230;nodejs&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;<a href="https://nodejs.org/dist/v4.4.7/node-v4.4.7-x64.msi" target="_blank" rel="noopener">node 4.4.7</a>,&#x5E76;&#x5B89;&#x88C5;&#x5230;d:\Runtime\nodejs&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x80FD;&#x6B63;&#x5E38;&#x8F93;&#x51FA;node&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x8BF4;&#x660E;&#x4F60;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E86;&#x3002;
@@ -31,8 +31,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org7c12398" class="outline-2">
-<h2 id="org7c12398"><span class="section-number-2">2</span> &#x914D;&#x7F6E;mingw64&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<div id="outline-container-org4fb86ff" class="outline-2">
+<h2 id="org4fb86ff"><span class="section-number-2">2</span> &#x914D;&#x7F6E;mingw64&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 &#x6211;&#x81EA;&#x5DF1;&#x6BD4;&#x8F83;&#x559C;&#x6B22;&#x7528;emacs&#xFF0C;&#x535A;&#x5BA2;&#x90FD;&#x662F;&#x7528;org&#x6765;&#x5199;&#x7684;&#xFF0C;org&#x6587;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#x662F;&#x4F9D;&#x8D56;emacs&#x7684;&#xFF0C;emacs&#x662F;&#x5B89;&#x88C5;&#x5728;ming64&#x73AF;&#x5883;&#x91CC;&#x9762;&#x7684;&#xFF0C;&#x6240;&#x4EE5;hexo&#x8981;&#x80FD;&#x6210;&#x529F;&#x8C03;&#x7528;emacs&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x628A;nodejs&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6DFB;&#x52A0;&#x5230;mingw64&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x3002;
@@ -43,16 +43,16 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org1bef995" class="outline-2">
-<h2 id="org1bef995"><span class="section-number-2">3</span> &#x5B89;&#x88C5;python2,python3</h2>
+<div id="outline-container-org3beb511" class="outline-2">
+<h2 id="org3beb511"><span class="section-number-2">3</span> &#x5B89;&#x88C5;python2,python3</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S python2 python3</span><br><span class="line">pacman -S mingw-w64-x86_64-python2-pip</span><br><span class="line">pacman -S mingw-w64-x86_64-python3-pip</span><br><span class="line"><span class="comment">#&#x4FEE;&#x6539;msys2&#x9ED8;&#x8BA4;&#x7684;python&#x7248;&#x672C;</span></span><br><span class="line">mv python.exe python_backup.exe</span><br><span class="line">cp python3 python</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org388563f" class="outline-2">
-<h2 id="org388563f"><span class="section-number-2">4</span> &#x5B89;&#x88C5;git</h2>
+<div id="outline-container-org779ed93" class="outline-2">
+<h2 id="org779ed93"><span class="section-number-2">4</span> &#x5B89;&#x88C5;git</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 &#x6253;&#x5F00;mingw64&#xFF0C;&#x5173;&#x4E8E;mingw32&#x3001;mingw64&#x3001;msys2&#x7684;&#x5DEE;&#x522B;&#xFF0C;&#x53C2;&#x8003;&#x6587;&#x7AE0;<a href="http://www.tuicool.com/articles/zmeQfu" target="_blank" rel="noopener">MSYS2 + MinGW-w64 + Git + gVim &#x73AF;&#x5883;&#x914D;&#x7F6E;</a>
@@ -65,8 +65,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </p>
 </div>
 </div>
-<div id="outline-container-org381ac60" class="outline-2">
-<h2 id="org381ac60"><span class="section-number-2">5</span> &#x5B89;&#x88C5;Hexo</h2>
+<div id="outline-container-org718e48f" class="outline-2">
+<h2 id="org718e48f"><span class="section-number-2">5</span> &#x5B89;&#x88C5;Hexo</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 &#x6253;&#x5F00;mingw64
@@ -80,16 +80,16 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 
-<div id="outline-container-org0a70590" class="outline-2">
-<h2 id="org0a70590"><span class="section-number-2">6</span> &#x5B89;&#x88C5;&#x4E3B;&#x9898;maupassant</h2>
+<div id="outline-container-org42b2a8b" class="outline-2">
+<h2 id="org42b2a8b"><span class="section-number-2">6</span> &#x5B89;&#x88C5;&#x4E3B;&#x9898;maupassant</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/blog</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/tufu9441/maupassant-hexo.git themes/maupassant</span><br><span class="line">npm install hexo-renderer-jade --save</span><br><span class="line">npm install hexo-renderer-sass --save</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org5506736" class="outline-2">
-<h2 id="org5506736"><span class="section-number-2">7</span> &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x63D2;&#x4EF6;</h2>
+<div id="outline-container-org51d33ba" class="outline-2">
+<h2 id="org51d33ba"><span class="section-number-2">7</span> &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x63D2;&#x4EF6;</h2>
 <div class="outline-text-2" id="text-7">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-renderer-org --save</span><br></pre></td></tr></table></figure>
@@ -102,8 +102,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-orgb38e776" class="outline-2">
-<h2 id="orgb38e776"><span class="section-number-2">8</span> &#x914D;&#x7F6E;blog-admin</h2>
+<div id="outline-container-org61a7d58" class="outline-2">
+<h2 id="org61a7d58"><span class="section-number-2">8</span> &#x914D;&#x7F6E;blog-admin</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 &#x53C2;&#x8003;&#x6211;&#x7684;spacemacs&#x7684;<a href="https://github.com/wing-ho/spacemacs-private" target="_blank" rel="noopener">Layer</a>
@@ -114,8 +114,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org6eff5b5" class="outline-2">
-<h2 id="org6eff5b5"><span class="section-number-2">9</span> &#x914D;&#x7F6E;Emacs&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;</h2>
+<div id="outline-container-org0bfdb34" class="outline-2">
+<h2 id="org0bfdb34"><span class="section-number-2">9</span> &#x914D;&#x7F6E;Emacs&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 &#x6211;&#x81EA;&#x5DF1;&#x9ED8;&#x8BA4;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x662F;Firefox&#xFF0C;&#x867D;&#x7136;Emacs&#x81EA;&#x5E26;&#x7684;&#x51FD;&#x6570;browse-url-firefox&#x662F;&#x9488;&#x5BF9;Linux&#x7CFB;&#x7EDF;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x66FF;&#x6362;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x6253;&#x5F00;~/.spacemacs
@@ -127,8 +127,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org160342b" class="outline-2">
-<h2 id="org160342b"><span class="section-number-2">10</span> &#x5B89;&#x88C5;&#x5B57;&#x4F53;</h2>
+<div id="outline-container-orgefeeada" class="outline-2">
+<h2 id="orgefeeada"><span class="section-number-2">10</span> &#x5B89;&#x88C5;&#x5B57;&#x4F53;</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 <a href="http://font.ubuntu.com/download/ubuntu-font-family-0.83.zip" target="_blank" rel="noopener">Ubuntu Mono</a>
@@ -142,8 +142,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </p>
 </div>
 </div>
-<div id="outline-container-org2bc9677" class="outline-2">
-<h2 id="org2bc9677"><span class="section-number-2">11</span> &#x540E;&#x8BB0;</h2>
+<div id="outline-container-org3cb5227" class="outline-2">
+<h2 id="org3cb5227"><span class="section-number-2">11</span> &#x540E;&#x8BB0;</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 Windows 10&#x7684;&#x66F4;&#x65B0;&#x7B56;&#x7565;&#x6539;&#x53D8;&#x4E4B;&#x540E;&#xFF0C;&#x6BCF;&#x6B21;&#x5927;&#x7684;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x5C31;&#x50CF;&#x662F;&#x91CD;&#x88C5;&#x4E00;&#x6B21;&#x7CFB;&#x7EDF;&#x4F3C;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x6F2B;&#x957F;&#x7684;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#x3002;&#x7279;&#x522B;&#x662F;&#x4F60;&#x5982;&#x679C;&#x4F60;&#x52A0;&#x5165;&#x4E86;Insider Preview&#x8BA1;&#x5212;&#xFF0C;&#x8FD9;&#x4E2A;&#x66F4;&#x65B0;&#x66F4;&#x52A0;&#x662F;&#x9891;&#x7E41;&#x53D1;&#x751F;&#x3002;&#x7EC8;&#x4E8E;&#x6709;&#x4E00;&#x6B21;&#x66F4;&#x65B0;&#x540E;&#xFF0C;&#x8FDE;grub&#x5F15;&#x5BFC;&#x90FD;&#x53D1;&#x751F;&#x4E86;&#xFF0C;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x542F;&#x52A8;&#x7CFB;&#x7EDF;&#x3002;&#x539F;&#x56E0;&#x662F;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x4ECE;&#x4E3B;&#x5206;&#x533A;&#x4E2D;&#x5212;&#x5206;&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x5927;&#x6982;500m&#x7684;recovery&#x5206;&#x533A;&#xFF0C;&#x8FDE;&#x6211;&#x81EA;&#x5DF1;&#x505A;&#x597D;&#x7684;&#x5206;&#x533A;&#x90FD;&#x6562;&#x52A8;&#xFF0C;&#x5FAE;&#x8F6F;&#x4F60;&#x7684;&#x80C6;&#x5B50;&#x4E5F;&#x592A;&#x5927;&#x4E86;&#x3002;&#x5B9E;&#x5728;&#x53D7;&#x591F;&#x4E86;&#x8FD9;&#x4E2A;&#x80C6;&#x5927;&#x5984;&#x4E3A;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x6211;&#x51B3;&#x5B9A;&#x8FD8;&#x662F;&#x56DE;&#x5230;Linux&#x7684;&#x6000;&#x62B1;&#xFF0C;&#x4EE4;&#x6211;&#x6B23;&#x559C;&#x7684;&#x662F;&#x6211;&#x5C1D;&#x8BD5;&#x8FC7;wine&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;Photoshop cs6&#x3001;Office 2007&#x90FD;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x8FD9;&#x6B21;Windows&#x771F;&#x7684;&#x53EF;&#x4EE5;byebye&#x4E86;&#x3002;
