@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow:
+Sitemap: http://callmewing.com/atom.xml

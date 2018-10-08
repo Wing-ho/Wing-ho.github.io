@@ -1,23 +1,23 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="baidu-site-verification" content="uYP4JiKuZc"><meta name="description" content="Wing's Blog"><title>实现简单的ASP MVC框架 | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">实现简单的ASP MVC框架</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">实现简单的ASP MVC框架</h1><div class="post-meta">Nov 20, 2015<span> | </span><span class="category"><a href="/categories/JavaScript/">JavaScript</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2015/11/20/实现简单的ASP MVC框架/" href="/2015/11/20/实现简单的ASP MVC框架/#disqus_thread"></a><div class="post-content"><div id="content">
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="description" content="Wing's Blog"><title>实现简单的ASP MVC框架 | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">实现简单的ASP MVC框架</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">实现简单的ASP MVC框架</h1><div class="post-meta">Nov 20, 2015<span> | </span><span class="category"><a href="/categories/JavaScript/">JavaScript</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2015/11/20/实现简单的ASP MVC框架/" href="/2015/11/20/实现简单的ASP MVC框架/#disqus_thread"></a><div class="post-content"><div id="content">
 <div id="table-of-contents">
 <h2>&#x76EE;&#x5F55;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd38d1c9">1. &#x8FD0;&#x884C;&#x73AF;&#x5883;</a></li>
-<li><a href="#org5b1a9d5">2. &#x76EE;&#x5F55;&#x7ED3;&#x6784;</a></li>
-<li><a href="#orgaa78793">3. &#x7F13;&#x5B58;</a></li>
-<li><a href="#org2e6cc9b">4. &#x5305;&#x7BA1;&#x7406;&#x95EE;&#x9898;</a></li>
-<li><a href="#org21c4770">5. &#x6A21;&#x7248;&#x5F15;&#x64CE;</a></li>
-<li><a href="#org16cb03e">6. &#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li>
-<li><a href="#orgf198ae3">7. &#x4E0A;&#x4F20;&#x95EE;&#x9898;</a></li>
+<li><a href="#org1f050b6">1. &#x8FD0;&#x884C;&#x73AF;&#x5883;</a></li>
+<li><a href="#org8bd2125">2. &#x76EE;&#x5F55;&#x7ED3;&#x6784;</a></li>
+<li><a href="#orgac089a9">3. &#x7F13;&#x5B58;</a></li>
+<li><a href="#org73924ed">4. &#x5305;&#x7BA1;&#x7406;&#x95EE;&#x9898;</a></li>
+<li><a href="#orgd01408e">5. &#x6A21;&#x7248;&#x5F15;&#x64CE;</a></li>
+<li><a href="#orgfd54dd5">6. &#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li>
+<li><a href="#org4e80b26">7. &#x4E0A;&#x4F20;&#x95EE;&#x9898;</a></li>
 </ul>
 </div>
 </div>
 <p>
 ASP&#x66FE;&#x7ECF;&#x975E;&#x5E38;&#x6D41;&#x884C;&#xFF0C;&#x6211;&#x4E0A;&#x5927;&#x5B66;&#x90A3;&#x4F1A;&#x513F;&#xFF0C;&#x56FE;&#x4E66;&#x9986;&#x4E66;&#x67B6;&#x4E0A;&#x5199;Web&#x7F16;&#x7A0B;&#x7684;&#x4E66;&#x7C4D;&#x91CC;&#x9762;&#x8BB2;ASP&#x7684;&#x5360;&#x4E86;&#x5927;&#x591A;&#x6570;&#xFF0C;&#x7ED9;&#x6211;&#x4E00;&#x4E2A;&#x9519;&#x89C9;&#xFF0C;ASP&#x5C31;&#x662F;&#x6700;&#x725B;&#x903C;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;ASP&#x8FDE;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x90FD;&#x4E0D;&#x7B97;&#xFF0C;ASP&#x53EA;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x63A5;&#x53E3;&#x7ED9;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x3002;ASP&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x662F;VBScript&#xFF0C;&#x4F46;&#x4ECE;2006&#x5E74;&#x5F00;&#x59CB;&#x6D41;&#x884C;WEB 2.0&#x7684;&#x6982;&#x5FF5;&#x540E;&#xFF0C;JavaScript&#x6210;&#x4E86;&#x6700;&#x70ED;&#x95E8;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E4B;&#x4E00;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x4ECE;&#x90A3;&#x65F6;&#x5F00;&#x59CB;&#xFF0C;&#x4E0D;&#x65AD;&#x6709;&#x4EBA;&#x91C7;&#x7528;JavaScript&#x4F5C;&#x4E3A;ASP&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x3002;JavaScript&#x7684;&#x8BED;&#x6CD5;&#x6BD4;&#x8F83;&#x7075;&#x6D3B;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x9AD8;&#x9636;&#x51FD;&#x6570;&#x3001;&#x95ED;&#x5305;&#x7B49;&#x7279;&#x6027;&#xFF0C;&#x6BD4;VBScript&#x4E2D;&#x89C4;&#x4E2D;&#x77E9;&#x7684;&#x7F16;&#x7A0B;&#x98CE;&#x683C;&#x597D;&#x7528;&#x592A;&#x591A;&#x4E86;&#x3002;&#x4F46;&#x6BD4;&#x8F83;&#x9057;&#x61BE;&#x7684;&#x662F;&#xFF0C;JavaScript&#x9ED8;&#x8BA4;&#x7684;&#x7C7B;&#x578B;&#x5F53;&#x4E2D;&#x6CA1;&#x6709;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5904;&#x7406;&#x4E8C;&#x8FDB;&#x5236;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x5B9A;&#x7684;&#x6280;&#x5DE7;&#x3002;ASP&#x867D;&#x7136;&#x5DF2;&#x7ECF;&#x6D41;&#x884C;&#x8FC7;&#x90A3;&#x4E48;&#x591A;&#x5E74;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x4E00;&#x5957;&#x6BD4;&#x8F83;&#x597D;&#x7528;&#x7684;Web&#x5F00;&#x53D1;&#x6846;&#x67B6;&#xFF0C;&#x591A;&#x6570;&#x5E94;&#x7528;&#x90FD;&#x662F;&#x505C;&#x7559;&#x5728;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#x6211;&#x8BBE;&#x8BA1;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;MVC&#x6846;&#x67B6;&#xFF0C;&#x7528;&#x4E8E;&#x5E94;&#x5BF9;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x5FEB;&#x6377;&#x7684;&#x5F00;&#x53D1;&#x9700;&#x6C42;&#xFF0C;&#x540C;&#x65F6;&#x5BF9;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x63D0;&#x4F9B;&#x4E00;&#x70B9;&#x89E3;&#x51B3;&#x601D;&#x8DEF;&#xFF0C;&#x7B97;&#x662F;&#x5BF9;ASP&#x77E5;&#x8BC6;&#x7684;&#x4E00;&#x70B9;&#x603B;&#x7ED3;&#x3002;
 </p>
-<div id="outline-container-orgd38d1c9" class="outline-2">
-<h2 id="orgd38d1c9"><span class="section-number-2">1</span> &#x8FD0;&#x884C;&#x73AF;&#x5883;</h2>
+<div id="outline-container-org1f050b6" class="outline-2">
+<h2 id="org1f050b6"><span class="section-number-2">1</span> &#x8FD0;&#x884C;&#x73AF;&#x5883;</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 &#x6253;&#x5F00;IIS Express&#x7684;&#x8C03;&#x8BD5;ASP&#x7684;&#x76F8;&#x5173;&#x9009;&#x9879;&#xFF0C;&#x7528;IIS Express&#x6765;&#x8FD0;&#x884C;&#x8C03;&#x8BD5;ASP&#x662F;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x7684;&#xFF0C;&#x529F;&#x80FD;&#x4E0E;&#x76F8;&#x5E94;&#x7248;&#x672C;&#x7684;IIS&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x5C11;&#x4E86;&#x7BA1;&#x7406;&#x754C;&#x9762;&#xFF0C;&#x7279;&#x522B;&#x5BF9;&#x4E8E;&#x8FD8;&#x5728;&#x8DD1;Win 2003&#x7684;&#x4E3B;&#x673A;&#xFF0C;IIS Express&#x53EF;&#x4EE5;&#x8BA9;PHP&#x3001;JSP&#x7B49;&#x591A;&#x79CD;&#x6280;&#x672F;&#x540C;&#x65F6;&#x5171;&#x4EAB;80&#x7AEF;&#x53E3;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;
@@ -29,8 +29,8 @@ ASP&#x66FE;&#x7ECF;&#x975E;&#x5E38;&#x6D41;&#x884C;&#xFF0C;&#x6211;&#x4E0A;&#x59
 </div>
 </div>
 </div>
-<div id="outline-container-org5b1a9d5" class="outline-2">
-<h2 id="org5b1a9d5"><span class="section-number-2">2</span> &#x76EE;&#x5F55;&#x7ED3;&#x6784;</h2>
+<div id="outline-container-org8bd2125" class="outline-2">
+<h2 id="org8bd2125"><span class="section-number-2">2</span> &#x76EE;&#x5F55;&#x7ED3;&#x6784;</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 &#x60F3;&#x8981;&#x5B9E;&#x73B0;rest&#x98CE;&#x683C;&#x7684;URL&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;rewrite&#x89C4;&#x5219;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5355;&#x6587;&#x4EF6;&#x5165;&#x53E3;&#xFF0C;&#x5B8C;&#x5168;&#x5272;&#x6389;.asp&#x8FD9;&#x4E2A;&#x5C3E;&#x5DF4;&#x3002;&#x6846;&#x67B6;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF1A;
@@ -134,8 +134,8 @@ ASP&#x66FE;&#x7ECF;&#x975E;&#x5E38;&#x6D41;&#x884C;&#xFF0C;&#x6211;&#x4E0A;&#x59
 </div>
 </div>
 </div>
-<div id="outline-container-orgaa78793" class="outline-2">
-<h2 id="orgaa78793"><span class="section-number-2">3</span> &#x7F13;&#x5B58;</h2>
+<div id="outline-container-orgac089a9" class="outline-2">
+<h2 id="orgac089a9"><span class="section-number-2">3</span> &#x7F13;&#x5B58;</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 &#x4E3A;&#x4E86;&#x8F83;&#x5C11;&#x78C1;&#x76D8;&#x8BFB;&#x5199;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x6211;&#x5C06;&#x6240;&#x6709;&#x9700;&#x8981;&#x8BFB;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x7F13;&#x5B58;&#x5230;Application&#x5BF9;&#x8C61;&#x5F53;&#x4E2D;&#xFF0C;&#x6BD4;&#x5982;&#x6A21;&#x677F;&#x3001;&#x63A7;&#x5236;&#x5668;&#x3001;&#x6A21;&#x578B;&#x7B49;&#x3002;&#x6846;&#x67B6;&#x5F53;&#x4E2D;&#x6709;&#x4E09;&#x4E2A;&#x51FD;&#x6570;&#x7528;&#x5230;&#x4E86;cache&#x7F13;&#x5B58;&#x51FD;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x7F13;&#x5B58;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x901A;&#x8FC7;cache&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x5DE7;&#x5999;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;cache&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x628A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#x3002;&#x6BD4;&#x5982;readAllText&#x51FD;&#x6570;&#x662F;&#x8C03;&#x7528;cache&#x51FD;&#x6570;&#x5F97;&#x5230;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;cache&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x51FD;&#x6570;&#x540D;+&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF08;&#x4E3A;&#x4E86;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x51FD;&#x6570;&#x8BFB;&#x53D6;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#xFF09;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5C01;&#x88C5;&#x4E86;&#x8BFB;&#x5199;&#x6B65;&#x9AA4;&#x7684;&#x533F;&#x540D;&#x51FD;&#x6570;&#x3002;&#x8FD8;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x7F13;&#x5B58;&#x4F8B;&#x5B50;&#xFF0C;&#x5C31;&#x662F;&#x6A21;&#x677F;&#x5F15;&#x64CE;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x6A21;&#x677F;&#x5F15;&#x64CE;&#x5148;&#x5C06;&#x6A21;&#x677F;&#x8BFB;&#x53D6;&#x8FDB;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x9884;&#x7F16;&#x8BD1;&#x6210;&#x51FD;&#x6570;&#x4F53;&#xFF0C;&#x63A5;&#x7740;&#x7F16;&#x8BD1;&#x6210;&#x51FD;&#x6570;&#xFF0C;&#x6700;&#x540E;&#x6839;&#x636E;&#x586B;&#x5145;&#x6570;&#x636E;&#x751F;&#x6210;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x3002;&#x56E0;&#x4E3A;Application&#x5BF9;&#x8C61;&#x53EA;&#x80FD;&#x7F13;&#x5B58;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x65E0;&#x6CD5;&#x7F13;&#x5B58;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#xFF0C;&#x4E3A;&#x4E86;&#x8FDB;&#x4E00;&#x6B65;&#x51CF;&#x5C11;&#x8FD0;&#x7B97;&#x6210;&#x672C;&#xFF0C;&#x628A;&#x51FD;&#x6570;&#x4F53;&#x7F13;&#x5B58;&#x5230;Application&#x5BF9;&#x8C61;&#x5F53;&#x4E2D;&#x3002;
@@ -145,8 +145,8 @@ ASP&#x66FE;&#x7ECF;&#x975E;&#x5E38;&#x6D41;&#x884C;&#xFF0C;&#x6211;&#x4E0A;&#x59
 </div>
 </div>
 </div>
-<div id="outline-container-org2e6cc9b" class="outline-2">
-<h2 id="org2e6cc9b"><span class="section-number-2">4</span> &#x5305;&#x7BA1;&#x7406;&#x95EE;&#x9898;</h2>
+<div id="outline-container-org73924ed" class="outline-2">
+<h2 id="org73924ed"><span class="section-number-2">4</span> &#x5305;&#x7BA1;&#x7406;&#x95EE;&#x9898;</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 &#x5F15;&#x5165;&#x7C7B;&#x4F3C;Node.js&#x5305;&#x7BA1;&#x7406;&#x673A;&#x5236;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x5BFC;&#x5165;&#x6A21;&#x5757;&#x800C;&#x4E0D;&#x662F;&#x5305;&#x542B;&#x8BED;&#x53E5;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#xFF0C;&#x800C;&#x6240;&#x6709;&#x7684;&#x8BFB;&#x6587;&#x4EF6;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x90FD;&#x8FDB;&#x884C;&#x4E86;&#x7F13;&#x5B58;&#x3002;&#x8FD9;&#x91CC;&#x6D89;&#x53CA;&#x5230;3&#x4E2A;&#x51FD;&#x6570;
@@ -157,8 +157,8 @@ ASP&#x66FE;&#x7ECF;&#x975E;&#x5E38;&#x6D41;&#x884C;&#xFF0C;&#x6211;&#x4E0A;&#x59
 </div>
 </div>
 
-<div id="outline-container-org21c4770" class="outline-2">
-<h2 id="org21c4770"><span class="section-number-2">5</span> &#x6A21;&#x7248;&#x5F15;&#x64CE;</h2>
+<div id="outline-container-orgd01408e" class="outline-2">
+<h2 id="orgd01408e"><span class="section-number-2">5</span> &#x6A21;&#x7248;&#x5F15;&#x64CE;</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 &#x8BF4;&#x5F97;&#x597D;&#x542C;&#x53EB;&#x6A21;&#x7248;&#x5F15;&#x64CE;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x6765;&#x6E90;&#x4E8E;JQuery&#x7684;&#x4F5C;&#x8005;John Resig&#x7684;Micro-Templating&#xFF0C;&#x9488;&#x5BF9;ASP&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x4E9B;&#x8C03;&#x6574;&#x3002;&#x652F;&#x6301;&#x5B50;&#x6A21;&#x677F;&#xFF0C;&#x7528;&lt;%=&#x53D8;&#x91CF;&#x540D;%&gt;&#x5F62;&#x5F0F;&#x8F93;&#x51FA;&#x586B;&#x5145;&#x6570;&#x636E;&#x3002;
@@ -168,8 +168,8 @@ ASP&#x66FE;&#x7ECF;&#x975E;&#x5E38;&#x6D41;&#x884C;&#xFF0C;&#x6211;&#x4E0A;&#x59
 </div>
 </div>
 </div>
-<div id="outline-container-org16cb03e" class="outline-2">
-<h2 id="org16cb03e"><span class="section-number-2">6</span> &#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h2>
+<div id="outline-container-orgfd54dd5" class="outline-2">
+<h2 id="orgfd54dd5"><span class="section-number-2">6</span> &#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 JavaScript&#x6BD4;&#x8F83;&#x5F3A;&#x5927;&#x7684;&#x5730;&#x65B9;&#x5C31;&#x5728;&#x4E8E;&#x53EF;&#x4EE5;&#x5C06;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E00;&#x7279;&#x6027;&#x5BF9;&#x4E8E;&#x62BD;&#x53D6;&#x5171;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#x5C01;&#x88C5;&#x6210;&#x51FD;&#x6570;&#x6216;&#x8005;&#x5E93;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x628A;&#x5C60;&#x9F99;&#x5200;&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x8BA9;&#x6211;&#x4EEC;&#x89C1;&#x8BC6;&#x4E00;&#x4E9B;&#x5B83;&#x7684;&#x5A01;&#x529B;&#x3002;
@@ -182,8 +182,8 @@ JavaScript&#x6BD4;&#x8F83;&#x5F3A;&#x5927;&#x7684;&#x5730;&#x65B9;&#x5C31;&#x572
 </p>
 </div>
 </div>
-<div id="outline-container-orgf198ae3" class="outline-2">
-<h2 id="orgf198ae3"><span class="section-number-2">7</span> &#x4E0A;&#x4F20;&#x95EE;&#x9898;</h2>
+<div id="outline-container-org4e80b26" class="outline-2">
+<h2 id="org4e80b26"><span class="section-number-2">7</span> &#x4E0A;&#x4F20;&#x95EE;&#x9898;</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 JavaScript&#x81EA;&#x5E26;&#x7684;&#x51FD;&#x6570;&#x5E93;&#x5F53;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7F51;&#x7EDC;&#x4E0A;&#x7684;&#x5404;&#x8DEF;&#x5927;&#x795E;&#xFF0C;&#x60F3;&#x5C3D;&#x4E86;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x8BD5;&#x56FE;&#x4E3A;JavaScript&#x589E;&#x52A0;&#x8FD9;&#x4E2A;&#x80FD;&#x529B;&#x3002;&#x6709;&#x4EBA;&#x901A;&#x8FC7;MSScriptControl.ScriptControl&#x63A7;&#x4EF6;&#xFF0C;&#x8C03;&#x7528;VBScript&#x7684;&#x51FD;&#x6570;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x6709;&#x4EBA;&#x901A;&#x8FC7;Adodb.Steam&#x5BF9;&#x8C61;&#xFF0C;&#x628A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210;unicode&#x5B57;&#x7B26;&#x6765;&#x5904;&#x7406;&#xFF0C;&#x8FD8;&#x6709;&#x4EBA;&#x5C06;VBScript&#x7684;&#x4E0A;&#x4F20;&#x7C7B;&#x5C01;&#x88C5;&#x6210;sct&#x7EC4;&#x4EF6;&#x3002;&#x5C01;&#x88C5;&#x6210;sct&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x5728;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x6548;&#x7387;&#x548C;&#x4EE3;&#x7801;&#x7EC4;&#x7EC7;&#x90FD;&#x662F;&#x6BD4;&#x8F83;&#x6709;&#x4F18;&#x52BF;&#x7684;&#x3002;&#x66FE;&#x7ECF;&#x6211;&#x4E5F;&#x6BD4;&#x8F83;&#x559C;&#x6B22;&#x8FD9;&#x6837;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x76F4;&#x5230;&#x6211;&#x89C1;&#x5230;&#x7B2C;&#x56DB;&#x79CD;&#x89E3;&#x51B3;&#x601D;&#x8DEF;&#xFF0C;&#x6211;&#x624D;&#x8C41;&#x7136;&#x5F00;&#x6717;&#x3002;&#x539F;&#x6765;Microsoft.XMLDOM&#x7EC4;&#x4EF6;&#x662F;&#x5177;&#x6709;&#x5904;&#x7406;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x7684;&#x80FD;&#x529B;&#x7684;&#xFF0C;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;dataType&#x4E3A;bin.hex&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7ED9;&#x8282;&#x70B9;&#x7684;noteTypeValue&#x8D4B;&#x503C;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#xFF0C;&#x8282;&#x70B9;&#x7684;text&#x5C5E;&#x6027;&#x5C31;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x7684;16&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x6570;&#x636E;&#x7684;&#x5206;&#x6790;&#x5C31;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x5230;&#x5BF9;16&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5206;&#x6790;&#x3002;
