@@ -441,19 +441,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.26" data-path="GNOME3.html">
-            
-                <a href="GNOME3.html">
-            
-                    
-                    GNOME 3
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -536,22 +523,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x89E3;&#x538B;&#x7684;&#x65F6;&#x5019;&#x91CD;&#x547D;&#x540D;</p>
-<p>1 Use -C and --strip-components (See man tar).
--C, --directory=DIR
-  Change  to DIR before performing any operations.  This option is order-sensitive, i.e. it affects all options that follow.
---strip-components=1
- Strip NUMBER leading components from file names on extraction.</p>
-<p>Example:</p>
-<p>mkdir FOLDER</p>
-<h1 id="for-remote-tar-file">for remote tar file</h1>
-<p>curl -L &#x2019;remote_tar_file&apos; | tar -xz - -C FOLDER --strip-components=1</p>
-<h1 id="for-local-tar-file">for local tar file</h1>
-<p>tar -xz FILENAME -C FOLDER --strip-components=1</p>
-<p>2 Use --transform</p>
-<p>You can also use the &#x2013;transform option for a bit more flexibility. It accepts any sed replacement (s) operation.</p>
-<p>For example, this is how I extract a Linux tarball to a new directory so I can apply a patch:</p>
-<p>tar -xjf linux-2.6.38.tar.bz2 --transform &apos;s/linux-2.6.38/linux-2.6.38.1/&apos;</p>
+                                <h1 id="tar">tar</h1>
+<h2 id="&#x89E3;&#x538B;&#x7684;&#x65F6;&#x5019;&#x91CD;&#x547D;&#x540D;">&#x89E3;&#x538B;&#x7684;&#x65F6;&#x5019;&#x91CD;&#x547D;&#x540D;</h2>
+<p>&#x4F8B;&#x5B50;&#xFF1A;
+&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x540C;&#x65F6;&#x4F7F;&#x7528;-C&#x548C;--strip-components&#x53C2;&#x6570;</p>
+<blockquote>
+<p>-C, --directory=DIR
+  Change  to DIR before performing any operations.  This option is order-sensitive, i.e. it affects all options that follow.</p>
+<p>--strip-components=1
+  Strip NUMBER leading components from file names on extraction.</p>
+</blockquote>
+<pre><code class="lang-shell">mkdir FOLDER
+# &#x89E3;&#x538B;&#x8FDC;&#x7A0B;&#x538B;&#x7F29;&#x6587;&#x4EF6;
+curl -L &#x2019;remote_tar_file&apos; | tar -xz - -C FOLDER --strip-components=1
+
+# &#x89E3;&#x538B;&#x672C;&#x5730;&#x538B;&#x7F29;&#x6587;&#x4EF6;
+tar -xz FILENAME -C FOLDER --strip-components=1
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x4F7F;&#x7528;--transform&#x53C2;&#x6570;
+&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x8981;&#x7ED9;2.6.38&#x6253;&#x4E2A;&#x8865;&#x4E01;&#xFF0C;&#x628A;linux-2.6.38&#x5185;&#x6838;&#x89E3;&#x538B;&#x5230;linux-2.6.38.1&#x76EE;&#x5F55;</p>
+<pre><code class="lang-shell">tar -xjf linux-2.6.38.tar.bz2 --transform &apos;s/linux-2.6.38/linux-2.6.38.1/&apos;
+</code></pre>
 
                                 
                                 </section>
@@ -595,7 +587,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tar","level":"1.2.8","depth":2,"next":{"title":"unzip","level":"1.2.9","depth":2,"path":"Linux/unzip.md","ref":"Linux/unzip.md","articles":[]},"previous":{"title":"cat","level":"1.2.7","depth":2,"path":"Linux/cat.md","ref":"Linux/cat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Linux/tar.md","mtime":"2018-09-10T02:24:18.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T04:29:53.436Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"tar","level":"1.2.8","depth":2,"next":{"title":"unzip","level":"1.2.9","depth":2,"path":"Linux/unzip.md","ref":"Linux/unzip.md","articles":[]},"previous":{"title":"cat","level":"1.2.7","depth":2,"path":"Linux/cat.md","ref":"Linux/cat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Linux/tar.md","mtime":"2018-10-08T07:30:46.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T07:45:27.539Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
