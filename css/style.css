@@ -1482,3 +1482,6 @@ em.search-keyword {
   padding: 0;
   margin: 0.5em;
   line-height: 1.8em; }
+
+.figure {
+  text-align: center; }
