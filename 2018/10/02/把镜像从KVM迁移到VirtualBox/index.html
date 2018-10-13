@@ -3,12 +3,12 @@
 <h2>&#x76EE;&#x5F55;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6fe5e78">1. &#x66F4;&#x65B0;ACPI&#x5C5E;&#x6027;</a></li>
-<li><a href="#org9f8b463">2. &#x66F4;&#x65B0;IDE&#x63A7;&#x5236;&#x5668;&#x5C5E;&#x6027;</a></li>
-<li><a href="#org2bb2886">3. &#x5220;&#x9664;&#x666E;&#x901A;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</a></li>
-<li><a href="#org7976718">4. &#x8F6C;&#x6362;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;</a></li>
-<li><a href="#org9fac7cc">5. &#x5C01;&#x88C5;&#x6210;&#x901A;&#x7528;Ghost&#x955C;&#x50CF;</a></li>
-<li><a href="#orgde5b886">6. &#x53C2;&#x8003;&#x6587;&#x7AE0;</a></li>
+<li><a href="#org6f67c25">1. &#x66F4;&#x65B0;ACPI&#x5C5E;&#x6027;</a></li>
+<li><a href="#orgc11bc90">2. &#x66F4;&#x65B0;IDE&#x63A7;&#x5236;&#x5668;&#x5C5E;&#x6027;</a></li>
+<li><a href="#orgfa0d407">3. &#x5220;&#x9664;&#x666E;&#x901A;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</a></li>
+<li><a href="#org41c3bc0">4. &#x8F6C;&#x6362;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;</a></li>
+<li><a href="#org4240211">5. &#x5C01;&#x88C5;&#x6210;&#x901A;&#x7528;Ghost&#x955C;&#x50CF;</a></li>
+<li><a href="#org15cbd61">6. &#x53C2;&#x8003;&#x6587;&#x7AE0;</a></li>
 </ul>
 </div>
 </div>
@@ -16,8 +16,8 @@
 Qemu&#x662F;&#x4F7F;&#x7528;KVM&#x5185;&#x6838;&#x6A21;&#x5757;&#x52A0;&#x901F;&#x7684;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x7528;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x9886;&#x57DF;&#x6027;&#x80FD;&#x975E;&#x5E38;&#x4E0D;&#x9519;&#xFF0C;&#x8D44;&#x6E90;&#x6D88;&#x8017;&#x8FD8;&#x5F88;&#x5C0F;&#xFF0C;&#x53EF;&#x662F;&#x56FE;&#x5F62;&#x663E;&#x793A;&#x4E00;&#x76F4;&#x662F;&#x4E2A;&#x7F3A;&#x9677;&#x3002;Linux&#x684C;&#x9762;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x603B;&#x514D;&#x4E0D;&#x4E86;&#x8981;&#x5F00;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x4F7F;&#x7528;Windows&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x65E0;&#x8BBA;&#x4F7F;&#x7528;spice&#x3001;vnc&#x6216;&#x8005;rdesktop&#x534F;&#x8BAE;&#x6765;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F7F;&#x7528;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x65F6;&#x603B;&#x611F;&#x89C9;&#x4E0D;&#x591F;&#x6D41;&#x7545;&#x3002;&#x800C;VirtualBox&#x5BF9;&#x56FE;&#x5F62;&#x663E;&#x793A;&#x505A;&#x4E86;&#x4F18;&#x5316;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x65E0;&#x7F1D;&#x6A21;&#x5F0F;&#xFF0C;Windows&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x3002;&#x672C;&#x6587;&#x7684;&#x65B9;&#x6CD5;&#x4E5F;&#x9002;&#x7528;&#x4E8E;&#x8FC1;&#x79FB;&#x5230;Parallels Desktop&#x3001;Vmware&#x6216;&#x8005;&#x7269;&#x7406;&#x673A;&#x7B49;&#x73AF;&#x5883;&#x4E2D;&#x3002;
 </p>
 
-<div id="outline-container-org6fe5e78" class="outline-2">
-<h2 id="org6fe5e78"><span class="section-number-2">1</span> &#x66F4;&#x65B0;ACPI&#x5C5E;&#x6027;</h2>
+<div id="outline-container-org6f67c25" class="outline-2">
+<h2 id="org6f67c25"><span class="section-number-2">1</span> &#x66F4;&#x65B0;ACPI&#x5C5E;&#x6027;</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 &#x628A;&#x8BA1;&#x7B97;&#x673A;&#x7684;ACPI&#x5C5E;&#x6027;&#x66F4;&#x6539;&#x4E3A;Standard PC&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x76EE;&#x6807;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x6709;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;ACPI&#xFF0C;&#x5219;&#x8FC1;&#x79FB;&#x5230;&#x65B0;&#x865A;&#x62DF;&#x673A;&#x73AF;&#x5883;&#x540E;&#x5C31;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x7535;&#x8111;&#x8F6F;&#x5173;&#x673A;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x542F;&#x52A8;&#x540E;&#x5D29;&#x6E83;&#xFF01;&#x66F4;&#x6539;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;
@@ -31,8 +31,8 @@ Qemu&#x662F;&#x4F7F;&#x7528;KVM&#x5185;&#x6838;&#x6A21;&#x5757;&#x52A0;&#x901F;&
 </ol>
 </div>
 </div>
-<div id="outline-container-org9f8b463" class="outline-2">
-<h2 id="org9f8b463"><span class="section-number-2">2</span> &#x66F4;&#x65B0;IDE&#x63A7;&#x5236;&#x5668;&#x5C5E;&#x6027;</h2>
+<div id="outline-container-orgc11bc90" class="outline-2">
+<h2 id="orgc11bc90"><span class="section-number-2">2</span> &#x66F4;&#x65B0;IDE&#x63A7;&#x5236;&#x5668;&#x5C5E;&#x6027;</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 &#x5BF9;&#x8BBE;&#x5907;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x624B;&#x672F;&#x662F;&#x66F4;&#x6539;IDE ATA / ATAPI &#x63A7;&#x5236;&#x5668;&#x3002;&#x8FD9;&#x4E00;&#x6B65;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x56E0;&#x4E3A;&#x5927;&#x5BB6;&#x77E5;&#x9053;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x4E3B;&#x677F;&#xFF0C;&#x4F8B;&#x5982;Intel&#x3001;Nforce 2&#x3001;VIA&#x7B49;&#x4E3B;&#x677F;&#xFF0C;&#x5176;IDE ATA / ATAPI&#x63A7;&#x5236;&#x5668;&#x7684;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x6709;&#x5F88;&#x5927;&#x7684;&#x5DEE;&#x522B;&#xFF0C;&#x6839;&#x672C;&#x65E0;&#x6CD5;&#x901A;&#x7528;&#xFF01;&#x5178;&#x578B;&#x7684;&#x73B0;&#x8C61;&#x5C31;&#x662F;&#x4E00;&#x5F00;&#x673A;&#x5C31;&#x84DD;&#x5C4F;&#xFF0C;&#x63D0;&#x793A;STOP: 0x0000007B&#x9519;&#x8BEF;&#x3002;
@@ -48,8 +48,8 @@ Qemu&#x662F;&#x4F7F;&#x7528;KVM&#x5185;&#x6838;&#x6A21;&#x5757;&#x52A0;&#x901F;&
 </p>
 </div>
 </div>
-<div id="outline-container-org2bb2886" class="outline-2">
-<h2 id="org2bb2886"><span class="section-number-2">3</span> &#x5220;&#x9664;&#x666E;&#x901A;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</h2>
+<div id="outline-container-orgfa0d407" class="outline-2">
+<h2 id="orgfa0d407"><span class="section-number-2">3</span> &#x5220;&#x9664;&#x666E;&#x901A;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</h2>
 <div class="outline-text-2" id="text-3">
 <ol class="org-ol">
 <li>&#x627E;&#x5230;&#x7F51;&#x7EDC;&#x9002;&#x914D;&#x5668;&#xFF0C;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x5355;&#x51FB;&#x5176;&#x4E0B;&#x7684;&#x7F51;&#x5361;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#xFF0C;&#x5728;&#x5F39;&#x51FA;&#x83DC;&#x5355;&#x4E0A;&#x5355;&#x51FB;&#x201C;&#x5378;&#x8F7D;&#x201D;&#x83DC;&#x5355;&#x9879;&#x3002;</li>
@@ -57,8 +57,8 @@ Qemu&#x662F;&#x4F7F;&#x7528;KVM&#x5185;&#x6838;&#x6A21;&#x5757;&#x52A0;&#x901F;&
 </ol>
 </div>
 </div>
-<div id="outline-container-org7976718" class="outline-2">
-<h2 id="org7976718"><span class="section-number-2">4</span> &#x8F6C;&#x6362;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;</h2>
+<div id="outline-container-org41c3bc0" class="outline-2">
+<h2 id="org41c3bc0"><span class="section-number-2">4</span> &#x8F6C;&#x6362;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 VirtualBox&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x652F;&#x6301;qcow&#x7684;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x3002;
@@ -70,8 +70,8 @@ VirtualBox&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x652F;&#x6301;qcow&#
 </div>
 </div>
 
-<div id="outline-container-org9fac7cc" class="outline-2">
-<h2 id="org9fac7cc"><span class="section-number-2">5</span> &#x5C01;&#x88C5;&#x6210;&#x901A;&#x7528;Ghost&#x955C;&#x50CF;</h2>
+<div id="outline-container-org4240211" class="outline-2">
+<h2 id="org4240211"><span class="section-number-2">5</span> &#x5C01;&#x88C5;&#x6210;&#x901A;&#x7528;Ghost&#x955C;&#x50CF;</h2>
 <div class="outline-text-2" id="text-5">
 <ol class="org-ol">
 <li>&#x4F7F;&#x7528;&#x201C;&#x7CFB;&#x7EDF;&#x51C6;&#x5907;&#x5DE5;&#x5177;&#x201D;sysprep.exe&#xFF0C;&#x4F4D;&#x7F6E;&#xFF1A;X:\SUPPORT\TOOLS\DEPLOY.CAB&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x89E3;&#x538B;&#x5230;c:\sysprep&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x3002;</li>
@@ -87,8 +87,8 @@ VirtualBox&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x652F;&#x6301;qcow&#
 </div>
 </div>
 
-<div id="outline-container-orgde5b886" class="outline-2">
-<h2 id="orgde5b886"><span class="section-number-2">6</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
+<div id="outline-container-org15cbd61" class="outline-2">
+<h2 id="org15cbd61"><span class="section-number-2">6</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
 <div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li><a href="http://blog.sina.com.cn/s/blog_7221b7540100m7do.html" target="_blank" rel="noopener">WindowsXP&#x7684;&#x91CD;&#x65B0;&#x5C01;&#x88C5;</a></li>
@@ -99,9 +99,29 @@ VirtualBox&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x652F;&#x6301;qcow&#
 </div>
 </div>
 <div id="postamble" class="status">
-Last Updated 2018-10-12 &#x4E94; 21:59.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
+Last Updated 2018-10-13 &#x516D; 13:39.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
 </div>
-</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a><a class="next" href="/2018/05/10/玩转电视盒子/">玩转电视盒子</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+
+      <script>
+        window.disqusProxy={
+          shortname: 'wing-ho',
+          username: 'wing-ho',
+          server: '45.78.15.97',
+          port: 5509,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2018/10/02/把镜像从KVM迁移到VirtualBox/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a><a class="next" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></div>
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
     this.page.url = 'http://wing-ho.github.io/2018/10/02/把镜像从KVM迁移到VirtualBox/';
     this.page.identifier = '2018/10/02/把镜像从KVM迁移到VirtualBox/';
     this.page.title = '把镜像从KVM迁移到VirtualBox';
@@ -114,7 +134,7 @@ success: function(){
   var s = d.createElement('script');
   s.src = '//wing-ho.disqus.com/embed.js';
   s.setAttribute('data-timestamp', + new Date());
-  (d.head || d.body).appendChild(s);
+  
   $('.disqus_click_btn').css('display', 'none');
 },
 error: function() {
@@ -146,4 +166,4 @@ error: function() {
      xhr.ontimeout = function () { xhr.abort(); };
      xhr.send(null);
    });
-</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://wing-ho.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rapberry-Pi/">Rapberry Pi</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Router/">Router</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL-Server/">SQL Server</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VirtualBox/">VirtualBox</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/07/lnmp/">配置LEMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/redis/">深入理解Redis</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/02/把镜像从KVM迁移到VirtualBox/">把镜像从KVM迁移到VirtualBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/玩转电视盒子/">玩转电视盒子</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/打造兼容BIOS和UEFI的启动盘/">打造兼容BIOS和UEFI的启动盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/批量下载喜马拉雅的免费专辑/">批量下载喜马拉雅的免费专辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/安装和配置Debian系操作系统/">安装和配置Debian系操作系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/把电纸书打造成护眼开发神器/">把电纸书打造成护眼开发神器</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//wing-ho.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/genrong" title="本人CSDN博客" target="_blank">本人CSDN博客</a><ul></ul><a href="https://blog.codingnow.com" title="云风" target="_blank">云风</a><ul></ul><a href="http://www.ruanyifeng.com/blog" title="阮一峰" target="_blank">阮一峰</a><ul></ul><a href="http://www.yinwang.org" title="王垠" target="_blank">王垠</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Wing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="/js/toc4org.js?v=0.0.0"></script></div></body></html>
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://wing-ho.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rapberry-Pi/">Rapberry Pi</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Router/">Router</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VirtualBox/">VirtualBox</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/redis/">深入理解Redis</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/02/把镜像从KVM迁移到VirtualBox/">把镜像从KVM迁移到VirtualBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/打造兼容BIOS和UEFI的启动盘/">打造兼容BIOS和UEFI的启动盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/批量下载喜马拉雅的免费专辑/">批量下载喜马拉雅的免费专辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/把电纸书打造成护眼开发神器/">把电纸书打造成护眼开发神器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/17/Hexo博客集成GitBook/">Hexo博客集成GitBook</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/用Wine运行那些你离不开的应用/">用Wine运行那些你离不开的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/将Emacs写作环境转移到Windows/">将Emacs写作环境转移到Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//wing-ho.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/genrong" title="本人CSDN博客" target="_blank">本人CSDN博客</a><ul></ul><a href="https://blog.codingnow.com" title="云风" target="_blank">云风</a><ul></ul><a href="http://www.ruanyifeng.com/blog" title="阮一峰" target="_blank">阮一峰</a><ul></ul><a href="http://www.yinwang.org" title="王垠" target="_blank">王垠</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Wing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="/js/toc4org.js?v=0.0.0"></script></div></body></html>
