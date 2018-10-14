@@ -1,10 +1,27 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="description" content="Wing's Blog"><title>将Emacs写作环境转移到Windows | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">将Emacs写作环境转移到Windows</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">将Emacs写作环境转移到Windows</h1><div class="post-meta">Jul 19, 2016<span> | </span><span class="category"><a href="/categories/Emacs/">Emacs</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2016/07/19/将Emacs写作环境转移到Windows/" href="/2016/07/19/将Emacs写作环境转移到Windows/#disqus_thread"></a><div class="post-content">&#xFEFF;<div id="content">
-
+<div class="clear"><div id="toc" class="toc-article">
+<div class="toc-title">&#x76EE;&#x5F55;</div>
+<div id="text-table-of-contents">
+<ul class="toc">
+<li class="toc-item toc-level-2"><a href="#orgfc4c3ab" class="toc-link toc-text">1. &#x5B89;&#x88C5;windows&#x7248;&#x672C;&#x7684;node</a></li>
+<li class="toc-item toc-level-2"><a href="#orge8fa31e" class="toc-link toc-text">2. &#x914D;&#x7F6E;mingw64&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li>
+<li class="toc-item toc-level-2"><a href="#orgbe0dc88" class="toc-link toc-text">3. &#x5B89;&#x88C5;python2,python3</a></li>
+<li class="toc-item toc-level-2"><a href="#org96b693e" class="toc-link toc-text">4. &#x5B89;&#x88C5;git</a></li>
+<li class="toc-item toc-level-2"><a href="#orgc0c2f4e" class="toc-link toc-text">5. &#x5B89;&#x88C5;Hexo</a></li>
+<li class="toc-item toc-level-2"><a href="#orgb9bb627" class="toc-link toc-text">6. &#x5B89;&#x88C5;&#x4E3B;&#x9898;maupassant</a></li>
+<li class="toc-item toc-level-2"><a href="#orgd8238d2" class="toc-link toc-text">7. &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x63D2;&#x4EF6;</a></li>
+<li class="toc-item toc-level-2"><a href="#org13e7769" class="toc-link toc-text">8. &#x914D;&#x7F6E;blog-admin</a></li>
+<li class="toc-item toc-level-2"><a href="#orgbc755b3" class="toc-link toc-text">9. &#x914D;&#x7F6E;Emacs&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;</a></li>
+<li class="toc-item toc-level-2"><a href="#orgf1dd9c9" class="toc-link toc-text">10. &#x5B89;&#x88C5;&#x5B57;&#x4F53;</a></li>
+<li class="toc-item toc-level-2"><a href="#org9e32744" class="toc-link toc-text">11. &#x540E;&#x8BB0;</a></li>
+</ul>
+</div>
+</div></div>
 <p>
 Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4E86;&#xFF0C;&#x968F;&#x7740;&#x8FD9;&#x4E2A;subsystem&#x7684;&#x53D1;&#x5E03;&#x548C;&#x5B8C;&#x5584;&#xFF0C;&#x4F30;&#x8BA1;&#x4EE5;&#x540E;Linux&#x53EA;&#x4F1A;&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x8DD1;&#x4E86;&#x3002;&#x6211;&#x5F53;&#x7136;&#x5E0C;&#x671B;&#x7528;WSL&#x6765;&#x642D;&#x5EFA;&#x5199;&#x4F5C;&#x73AF;&#x5883;&#xFF0C;&#x4F46;WSL&#x9ED8;&#x8BA4;&#x53EA;&#x63D0;&#x4F9B;&#x5BF9;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;GUI&#x7A0B;&#x5E8F;&#xFF0C;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B89;&#x88C5;xming&#xFF0C;Xmanger&#x7B49;Xserver&#x65B9;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;WSL&#x7684;GUI&#x7A0B;&#x5E8F;&#x8DD1;&#x5728;Windows&#x4E0A;&#x3002;emacs&#x4E5F;&#x80FD;&#x6210;&#x529F;&#x5B89;&#x88C5;&#x548C;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;Bash&#x4E0B;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x4E2D;&#x6587;&#x8F93;&#x5165;&#x3002;&#x8BA9;emacs&#x8DD1;&#x5728;xserver&#x4E0A;&#xFF0C;&#x540C;&#x6837;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x8C03;&#x51FA;&#x8F93;&#x5165;&#x6CD5;&#x3002;&#x4F30;&#x8BA1;&#x4EE5;&#x540E;&#x6210;&#x719F;&#x4E86;GUI&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x80FD;&#x591F;&#x8DD1;&#x8D77;&#x6765;&#x7684;&#xFF0C;&#x5148;&#x653E;&#x5F03;WSL&#xFF0C;&#x6682;&#x65F6;&#x7528;msys2&#x642D;&#x5EFA;&#x73AF;&#x5883;&#xFF0C;&#x4ECE;&#x7ED3;&#x679C;&#x6765;&#x770B;&#x8FD8;&#x7B97;&#x662F;&#x6EE1;&#x610F;&#x7684;&#x3002;
 </p>
-<div id="outline-container-org795d01e" class="outline-2">
-<h2 id="org795d01e"><span class="section-number-2">1</span> &#x5B89;&#x88C5;windows&#x7248;&#x672C;&#x7684;node</h2>
+<div id="outline-container-orgfc4c3ab" class="outline-2">
+<h2 id="orgfc4c3ab"><span class="section-number-2">1</span> &#x5B89;&#x88C5;windows&#x7248;&#x672C;&#x7684;node</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 &#x5230;nodejs&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;<a href="https://nodejs.org/dist/v4.4.7/node-v4.4.7-x64.msi" target="_blank" rel="noopener">node 4.4.7</a>,&#x5E76;&#x5B89;&#x88C5;&#x5230;d:\Runtime\nodejs&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x80FD;&#x6B63;&#x5E38;&#x8F93;&#x51FA;node&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x8BF4;&#x660E;&#x4F60;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E86;&#x3002;
@@ -14,8 +31,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org7b45c78" class="outline-2">
-<h2 id="org7b45c78"><span class="section-number-2">2</span> &#x914D;&#x7F6E;mingw64&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<div id="outline-container-orge8fa31e" class="outline-2">
+<h2 id="orge8fa31e"><span class="section-number-2">2</span> &#x914D;&#x7F6E;mingw64&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 &#x6211;&#x81EA;&#x5DF1;&#x6BD4;&#x8F83;&#x559C;&#x6B22;&#x7528;emacs&#xFF0C;&#x535A;&#x5BA2;&#x90FD;&#x662F;&#x7528;org&#x6765;&#x5199;&#x7684;&#xFF0C;org&#x6587;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#x662F;&#x4F9D;&#x8D56;emacs&#x7684;&#xFF0C;emacs&#x662F;&#x5B89;&#x88C5;&#x5728;ming64&#x73AF;&#x5883;&#x91CC;&#x9762;&#x7684;&#xFF0C;&#x6240;&#x4EE5;hexo&#x8981;&#x80FD;&#x6210;&#x529F;&#x8C03;&#x7528;emacs&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x628A;nodejs&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6DFB;&#x52A0;&#x5230;mingw64&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x3002;
@@ -26,16 +43,16 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-orgd9fd46f" class="outline-2">
-<h2 id="orgd9fd46f"><span class="section-number-2">3</span> &#x5B89;&#x88C5;python2,python3</h2>
+<div id="outline-container-orgbe0dc88" class="outline-2">
+<h2 id="orgbe0dc88"><span class="section-number-2">3</span> &#x5B89;&#x88C5;python2,python3</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S python2 python3</span><br><span class="line">pacman -S mingw-w64-x86_64-python2-pip</span><br><span class="line">pacman -S mingw-w64-x86_64-python3-pip</span><br><span class="line"><span class="comment">#&#x4FEE;&#x6539;msys2&#x9ED8;&#x8BA4;&#x7684;python&#x7248;&#x672C;</span></span><br><span class="line">mv python.exe python_backup.exe</span><br><span class="line">cp python3 python</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org927cdfb" class="outline-2">
-<h2 id="org927cdfb"><span class="section-number-2">4</span> &#x5B89;&#x88C5;git</h2>
+<div id="outline-container-org96b693e" class="outline-2">
+<h2 id="org96b693e"><span class="section-number-2">4</span> &#x5B89;&#x88C5;git</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 &#x6253;&#x5F00;mingw64&#xFF0C;&#x5173;&#x4E8E;mingw32&#x3001;mingw64&#x3001;msys2&#x7684;&#x5DEE;&#x522B;&#xFF0C;&#x53C2;&#x8003;&#x6587;&#x7AE0;<a href="http://www.tuicool.com/articles/zmeQfu" target="_blank" rel="noopener">MSYS2 + MinGW-w64 + Git + gVim &#x73AF;&#x5883;&#x914D;&#x7F6E;</a>
@@ -48,8 +65,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </p>
 </div>
 </div>
-<div id="outline-container-org425a7a0" class="outline-2">
-<h2 id="org425a7a0"><span class="section-number-2">5</span> &#x5B89;&#x88C5;Hexo</h2>
+<div id="outline-container-orgc0c2f4e" class="outline-2">
+<h2 id="orgc0c2f4e"><span class="section-number-2">5</span> &#x5B89;&#x88C5;Hexo</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 &#x6253;&#x5F00;mingw64
@@ -63,16 +80,16 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 
-<div id="outline-container-org52b59d0" class="outline-2">
-<h2 id="org52b59d0"><span class="section-number-2">6</span> &#x5B89;&#x88C5;&#x4E3B;&#x9898;maupassant</h2>
+<div id="outline-container-orgb9bb627" class="outline-2">
+<h2 id="orgb9bb627"><span class="section-number-2">6</span> &#x5B89;&#x88C5;&#x4E3B;&#x9898;maupassant</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/blog</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/tufu9441/maupassant-hexo.git themes/maupassant</span><br><span class="line">npm install hexo-renderer-jade --save</span><br><span class="line">npm install hexo-renderer-sass --save</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org822474e" class="outline-2">
-<h2 id="org822474e"><span class="section-number-2">7</span> &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x63D2;&#x4EF6;</h2>
+<div id="outline-container-orgd8238d2" class="outline-2">
+<h2 id="orgd8238d2"><span class="section-number-2">7</span> &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x63D2;&#x4EF6;</h2>
 <div class="outline-text-2" id="text-7">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-renderer-org --save</span><br></pre></td></tr></table></figure>
@@ -85,8 +102,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org9825c53" class="outline-2">
-<h2 id="org9825c53"><span class="section-number-2">8</span> &#x914D;&#x7F6E;blog-admin</h2>
+<div id="outline-container-org13e7769" class="outline-2">
+<h2 id="org13e7769"><span class="section-number-2">8</span> &#x914D;&#x7F6E;blog-admin</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 &#x53C2;&#x8003;&#x6211;&#x7684;spacemacs&#x7684;<a href="https://github.com/wing-ho/spacemacs-private" target="_blank" rel="noopener">Layer</a>
@@ -97,8 +114,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org46173ab" class="outline-2">
-<h2 id="org46173ab"><span class="section-number-2">9</span> &#x914D;&#x7F6E;Emacs&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;</h2>
+<div id="outline-container-orgbc755b3" class="outline-2">
+<h2 id="orgbc755b3"><span class="section-number-2">9</span> &#x914D;&#x7F6E;Emacs&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 &#x6211;&#x81EA;&#x5DF1;&#x9ED8;&#x8BA4;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x662F;Firefox&#xFF0C;&#x867D;&#x7136;Emacs&#x81EA;&#x5E26;&#x7684;&#x51FD;&#x6570;browse-url-firefox&#x662F;&#x9488;&#x5BF9;Linux&#x7CFB;&#x7EDF;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x66FF;&#x6362;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x6253;&#x5F00;~/.spacemacs
@@ -110,8 +127,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </div>
 </div>
 </div>
-<div id="outline-container-org46a6d14" class="outline-2">
-<h2 id="org46a6d14"><span class="section-number-2">10</span> &#x5B89;&#x88C5;&#x5B57;&#x4F53;</h2>
+<div id="outline-container-orgf1dd9c9" class="outline-2">
+<h2 id="orgf1dd9c9"><span class="section-number-2">10</span> &#x5B89;&#x88C5;&#x5B57;&#x4F53;</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 <a href="http://font.ubuntu.com/download/ubuntu-font-family-0.83.zip" target="_blank" rel="noopener">Ubuntu Mono</a>
@@ -125,8 +142,8 @@ Bash on Ubuntu on Windows&#xFF08;&#x7B80;&#x79F0;WSL&#xFF09;&#x53D1;&#x5E03;&#x4
 </p>
 </div>
 </div>
-<div id="outline-container-orgaa937d1" class="outline-2">
-<h2 id="orgaa937d1"><span class="section-number-2">11</span> &#x540E;&#x8BB0;</h2>
+<div id="outline-container-org9e32744" class="outline-2">
+<h2 id="org9e32744"><span class="section-number-2">11</span> &#x540E;&#x8BB0;</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 Windows 10&#x7684;&#x66F4;&#x65B0;&#x7B56;&#x7565;&#x6539;&#x53D8;&#x4E4B;&#x540E;&#xFF0C;&#x6BCF;&#x6B21;&#x5927;&#x7684;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x5C31;&#x50CF;&#x662F;&#x91CD;&#x88C5;&#x4E00;&#x6B21;&#x7CFB;&#x7EDF;&#x4F3C;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x6F2B;&#x957F;&#x7684;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#x3002;&#x7279;&#x522B;&#x5982;&#x679C;&#x4F60;&#x52A0;&#x5165;&#x4E86;Insider Preview&#x8BA1;&#x5212;&#xFF0C;&#x8FD9;&#x4E2A;&#x66F4;&#x65B0;&#x66F4;&#x52A0;&#x662F;&#x9891;&#x7E41;&#x53D1;&#x751F;&#x3002;&#x7EC8;&#x4E8E;&#x6709;&#x4E00;&#x6B21;&#x66F4;&#x65B0;&#x540E;&#xFF0C;&#x8FDE;grub&#x5F15;&#x5BFC;&#x90FD;&#x53D1;&#x751F;&#x4E86;&#xFF0C;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x542F;&#x52A8;&#x7CFB;&#x7EDF;&#x3002;&#x539F;&#x56E0;&#x662F;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x4ECE;&#x4E3B;&#x5206;&#x533A;&#x4E2D;&#x5212;&#x5206;&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x5927;&#x6982;500m&#x7684;recovery&#x5206;&#x533A;&#xFF0C;&#x8FDE;&#x6211;&#x81EA;&#x5DF1;&#x505A;&#x597D;&#x7684;&#x5206;&#x533A;&#x90FD;&#x6562;&#x52A8;&#xFF0C;&#x5FAE;&#x8F6F;&#x4F60;&#x7684;&#x80C6;&#x5B50;&#x4E5F;&#x592A;&#x5927;&#x4E86;&#x3002;&#x5B9E;&#x5728;&#x53D7;&#x591F;&#x4E86;&#x8FD9;&#x4E2A;&#x80C6;&#x5927;&#x5984;&#x4E3A;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x6211;&#x51B3;&#x5B9A;&#x8FD8;&#x662F;&#x56DE;&#x5230;Linux&#x7684;&#x6000;&#x62B1;&#xFF0C;&#x4EE4;&#x6211;&#x6B23;&#x559C;&#x7684;&#x662F;&#x968F;&#x7740;WPS&#x7248;&#x672C;&#x7684;&#x66F4;&#x65B0;&#xFF0C;WPS&#x7684;Linux&#x7248;&#x672C;&#x53EF;&#x4EE5;&#x7A33;&#x5B9A;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x8FD9;&#x6B21;Windows&#x771F;&#x7684;&#x53EF;&#x4EE5;byebye&#x4E86;&#x3002;
@@ -135,7 +152,7 @@ Windows 10&#x7684;&#x66F4;&#x65B0;&#x7B56;&#x7565;&#x6539;&#x53D8;&#x4E4B;&#x540
 </div>
 </div>
 <div id="postamble" class="status">
-Last Updated 2018-10-14 &#x65E5; 09:06.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
+Last Updated 2018-10-14 &#x65E5; 23:38.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
 </div>
 
       <script>

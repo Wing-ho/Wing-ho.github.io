@@ -1464,3 +1464,7 @@ em.search-keyword {
   list-style: none; }
   .post-copyright li {
     margin: 8px 0; }
+
+#text-table-of-contents a {
+  font-size: 14px;
+  color: #6E7173; }

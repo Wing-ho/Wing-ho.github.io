@@ -1,5 +1,39 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="description" content="Wing's Blog"><title>玩转Window 10 Bash | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">玩转Window 10 Bash</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">玩转Window 10 Bash</h1><div class="post-meta">Jul 17, 2016<span> | </span><span class="category"><a href="/categories/Windows/">Windows</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2016/07/17/玩转Window 10 Bash/" href="/2016/07/17/玩转Window 10 Bash/#disqus_thread"></a><div class="post-content">&#xFEFF;<div id="content">
-
+<div class="clear"><div id="toc" class="toc-article">
+<div class="toc-title">&#x76EE;&#x5F55;</div>
+<div id="text-table-of-contents">
+<ul class="toc">
+<li class="toc-item toc-level-2"><a href="#org4cb3181" class="toc-link toc-text">1. &#x5173;&#x4E8E;&#x6FC0;&#x6D3B;&#x7684;&#x95EE;&#x9898;</a></li>
+<li class="toc-item toc-level-2"><a href="#orgc0479a0" class="toc-link toc-text">2. &#x5B89;&#x88C5;Windows 10</a>
+<ul class="toc-child">
+<li class="toc-item toc-level-3"><a href="#org9f01b4a" class="toc-link toc-text">2.1. &#x4E0B;&#x8F7D;ESD&#x6587;&#x4EF6;</a></li>
+<li class="toc-item toc-level-3"><a href="#org364fdc9" class="toc-link toc-text">2.2. &#x89E3;&#x5BC6;ESD&#x6587;&#x4EF6;</a></li>
+<li class="toc-item toc-level-3"><a href="#orgb166a76" class="toc-link toc-text">2.3. &#x8F6C;&#x6362;&#x4E3A;ISO</a></li>
+</ul>
+</li>
+<li class="toc-item toc-level-2"><a href="#org546ce65" class="toc-link toc-text">3. &#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x548C;&#x5B89;&#x88C5;&#x9A71;&#x52A8;</a></li>
+<li class="toc-item toc-level-2"><a href="#org2085967" class="toc-link toc-text">4. &#x5F7B;&#x5E95;&#x5378;&#x8F7D;OneDrive</a></li>
+<li class="toc-item toc-level-2"><a href="#org0ce8f5f" class="toc-link toc-text">5. &#x8BBE;&#x7F6E;&#x8F93;&#x5165;&#x6CD5;&#x9ED8;&#x8BA4;&#x82F1;&#x6587;&#x6A21;&#x5F0F;</a></li>
+<li class="toc-item toc-level-2"><a href="#org1665c09" class="toc-link toc-text">6. &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x9879;</a></li>
+<li class="toc-item toc-level-2"><a href="#org36c391c" class="toc-link toc-text">7. Bash On Ubuntu on Windows</a>
+<ul class="toc-child">
+<li class="toc-item toc-level-3"><a href="#orgac4cd8f" class="toc-link toc-text">7.1. &#x5B89;&#x88C5;Bash On Windows</a></li>
+<li class="toc-item toc-level-3"><a href="#orga658129" class="toc-link toc-text">7.2. &#x66F4;&#x65B0;Ubuntu</a></li>
+<li class="toc-item toc-level-3"><a href="#org9a0056c" class="toc-link toc-text">7.3. &#x5347;&#x7EA7;&#x5230;ubuntu 16.04</a></li>
+<li class="toc-item toc-level-3"><a href="#orgeae1c3b" class="toc-link toc-text">7.4. &#x5B89;&#x88C5;Emacs</a></li>
+<li class="toc-item toc-level-3"><a href="#org0066901" class="toc-link toc-text">7.5. &#x5B89;&#x88C5;Spacemacs</a></li>
+<li class="toc-item toc-level-3"><a href="#org9e3e7dc" class="toc-link toc-text">7.6. &#x5B89;&#x88C5;&#x641C;&#x72D7;&#x8F93;&#x5165;&#x6CD5;</a></li>
+<li class="toc-item toc-level-3"><a href="#org022c0dc" class="toc-link toc-text">7.7. &#x76EE;&#x524D;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</a>
+<ul class="toc-child">
+<li class="toc-item toc-level-4"><a href="#org7517091" class="toc-link toc-text">7.7.1. &#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;cli&#x7684;&#x7A0B;&#x5E8F;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-level-2"><a href="#org523df4f" class="toc-link toc-text">8. &#x53C2;&#x8003;&#x6587;&#x7AE0;</a></li>
+</ul>
+</div>
+</div></div>
 <p>
 &#x968F;&#x7740;Windows 10&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x7A81;&#x7136;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5438;&#x5F15;&#x6211;&#x7684;&#x7279;&#x6027;Bash On Ubuntu On Windows&#xFF0C;&#x6211;&#x8FEB;&#x4E0D;&#x53CA;&#x5F85;&#x5730;&#x6362;&#x56DE;&#x4E86;Windows 10&#xFF0C;&#x597D;&#x597D;&#x4F53;&#x9A8C;&#x4E86;&#x4E00;&#x628A;&#x8FD9;&#x4E2A;&#x4EE4;&#x4EBA;&#x6FC0;&#x52A8;&#x7684;&#x529F;&#x80FD;&#x3002;&#x4F46;&#x662F;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x8FD8;&#x662F;&#x4E0D;&#x5C11;&#x7684;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;Bash&#x80FD;&#x8DD1;&#x7684;&#x7A0B;&#x5E8F;&#x662F;&#x5341;&#x5206;&#x6709;&#x9650;&#x7684;&#xFF0C;&#x5C31;&#x8DDF;&#x901A;&#x8FC7;Wine&#x8DD1;&#x5728;Linux&#x7684;&#x5E94;&#x7528;&#x4E00;&#x6837;&#x662F;&#x5341;&#x5206;&#x6709;&#x9650;&#x7684;&#x3002;&#x6211;&#x5E0C;&#x671B;&#x8FD9;&#x6709;&#x9650;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x7684;&#x865A;&#x62DF;&#x673A;&#x4E0D;&#x7528;&#x518D;&#x600E;&#x4E48;&#x5F00;&#x673A;&#x4E86;&#xFF0C;&#x76EE;&#x524D;Bash&#x7684;&#x5E94;&#x7528;&#x6211;&#x8FD8;&#x5728;&#x63A2;&#x7D22;&#x4E2D;&#x3002;Win 10&#x8FD8;&#x6709;&#x6BD4;&#x8F83;&#x5438;&#x5F15;&#x6211;&#x7684;&#x7684;&#x865A;&#x62DF;&#x684C;&#x9762;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x53EF;&#x4EE5;&#x6781;&#x5927;&#x5730;&#x63D0;&#x9AD8;&#x5DE5;&#x4F5C;&#x6548;&#x7387;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5728;Linux&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x5F88;&#x4E45;&#x4E86;&#xFF0C;&#x4EE5;&#x524D;&#x603B;&#x60F3;&#x901A;&#x8FC7;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x684C;&#x9762;&#x5B9E;&#x73B0;&#x7C7B;&#x578B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x73B0;&#x5728;&#x7EC8;&#x4E8E;&#x7531;&#x5B98;&#x65B9;&#x5B9E;&#x73B0;&#x4E86;&#x3002;
 </p>
@@ -8,31 +42,31 @@
 &#x5BF9;&#x6211;&#x6765;&#x8BF4;Windows 10&#x4E0D;&#x5982;&#x610F;&#x7684;&#x5730;&#x65B9;&#x4E5F;&#x8FD8;&#x662F;&#x4E0D;&#x5C11;&#x7684;&#xFF0C;&#x8BF4;&#x662F;&#x6709;&#x53F2;&#x4EE5;&#x5F80;&#x524D;&#x517C;&#x5BB9;&#x6027;&#x6700;&#x597D;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x517C;&#x5BB9;&#x6027;&#x8FD8;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;&#x3002;&#x8FDE;&#x5B66;&#x6821;&#x56FE;&#x4E66;&#x9986;&#x6570;&#x636E;&#x5E93;&#x7684;VPN&#x7A0B;&#x5E8F;&#x65E0;&#x6CD5;&#x6267;&#x884C;&#xFF0C;&#x60F3;&#x67E5;&#x4E00;&#x4E9B;&#x8BBA;&#x6587;&#x8FD8;&#x5F00;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x3002;&#x53E6;&#x5916;&#x6211;&#x7684;&#x84DD;&#x7259;&#x9F20;&#x6807;&#x548C;&#x952E;&#x76D8;&#x5C31;&#x4E0D;&#x597D;&#x7528;&#x3002;&#x9F20;&#x6807;&#x8FDB;&#x5165;&#x8282;&#x7535;&#x6A21;&#x5F0F;&#x91CD;&#x65B0;&#x5524;&#x9192;&#x9F20;&#x6807;&#xFF0C;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x5C31;&#x65E0;&#x6CD5;&#x8FDE;&#x4E0A;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x95ED;&#x9F20;&#x6807;&#x7535;&#x6E90;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x3002;Windows 8&#x65F6;&#x4EE3;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x5343;&#x6708;&#x9A71;&#x52A8;&#x5F25;&#x8865;&#x5B98;&#x65B9;&#x9A71;&#x52A8;&#x7684;&#x4E0D;&#x8DB3;&#xFF0C;&#x8FD9;&#x4E2A;&#x7834;&#x89E3;&#x7248;&#x7684;&#x9A71;&#x52A8;&#x5E76;&#x6CA1;&#x6709;&#x5728;Win 10&#x4E0A;&#x8D77;&#x5230;&#x7834;&#x89E3;&#x4F5C;&#x7528;&#x3002;&#x9A71;&#x52A8;&#x95EE;&#x9898;&#x9020;&#x6210;&#x7684;&#x9EBB;&#x70E6;&#x662F;&#x4F1A;&#x5F15;&#x8D77;&#x6781;&#x5927;&#x7684;&#x4E0D;&#x4FBF;&#x7684;&#x3002;
 </p>
 
-<div id="outline-container-orge79de09" class="outline-2">
-<h2 id="orge79de09"><span class="section-number-2">1</span> &#x5173;&#x4E8E;&#x6FC0;&#x6D3B;&#x7684;&#x95EE;&#x9898;</h2>
+<div id="outline-container-org4cb3181" class="outline-2">
+<h2 id="org4cb3181"><span class="section-number-2">1</span> &#x5173;&#x4E8E;&#x6FC0;&#x6D3B;&#x7684;&#x95EE;&#x9898;</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Win10&#x7684;&#x6FC0;&#x6D3B;&#x7B56;&#x7565;&#xFF0C;&#x6B63;&#x7248;Win 7&#x4EE5;&#x4E0A;&#x7684;&#x76F4;&#x63A5;&#x5347;&#x7EA7;&#x540E;&#x5C31;&#x76F4;&#x63A5;&#x6FC0;&#x6D3B;&#xFF0C;&#x6FC0;&#x6D3B;&#x540E;&#x5FAE;&#x8F6F;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x8BB0;&#x5F55;&#x4E0B;&#x4F60;&#x7684;&#x786C;&#x4EF6;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x540E;&#x5168;&#x65B0;&#x5B89;&#x88C5;&#x4E4B;&#x540E;&#x8054;&#x7F51;&#x5373;&#x53EF;&#x81EA;&#x52A8;&#x6FC0;&#x6D3B;&#x3002;
 </p>
 </div>
 </div>
-<div id="outline-container-org6f1f0ec" class="outline-2">
-<h2 id="org6f1f0ec"><span class="section-number-2">2</span> &#x5B89;&#x88C5;Windows 10</h2>
+<div id="outline-container-orgc0479a0" class="outline-2">
+<h2 id="orgc0479a0"><span class="section-number-2">2</span> &#x5B89;&#x88C5;Windows 10</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Windws 10&#x521A;&#x53D1;&#x5E03;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x5C31;&#x5B89;&#x88C5;&#x4E0A;&#x4E86;&#xFF0C;&#x4F53;&#x9A8C;&#x8FC7;&#x4E4B;&#x540E;&#xFF0C;&#x89C9;&#x5F97;&#x8FD8;&#x7B97;&#x6BD4;&#x8F83;&#x6D41;&#x7545;&#xFF0C;&#x4F46;&#x662F;&#x8F6F;&#x4EF6;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x8FD8;&#x8DDF;&#x4E0D;&#x4E0A;&#x6765;&#xFF0C;&#x540E;&#x6765;&#x53C8;&#x6362;&#x4F1A;Window 2008 R2&#xFF0C;&#x4ECA;&#x5929;&#x53C8;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#xFF0C;&#x53D1;&#x73B0;Windows Insider preview&#x7248;&#x672C;&#x7684;&#x52A0;&#x5BC6;&#x7684;&#xFF0C;&#x6709;&#x7ECF;&#x8FC7;&#x4E00;&#x756A;&#x6298;&#x817E;&#x624D;&#x628A;&#x7CFB;&#x7EDF;&#x88C5;&#x4E0A;&#xFF0C;&#x4E3A;&#x6B64;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x65B9;&#x4FBF;&#x4EE5;&#x540E;&#x67E5;&#x9605;&#x3002;
 </p>
 </div>
-<div id="outline-container-org8da2e26" class="outline-3">
-<h3 id="org8da2e26"><span class="section-number-3">2.1</span> &#x4E0B;&#x8F7D;ESD&#x6587;&#x4EF6;</h3>
+<div id="outline-container-org9f01b4a" class="outline-3">
+<h3 id="org9f01b4a"><span class="section-number-3">2.1</span> &#x4E0B;&#x8F7D;ESD&#x6587;&#x4EF6;</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 &#x4E0B;&#x8F7D;Windows 10 14393 x64 pro zh-CN<a href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/feeff83d-3150-4c0d-b40a-1bbf2aea42af?P1=1468921537&amp;P2=301&amp;P3=2&amp;P4=4hX0607cFTAlcpi9r/l5LGCXZOF277+CK7UZA+lL4mo=" target="_blank" rel="noopener">&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a>
 </p>
 </div>
 </div>
-<div id="outline-container-org203d36c" class="outline-3">
-<h3 id="org203d36c"><span class="section-number-3">2.2</span> &#x89E3;&#x5BC6;ESD&#x6587;&#x4EF6;</h3>
+<div id="outline-container-org364fdc9" class="outline-3">
+<h3 id="org364fdc9"><span class="section-number-3">2.2</span> &#x89E3;&#x5BC6;ESD&#x6587;&#x4EF6;</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Windows Insider Preview&#x7248;&#x672C;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;ESD&#x6587;&#x4EF6;&#x662F;&#x7ECF;&#x8FC7;&#x52A0;&#x5BC6;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x89E3;&#x5BC6;Key&#xFF0C;Key&#x6211;&#x662F;&#x4ECE;pcbeta.com&#x627E;&#x5230;&#x7684;&#xFF0C;&#x8001;&#x7248;&#x672C;&#x7684;esd&#xFF0C;&#x8C8C;&#x4F3C;Dism++&#x53EF;&#x4EE5;&#x89E3;&#x5BC6;&#xFF0C;&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x81EA;&#x5E26;&#x4E86;&#x5404;&#x4E2A;&#x7248;&#x672C;&#x7684;Key&#x3002;
@@ -45,8 +79,8 @@ esd&#x89E3;&#x5BC6;key
 </div>
 </div>
 </div>
-<div id="outline-container-org70158be" class="outline-3">
-<h3 id="org70158be"><span class="section-number-3">2.3</span> &#x8F6C;&#x6362;&#x4E3A;ISO</h3>
+<div id="outline-container-orgb166a76" class="outline-3">
+<h3 id="orgb166a76"><span class="section-number-3">2.3</span> &#x8F6C;&#x6362;&#x4E3A;ISO</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 &#x4ECE;Windows 10&#x7684;ISO&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;4g&#xFF0C;&#x7528;UltraISO&#x5199;&#x5165;&#x5230;U&#x76D8;&#x5F53;&#x4E2D;&#xFF0C;&#x4F1A;&#x56E0;&#x4E3A;&#x5927;&#x4E8E;4g&#x7684;install.wim&#x6587;&#x4EF6;&#x65E0;&#x6CD5;&#x88C5;&#x5165;fat32&#x5206;&#x533A;&#x800C;&#x88AB;&#x820D;&#x5F03;&#xFF0C;&#x6240;&#x4EE5;&#x538B;&#x7F29;&#x6BD4;&#x66F4;&#x9AD8;&#x4E14;&#x5C0F;&#x4E8E;4g&#x7684;install.esd&#x7684;&#x6587;&#x4EF6;&#x3002;
@@ -55,8 +89,8 @@ esd&#x89E3;&#x5BC6;key
 </div>
 </div>
 </div>
-<div id="outline-container-org35d0275" class="outline-2">
-<h2 id="org35d0275"><span class="section-number-2">3</span> &#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x548C;&#x5B89;&#x88C5;&#x9A71;&#x52A8;</h2>
+<div id="outline-container-org546ce65" class="outline-2">
+<h2 id="org546ce65"><span class="section-number-2">3</span> &#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x548C;&#x5B89;&#x88C5;&#x9A71;&#x52A8;</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Windows 10&#x62E5;&#x6709;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x9A71;&#x52A8;&#x5E93;&#xFF0C;&#x8054;&#x7F51;&#x540E;&#x9009;&#x62E9;&#x66F4;&#x65B0;&#xFF0C;&#x5C31;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x4E0A;&#x76F8;&#x5E94;&#x7684;&#x9A71;&#x52A8;&#x3002;
@@ -64,8 +98,8 @@ Windows 10&#x62E5;&#x6709;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x9A71;&#x52A
 </p>
 </div>
 </div>
-<div id="outline-container-orgb1e319a" class="outline-2">
-<h2 id="orgb1e319a"><span class="section-number-2">4</span> &#x5F7B;&#x5E95;&#x5378;&#x8F7D;OneDrive</h2>
+<div id="outline-container-org2085967" class="outline-2">
+<h2 id="org2085967"><span class="section-number-2">4</span> &#x5F7B;&#x5E95;&#x5378;&#x8F7D;OneDrive</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 &#x56E0;&#x4E3A;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x8D44;&#x6599;&#x5927;&#x90E8;&#x5206;&#x662F;&#x5B58;&#x653E;&#x5728;&#x91D1;&#x5C71;&#x5FEB;&#x76D8;&#xFF0C;&#x5BB9;&#x91CF;&#x53C8;&#x5C0F;&#x53C8;&#x6162;OneDrive&#xFF0C;&#x81EA;&#x7136;&#x5C31;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x4E86;&#x3002;&#x4F46;&#x662F;Windows 10&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x4E2A;&#x8BBE;&#x5907;&#x4E0A;&#x5B89;&#x88C5;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x4E70;&#x4E86;Windows 10&#x7684;&#x624B;&#x673A;&#xFF0C;&#x5728;Win 10&#x5E94;&#x7528;&#x8FD8;&#x6BD4;&#x8F83;&#x7F3A;&#x4E4F;&#x7684;&#x65F6;&#x5019;&#xFF0C;OneDrive&#x8FD8;&#x662F;&#x4F1A;&#x6BD4;&#x8F83;&#x597D;&#x7528;&#x7684;&#x3002;
@@ -88,8 +122,8 @@ Windows 10&#x62E5;&#x6709;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x9A71;&#x52A
 </div>
 </div>
 
-<div id="outline-container-orgb1df6d5" class="outline-2">
-<h2 id="orgb1df6d5"><span class="section-number-2">5</span> &#x8BBE;&#x7F6E;&#x8F93;&#x5165;&#x6CD5;&#x9ED8;&#x8BA4;&#x82F1;&#x6587;&#x6A21;&#x5F0F;</h2>
+<div id="outline-container-org0ce8f5f" class="outline-2">
+<h2 id="org0ce8f5f"><span class="section-number-2">5</span> &#x8BBE;&#x7F6E;&#x8F93;&#x5165;&#x6CD5;&#x9ED8;&#x8BA4;&#x82F1;&#x6587;&#x6A21;&#x5F0F;</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 &#x8BBE;&#x7F6E; -&gt; &#x8BED;&#x8A00;&#x548C;&#x6587;&#x5B57; -&gt; &#x533A;&#x57DF;&#x548C;&#x8BED;&#x8A00; -&gt; &#x8BED;&#x8A00; -&gt; &#x9009;&#x9879; -&gt; &#x5FAE;&#x8F6F;&#x62FC;&#x97F3; -&gt; &#x9009;&#x9879; -&gt; &#x9009;&#x62E9;&#x8F93;&#x5165;&#x6CD5;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F; -&gt; &#x82F1;&#x6587;
@@ -97,8 +131,8 @@ Windows 10&#x62E5;&#x6709;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x9A71;&#x52A
 </div>
 </div>
 
-<div id="outline-container-org2304838" class="outline-2">
-<h2 id="org2304838"><span class="section-number-2">6</span> &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x9879;</h2>
+<div id="outline-container-org1665c09" class="outline-2">
+<h2 id="org1665c09"><span class="section-number-2">6</span> &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x9879;</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 &#x5982;&#x679C;&#x4F60;&#x7684;&#x7535;&#x8111;&#x5B89;&#x88C5;&#x4E86;Linux&#xFF0C;Windows 10&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x4FEE;&#x6539;&#x542F;&#x52A8;&#x9879;&#x76EE;&#x7684;&#x4F18;&#x5148;&#x987A;&#x5E8F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x76F4;&#x63A5;&#x8FDB;&#x5165;Windows&#x3002;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x53EA;&#x9002;&#x7528;&#x4E8E;UEFI&#x542F;&#x52A8;&#x7684;&#x60C5;&#x51B5;&#x3002;
@@ -113,12 +147,12 @@ Windows 10&#x62E5;&#x6709;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x9A71;&#x52A
 </p>
 </div>
 </div>
-<div id="outline-container-org215680b" class="outline-2">
-<h2 id="org215680b"><span class="section-number-2">7</span> Bash On Ubuntu on Windows</h2>
+<div id="outline-container-org36c391c" class="outline-2">
+<h2 id="org36c391c"><span class="section-number-2">7</span> Bash On Ubuntu on Windows</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgbcb8370" class="outline-3">
-<h3 id="orgbcb8370"><span class="section-number-3">7.1</span> &#x5B89;&#x88C5;Bash On Windows</h3>
+<div id="outline-container-orgac4cd8f" class="outline-3">
+<h3 id="orgac4cd8f"><span class="section-number-3">7.1</span> &#x5B89;&#x88C5;Bash On Windows</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 &#x6211;&#x5B89;&#x88C5;&#x7684;&#x662F;Windows 10 X64 Pro 14393&#xFF0C;&#x4ECE;14316&#x7248;&#x672C;&#x7684;Windows 10&#x5F00;&#x59CB;&#x589E;&#x52A0;&#x4E86;Windows SubSystem for Linux(Beta)&#xFF0C;&#x9002;&#x5408;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x733F;&#xFF0C;&#x4E0D;&#x7528;&#x5728;&#x53E6;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E4B;&#x95F4;&#x6765;&#x56DE;&#x5207;&#x6362;&#x4E86;&#x3002;Bash&#x7EC4;&#x4EF6;&#x9ED8;&#x8BA4;&#x662F;&#x5173;&#x95ED;&#x7684;&#xFF0C;&#x542F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5148;&#x9009;&#x4E2D;&#x201C;&#x5F00;&#x59CB;-&gt;&#x8BBE;&#x7F6E;-&gt;&#x66F4;&#x65B0;&#x548C;&#x5B89;&#x5168;-&gt;&#x9488;&#x5BF9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;-&gt;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x6A21;&#x5F0F;&#x201D;&#xFF0C;&#x7136;&#x540E;&#x6309; Win+X,F &#x6253;&#x5F00;&#x201C;&#x7A0B;&#x5E8F;&#x548C;&#x529F;&#x80FD;&#x201D;&#xFF0C;&#x70B9;&#x51FB;&#x5DE6;&#x4FA7;&#x7684;&#x201C;&#x542F;&#x7528;&#x6216;&#x5173;&#x95ED;Windows&#x529F;&#x80FD;&#x201D;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x5230;&#x5E76;&#x52FE;&#x9009; Windows Subsystem for Linux (Beta) &#xFF0C;&#x786E;&#x5B9A;&#x540E;&#x4F1A;&#x63D0;&#x793A;&#x91CD;&#x542F;&#x542F;&#x52A8;&#x7CFB;&#x7EDF;&#x3002;
@@ -132,8 +166,8 @@ Windows 10&#x62E5;&#x6709;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x9A71;&#x52A
 </div>
 </div>
 </div>
-<div id="outline-container-org53bb288" class="outline-3">
-<h3 id="org53bb288"><span class="section-number-3">7.2</span> &#x66F4;&#x65B0;Ubuntu</h3>
+<div id="outline-container-orga658129" class="outline-3">
+<h3 id="orga658129"><span class="section-number-3">7.2</span> &#x66F4;&#x65B0;Ubuntu</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 &#x6211;&#x6BD4;&#x8F83;&#x5173;&#x5FC3;&#x7684;&#x662F;emacs&#x662F;&#x5426;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#xFF0C;Ubuntu&#x5B50;&#x7CFB;&#x7EDF;&#x7684;14.04.4 LTS&#xFF0C;&#x6E90;&#x91CC;&#x7684;emacs&#x76F8;&#x5BF9;&#x6BD4;&#x8F83;&#x65E7;&#xFF0C;&#x4E0D;&#x80FD;&#x652F;&#x6301;&#x6240;&#x6709;&#x7684;spacemas&#x7684;&#x7279;&#x6027;&#x3002;&#x60F3;&#x7F16;&#x8BD1;&#x65B0;&#x7248;&#x672C;&#x7684;emacs&#xFF0C;&#x63D0;&#x793A;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;
@@ -153,8 +187,8 @@ Segmentation fault      (core dumped) ./temacs &#x2013;batch &#x2013;load loadup
 </div>
 </div>
 
-<div id="outline-container-org3029500" class="outline-3">
-<h3 id="org3029500"><span class="section-number-3">7.3</span> &#x5347;&#x7EA7;&#x5230;ubuntu 16.04</h3>
+<div id="outline-container-org9a0056c" class="outline-3">
+<h3 id="org9a0056c"><span class="section-number-3">7.3</span> &#x5347;&#x7EA7;&#x5230;ubuntu 16.04</h3>
 <div class="outline-text-3" id="text-7-3">
 <p>
 &#x6211;&#x81EA;&#x5DF1;&#x7528;&#x5F97;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x662F;emacs&#xFF0C;ubuntu 14.04&#x9ED8;&#x8BA4;&#x7684;emacs&#x662F;24.3&#xFF0C;spacemacs&#x5B98;&#x65B9;&#x76EE;&#x524D;&#x7684;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x4E0D;&#x652F;&#x6301;&#x4E86;&#xFF0C;&#x5347;&#x7EA7;&#x5230;Ubuntu 16.04&#x53EF;&#x4EE5;&#x5F7B;&#x5E95;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x3002;
@@ -170,8 +204,8 @@ Segmentation fault      (core dumped) ./temacs &#x2013;batch &#x2013;load loadup
 </div>
 </div>
 </div>
-<div id="outline-container-org01957e4" class="outline-3">
-<h3 id="org01957e4"><span class="section-number-3">7.4</span> &#x5B89;&#x88C5;Emacs</h3>
+<div id="outline-container-orgeae1c3b" class="outline-3">
+<h3 id="orgeae1c3b"><span class="section-number-3">7.4</span> &#x5B89;&#x88C5;Emacs</h3>
 <div class="outline-text-3" id="text-7-4">
 <p>
 Ubuntu 16.04&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#x5F53;&#x4E2D;&#x7684;&#x662F;Emacs 24.5&#xFF0C;&#x4E0D;&#x4F1A;&#x518D;&#x51FA;&#x73B0;<a href="https://github.com/syl20bnr/spacemacs/issues/4443" target="_blank" rel="noopener">helm-flx do not support emacs-24,3</a>&#x7684;&#x95EE;&#x9898;&#x3002;&#x4F46;&#x901A;&#x8FC7;Xserver&#x542F;&#x52A8;&#x65F6;&#x53D1;&#x751F;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;
@@ -187,8 +221,8 @@ Ubuntu 16.04&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#x5F53;&#x4E2D;&#x7684;&#x662F;Emac
 </div>
 </div>
 </div>
-<div id="outline-container-org6abb8e8" class="outline-3">
-<h3 id="org6abb8e8"><span class="section-number-3">7.5</span> &#x5B89;&#x88C5;Spacemacs</h3>
+<div id="outline-container-org0066901" class="outline-3">
+<h3 id="org0066901"><span class="section-number-3">7.5</span> &#x5B89;&#x88C5;Spacemacs</h3>
 <div class="outline-text-3" id="text-7-5">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/syl20bnr/spacemacs ~/.emacs.d</span><br><span class="line">emacs --insecure</span><br></pre></td></tr></table></figure>
@@ -201,8 +235,8 @@ Ubuntu 16.04&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#x5F53;&#x4E2D;&#x7684;&#x662F;Emac
 </div>
 </div>
 </div>
-<div id="outline-container-org38b2f74" class="outline-3">
-<h3 id="org38b2f74"><span class="section-number-3">7.6</span> &#x5B89;&#x88C5;&#x641C;&#x72D7;&#x8F93;&#x5165;&#x6CD5;</h3>
+<div id="outline-container-org9e3e7dc" class="outline-3">
+<h3 id="org9e3e7dc"><span class="section-number-3">7.6</span> &#x5B89;&#x88C5;&#x641C;&#x72D7;&#x8F93;&#x5165;&#x6CD5;</h3>
 <div class="outline-text-3" id="text-7-6">
 <p>
 &#x5C1D;&#x8BD5;&#x8FD0;&#x884C;fcitx -d&#xFF0C;&#x63D0;&#x793A;&#x51FA;&#x9519;X11&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4EE5;&#x4E3A;&#x662F;&#x6CA1;&#x6709;&#x5B89;&#x88C5;xserver&#xFF0C;&#x5B89;&#x88C5;xorg&#x540E;&#xFF0C;&#x9519;&#x8BEF;&#x4F9D;&#x65E7;&#xFF0C;&#x6682;&#x65F6;&#x653E;&#x5F03;&#x5B89;&#x88C5;&#x8F93;&#x5165;&#x6CD5;&#x3002;
@@ -229,12 +263,12 @@ Sublime Text 3&#x65E0;&#x6CD5;&#x6253;&#x5F00;&#x8DEF;&#x5F84;&#x5E26;&#x7A7A;&#
 </div>
 </div>
 </div>
-<div id="outline-container-org763142b" class="outline-3">
-<h3 id="org763142b"><span class="section-number-3">7.7</span> &#x76EE;&#x524D;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</h3>
+<div id="outline-container-org022c0dc" class="outline-3">
+<h3 id="org022c0dc"><span class="section-number-3">7.7</span> &#x76EE;&#x524D;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</h3>
 <div class="outline-text-3" id="text-7-7">
 </div>
-<div id="outline-container-org2c6cc64" class="outline-4">
-<h4 id="org2c6cc64"><span class="section-number-4">7.7.1</span> &#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;cli&#x7684;&#x7A0B;&#x5E8F;</h4>
+<div id="outline-container-org7517091" class="outline-4">
+<h4 id="org7517091"><span class="section-number-4">7.7.1</span> &#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;cli&#x7684;&#x7A0B;&#x5E8F;</h4>
 <div class="outline-text-4" id="text-7-7-1">
 <p>
 nmap,mysql
@@ -244,8 +278,8 @@ nmap,mysql
 </div>
 </div>
 </div>
-<div id="outline-container-orgc075f93" class="outline-2">
-<h2 id="orgc075f93"><span class="section-number-2">8</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
+<div id="outline-container-org523df4f" class="outline-2">
+<h2 id="org523df4f"><span class="section-number-2">8</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
 <div class="outline-text-2" id="text-8">
 <ol class="org-ol">
 <li><a href="https://msdn.microsoft.com/en-us/commandline/wsl/about" target="_blank" rel="noopener">Bash on Ubuntu on Windows</a></li>
@@ -258,7 +292,7 @@ nmap,mysql
 </div>
 </div>
 <div id="postamble" class="status">
-Last Updated 2018-10-14 &#x65E5; 09:06.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
+Last Updated 2018-10-14 &#x65E5; 23:38.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
 </div>
 
       <script>
