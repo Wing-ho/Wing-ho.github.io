@@ -1,328 +1,0 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="description" content="Wing's Blog"><title>玩转Window 10 Bash | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">玩转Window 10 Bash</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">玩转Window 10 Bash</h1><div class="post-meta">Jul 17, 2016<span> | </span><span class="category"><a href="/categories/Windows/">Windows</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2016/07/17/玩转Window 10 Bash/" href="/2016/07/17/玩转Window 10 Bash/#disqus_thread"></a><div class="post-content">&#xFEFF;<div id="content">
-
-<p>
-&#x968F;&#x7740;Windows 10&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x7A81;&#x7136;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5438;&#x5F15;&#x6211;&#x7684;&#x7279;&#x6027;Bash On Ubuntu On Windows&#xFF0C;&#x6211;&#x8FEB;&#x4E0D;&#x53CA;&#x5F85;&#x5730;&#x6362;&#x56DE;&#x4E86;Windows 10&#xFF0C;&#x597D;&#x597D;&#x4F53;&#x9A8C;&#x4E86;&#x4E00;&#x628A;&#x8FD9;&#x4E2A;&#x4EE4;&#x4EBA;&#x6FC0;&#x52A8;&#x7684;&#x529F;&#x80FD;&#x3002;&#x4F46;&#x662F;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x8FD8;&#x662F;&#x4E0D;&#x5C11;&#x7684;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;Bash&#x80FD;&#x8DD1;&#x7684;&#x7A0B;&#x5E8F;&#x662F;&#x5341;&#x5206;&#x6709;&#x9650;&#x7684;&#xFF0C;&#x5C31;&#x8DDF;&#x901A;&#x8FC7;Wine&#x8DD1;&#x5728;Linux&#x7684;&#x5E94;&#x7528;&#x4E00;&#x6837;&#x662F;&#x5341;&#x5206;&#x6709;&#x9650;&#x7684;&#x3002;&#x6211;&#x5E0C;&#x671B;&#x8FD9;&#x6709;&#x9650;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x7684;&#x865A;&#x62DF;&#x673A;&#x4E0D;&#x7528;&#x518D;&#x600E;&#x4E48;&#x5F00;&#x673A;&#x4E86;&#xFF0C;&#x76EE;&#x524D;Bash&#x7684;&#x5E94;&#x7528;&#x6211;&#x8FD8;&#x5728;&#x63A2;&#x7D22;&#x4E2D;&#x3002;Win 10&#x8FD8;&#x6709;&#x6BD4;&#x8F83;&#x5438;&#x5F15;&#x6211;&#x7684;&#x7684;&#x865A;&#x62DF;&#x684C;&#x9762;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x53EF;&#x4EE5;&#x6781;&#x5927;&#x5730;&#x63D0;&#x9AD8;&#x5DE5;&#x4F5C;&#x6548;&#x7387;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5728;Linux&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x5F88;&#x4E45;&#x4E86;&#xFF0C;&#x4EE5;&#x524D;&#x603B;&#x60F3;&#x901A;&#x8FC7;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x684C;&#x9762;&#x5B9E;&#x73B0;&#x7C7B;&#x578B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x73B0;&#x5728;&#x7EC8;&#x4E8E;&#x7531;&#x5B98;&#x65B9;&#x5B9E;&#x73B0;&#x4E86;&#x3002;
-</p>
-
-<p>
-&#x5BF9;&#x6211;&#x6765;&#x8BF4;Windows 10&#x4E0D;&#x5982;&#x610F;&#x7684;&#x5730;&#x65B9;&#x4E5F;&#x8FD8;&#x662F;&#x4E0D;&#x5C11;&#x7684;&#xFF0C;&#x8BF4;&#x662F;&#x6709;&#x53F2;&#x4EE5;&#x5F80;&#x524D;&#x517C;&#x5BB9;&#x6027;&#x6700;&#x597D;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x517C;&#x5BB9;&#x6027;&#x8FD8;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;&#x3002;&#x8FDE;&#x5B66;&#x6821;&#x56FE;&#x4E66;&#x9986;&#x6570;&#x636E;&#x5E93;&#x7684;VPN&#x7A0B;&#x5E8F;&#x65E0;&#x6CD5;&#x6267;&#x884C;&#xFF0C;&#x60F3;&#x67E5;&#x4E00;&#x4E9B;&#x8BBA;&#x6587;&#x8FD8;&#x5F00;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x3002;&#x53E6;&#x5916;&#x6211;&#x7684;&#x84DD;&#x7259;&#x9F20;&#x6807;&#x548C;&#x952E;&#x76D8;&#x5C31;&#x4E0D;&#x597D;&#x7528;&#x3002;&#x9F20;&#x6807;&#x8FDB;&#x5165;&#x8282;&#x7535;&#x6A21;&#x5F0F;&#x91CD;&#x65B0;&#x5524;&#x9192;&#x9F20;&#x6807;&#xFF0C;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x5C31;&#x65E0;&#x6CD5;&#x8FDE;&#x4E0A;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x95ED;&#x9F20;&#x6807;&#x7535;&#x6E90;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x3002;Windows 8&#x65F6;&#x4EE3;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x5343;&#x6708;&#x9A71;&#x52A8;&#x5F25;&#x8865;&#x5B98;&#x65B9;&#x9A71;&#x52A8;&#x7684;&#x4E0D;&#x8DB3;&#xFF0C;&#x8FD9;&#x4E2A;&#x7834;&#x89E3;&#x7248;&#x7684;&#x9A71;&#x52A8;&#x5E76;&#x6CA1;&#x6709;&#x5728;Win 10&#x4E0A;&#x8D77;&#x5230;&#x7834;&#x89E3;&#x4F5C;&#x7528;&#x3002;&#x9A71;&#x52A8;&#x95EE;&#x9898;&#x9020;&#x6210;&#x7684;&#x9EBB;&#x70E6;&#x662F;&#x4F1A;&#x5F15;&#x8D77;&#x6781;&#x5927;&#x7684;&#x4E0D;&#x4FBF;&#x7684;&#x3002;
-</p>
-
-<div id="outline-container-org078e295" class="outline-2">
-<h2 id="org078e295"><span class="section-number-2">1</span> &#x5173;&#x4E8E;&#x6FC0;&#x6D3B;&#x7684;&#x95EE;&#x9898;</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-Win10&#x7684;&#x6FC0;&#x6D3B;&#x7B56;&#x7565;&#xFF0C;&#x6B63;&#x7248;Win 7&#x4EE5;&#x4E0A;&#x7684;&#x76F4;&#x63A5;&#x5347;&#x7EA7;&#x540E;&#x5C31;&#x76F4;&#x63A5;&#x6FC0;&#x6D3B;&#xFF0C;&#x6FC0;&#x6D3B;&#x540E;&#x5FAE;&#x8F6F;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x8BB0;&#x5F55;&#x4E0B;&#x4F60;&#x7684;&#x786C;&#x4EF6;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x540E;&#x5168;&#x65B0;&#x5B89;&#x88C5;&#x4E4B;&#x540E;&#x8054;&#x7F51;&#x5373;&#x53EF;&#x81EA;&#x52A8;&#x6FC0;&#x6D3B;&#x3002;
-</p>
-</div>
-</div>
-<div id="outline-container-orgbfdc072" class="outline-2">
-<h2 id="orgbfdc072"><span class="section-number-2">2</span> &#x5B89;&#x88C5;Windows 10</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-Windws 10&#x521A;&#x53D1;&#x5E03;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x5C31;&#x5B89;&#x88C5;&#x4E0A;&#x4E86;&#xFF0C;&#x4F53;&#x9A8C;&#x8FC7;&#x4E4B;&#x540E;&#xFF0C;&#x89C9;&#x5F97;&#x8FD8;&#x7B97;&#x6BD4;&#x8F83;&#x6D41;&#x7545;&#xFF0C;&#x4F46;&#x662F;&#x8F6F;&#x4EF6;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x8FD8;&#x8DDF;&#x4E0D;&#x4E0A;&#x6765;&#xFF0C;&#x540E;&#x6765;&#x53C8;&#x6362;&#x4F1A;Window 2008 R2&#xFF0C;&#x4ECA;&#x5929;&#x53C8;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#xFF0C;&#x53D1;&#x73B0;Windows Insider preview&#x7248;&#x672C;&#x7684;&#x52A0;&#x5BC6;&#x7684;&#xFF0C;&#x6709;&#x7ECF;&#x8FC7;&#x4E00;&#x756A;&#x6298;&#x817E;&#x624D;&#x628A;&#x7CFB;&#x7EDF;&#x88C5;&#x4E0A;&#xFF0C;&#x4E3A;&#x6B64;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x65B9;&#x4FBF;&#x4EE5;&#x540E;&#x67E5;&#x9605;&#x3002;
-</p>
-</div>
-<div id="outline-container-org664588d" class="outline-3">
-<h3 id="org664588d"><span class="section-number-3">2.1</span> &#x4E0B;&#x8F7D;ESD&#x6587;&#x4EF6;</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-&#x4E0B;&#x8F7D;Windows 10 14393 x64 pro zh-CN<a href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/feeff83d-3150-4c0d-b40a-1bbf2aea42af?P1=1468921537&amp;P2=301&amp;P3=2&amp;P4=4hX0607cFTAlcpi9r/l5LGCXZOF277+CK7UZA+lL4mo=" target="_blank" rel="noopener">&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a>
-</p>
-</div>
-</div>
-<div id="outline-container-org64ad0b1" class="outline-3">
-<h3 id="org64ad0b1"><span class="section-number-3">2.2</span> &#x89E3;&#x5BC6;ESD&#x6587;&#x4EF6;</h3>
-<div class="outline-text-3" id="text-2-2">
-<p>
-Windows Insider Preview&#x7248;&#x672C;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;ESD&#x6587;&#x4EF6;&#x662F;&#x7ECF;&#x8FC7;&#x52A0;&#x5BC6;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x89E3;&#x5BC6;Key&#xFF0C;Key&#x6211;&#x662F;&#x4ECE;pcbeta.com&#x627E;&#x5230;&#x7684;&#xFF0C;&#x8001;&#x7248;&#x672C;&#x7684;esd&#xFF0C;&#x8C8C;&#x4F3C;Dism++&#x53EF;&#x4EE5;&#x89E3;&#x5BC6;&#xFF0C;&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x81EA;&#x5E26;&#x4E86;&#x5404;&#x4E2A;&#x7248;&#x672C;&#x7684;Key&#x3002;
-&#x4E0B;&#x8F7D;Dism++
-&#x5B98;&#x65B9;&#x5730;&#x5740;&#xFF1A;<a href="https://www.chuyu.me/" target="_blank" rel="noopener">https://www.chuyu.me/</a>
-esd&#x89E3;&#x5BC6;key
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">BwIAAACkAABSU0EyAAQAAAEAAQDpBHbDTC1rTdcSHhp58n1fBY4EaGo6ez4RYAu/RGiICloh3lm4vXz6SgEAXdQEtv0HzXXpORvkm+uWzmfl02yXDSYEvmDVw9kIn0u9pxdQiwo18ezHK55zbQV+KzisSJz97ZO9Z65i+EsoUdi7clqHDcJKEuudF0BDWt16XBTdntVBt7OMhYv549C1wRjASLIJVmWmeXz1d6fw03TWQoWNUud/UY3YGEzGcPPEnJT/Rhpp2OcXYYcKbsLwVyRK7tbF7MALxBrqU440kXjBGStcfTPYYwXg/C42RSdtZcjwYl1bbzcckpB3lkunMG741JK4MR238Dl+Md6EOt1HKji9gS7cQl5RPPv/oKCcWL6PkViWHhzvwexLM1cpLcXAAum7gPYegT2PrHZUav8yEtuGTPUi4+cHHaiXStujvZ79jXV9HeJ0NEfAcie8d+<span class="number">4</span>Ctph34Skj9arHA649yhat+q6iqmNWE0uTyfPNZ9tr42hLQwITCBe+jEdOYNqSRdutNDI7dGS2uG6k7UQUSLbvZ5fHI/YULMtoVI+I/kESboMj+r+ENBDslckFxS4ubUsjJcLci1ig8kZg909tlWX+wQeuAbQCzuWJbhXPJf2IcZ2o7kfPfbmYFObPVG1FgAfEo+nKSl8Pqw/<span class="number">7</span>hf6t8BzWdquWvgCuqoWMJdRqL3N5Utrm6NdS0B5sJOGqqxhEXI6O02pfO/Kmt5a+JtAA7Gv5WzYtmcdNIZX5mXqqzsCoN5Vjv6jU/q3qDsRQkXw4YbypJSQ=</span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-<div id="outline-container-org6cc5d15" class="outline-3">
-<h3 id="org6cc5d15"><span class="section-number-3">2.3</span> &#x8F6C;&#x6362;&#x4E3A;ISO</h3>
-<div class="outline-text-3" id="text-2-3">
-<p>
-&#x4ECE;Windows 10&#x7684;ISO&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;4g&#xFF0C;&#x7528;UltraISO&#x5199;&#x5165;&#x5230;U&#x76D8;&#x5F53;&#x4E2D;&#xFF0C;&#x4F1A;&#x56E0;&#x4E3A;&#x5927;&#x4E8E;4g&#x7684;install.wim&#x6587;&#x4EF6;&#x65E0;&#x6CD5;&#x88C5;&#x5165;fat32&#x5206;&#x533A;&#x800C;&#x88AB;&#x820D;&#x5F03;&#xFF0C;&#x6240;&#x4EE5;&#x538B;&#x7F29;&#x6BD4;&#x66F4;&#x9AD8;&#x4E14;&#x5C0F;&#x4E8E;4g&#x7684;install.esd&#x7684;&#x6587;&#x4EF6;&#x3002;
-&#x6253;&#x5F00;Dism++&#xFF0C;&#x6587;&#x4EF6; -&gt; (ESD &#x2013;&gt; ISO) -&gt; &#x9009;&#x62E9;&#x4F60;&#x5DF2;&#x7ECF;&#x89E3;&#x5BC6;&#x7684;ESD&#x6587;&#x4EF6; -&gt; &#x9009;&#x62E9;ISO&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF08; &#x9ED8;&#x8BA4;&#x7C7B;&#x578B;ISO&#x955C;&#x50CF;&#x6587;&#x4EF6;-&#x9AD8;&#x538B;&#x7248;&#xFF09;-&gt; &#x5B8C;&#x6210;&#x3002;
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org98f0f8e" class="outline-2">
-<h2 id="org98f0f8e"><span class="section-number-2">3</span> &#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x548C;&#x5B89;&#x88C5;&#x9A71;&#x52A8;</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-Windows 10&#x62E5;&#x6709;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x9A71;&#x52A8;&#x5E93;&#xFF0C;&#x8054;&#x7F51;&#x540E;&#x9009;&#x62E9;&#x66F4;&#x65B0;&#xFF0C;&#x5C31;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x4E0A;&#x76F8;&#x5E94;&#x7684;&#x9A71;&#x52A8;&#x3002;
-&#x5F00;&#x59CB;&#x2013;&gt;&#x8BBE;&#x7F6E;&#x2013;&gt;&#x66F4;&#x65B0;&#x548C;&#x5B89;&#x5168;&#x2013;&gt;Windows&#x66F4;&#x65B0;&#x2013;&gt;&#x66F4;&#x65B0;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x4E00;&#x822C;&#x7684;&#x673A;&#x5668;&#x9A71;&#x52A8;&#x4E5F;&#x5C31;&#x5B89;&#x88C5;&#x597D;&#x4E86;&#x3002;&#x6211;&#x7684;&#x7B14;&#x8BB0;&#x672C;HP Pro 5130m&#x5E26;&#x4E86;&#x9632;&#x6B62;&#x6389;&#x843D;&#x7684;&#x4F20;&#x611F;&#x5668;&#xFF0C;&#x9700;&#x8981;&#x53E6;&#x5916;&#x5B89;&#x88C5;&#x9A71;&#x52A8;&#xFF0C;&#x4E0D;&#x8FC7;&#x6211;&#x5DF2;&#x7ECF;&#x66F4;&#x6362;&#x4E86;SSD&#xFF0C;&#x8FD9;&#x4E2A;&#x4F20;&#x611F;&#x5668;&#x65E9;&#x5C31;&#x6CA1;&#x6709;&#x7528;&#x4E86;&#x3002;
-</p>
-</div>
-</div>
-<div id="outline-container-org6f7eb3d" class="outline-2">
-<h2 id="org6f7eb3d"><span class="section-number-2">4</span> &#x5F7B;&#x5E95;&#x5378;&#x8F7D;OneDrive</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-&#x56E0;&#x4E3A;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x8D44;&#x6599;&#x5927;&#x90E8;&#x5206;&#x662F;&#x5B58;&#x653E;&#x5728;&#x91D1;&#x5C71;&#x5FEB;&#x76D8;&#xFF0C;&#x5BB9;&#x91CF;&#x53C8;&#x5C0F;&#x53C8;&#x6162;OneDrive&#xFF0C;&#x81EA;&#x7136;&#x5C31;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x4E86;&#x3002;&#x4F46;&#x662F;Windows 10&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x4E2A;&#x8BBE;&#x5907;&#x4E0A;&#x5B89;&#x88C5;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x4E70;&#x4E86;Windows 10&#x7684;&#x624B;&#x673A;&#xFF0C;&#x5728;Win 10&#x5E94;&#x7528;&#x8FD8;&#x6BD4;&#x8F83;&#x7F3A;&#x4E4F;&#x7684;&#x65F6;&#x5019;&#xFF0C;OneDrive&#x8FD8;&#x662F;&#x4F1A;&#x6BD4;&#x8F83;&#x597D;&#x7528;&#x7684;&#x3002;
-&#x627E;&#x5230;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;C:\Users\&#x7528;&#x6237;&#x540D;\AppData\Local\Microsoft\OneDrive\17.XXX\
-&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x5373;&#x53EF;&#x5378;&#x8F7D;&#x3002;
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">OneDriveSetup.exe /uninstall</span><br></pre></td></tr></table></figure>
-</div>
-<p>
-&#x5220;&#x9664;&#x5BFC;&#x822A;&#x680F;&#x4E2D;&#x7684;onedrive&#x3002;
-&#x5378;&#x8F7D;onedrive&#x662F;&#x4E0D;&#x80FD;&#x6E05;&#x9664;&#x5BFC;&#x822A;&#x680F;&#x91CC;&#x9762;&#x7684;onedrive&#xFF0C;&#x8FDB;&#x5165;&#x6CE8;&#x518C;&#x8868;&#xFF1A;
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">HKEY_CLASSES_ROOT\CLSID\{<span class="number">018</span>D5C66-<span class="number">4533</span>-<span class="number">4307</span>-<span class="number">9</span>B53-<span class="number">224</span>DE2ED1FE6}\ShellFolder</span><br></pre></td></tr></table></figure>
-</div>
-<p>
-&#x628A;&#x53F3;&#x4FA7;&#x7684;Attributes&#x5C5E;&#x6027;&#x7684;&#x503C; f080004d&#x4FEE;&#x6539;&#x4E3A;f090004d&#x3002;&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x91CD;&#x542F;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;&#x540E;&#x5C31;&#x751F;&#x6548;&#x4E86;&#x3002;
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge2dbd19" class="outline-2">
-<h2 id="orge2dbd19"><span class="section-number-2">5</span> &#x8BBE;&#x7F6E;&#x8F93;&#x5165;&#x6CD5;&#x9ED8;&#x8BA4;&#x82F1;&#x6587;&#x6A21;&#x5F0F;</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-&#x8BBE;&#x7F6E; -&gt; &#x8BED;&#x8A00;&#x548C;&#x6587;&#x5B57; -&gt; &#x533A;&#x57DF;&#x548C;&#x8BED;&#x8A00; -&gt; &#x8BED;&#x8A00; -&gt; &#x9009;&#x9879; -&gt; &#x5FAE;&#x8F6F;&#x62FC;&#x97F3; -&gt; &#x9009;&#x9879; -&gt; &#x9009;&#x62E9;&#x8F93;&#x5165;&#x6CD5;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F; -&gt; &#x82F1;&#x6587;
-</p>
-</div>
-</div>
-
-<div id="outline-container-org26d8d53" class="outline-2">
-<h2 id="org26d8d53"><span class="section-number-2">6</span> &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x9879;</h2>
-<div class="outline-text-2" id="text-6">
-<p>
-&#x5982;&#x679C;&#x4F60;&#x7684;&#x7535;&#x8111;&#x5B89;&#x88C5;&#x4E86;Linux&#xFF0C;Windows 10&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x4FEE;&#x6539;&#x542F;&#x52A8;&#x9879;&#x76EE;&#x7684;&#x4F18;&#x5148;&#x987A;&#x5E8F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x76F4;&#x63A5;&#x8FDB;&#x5165;Windows&#x3002;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x53EA;&#x9002;&#x7528;&#x4E8E;UEFI&#x542F;&#x52A8;&#x7684;&#x60C5;&#x51B5;&#x3002;
-</p>
-
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4E2D;&#x786C;&#x76D8;&#x6216;&#x5206;&#x533A;&#x7684; GUID &#x6807;&#x8BC6;</span></span><br><span class="line">bcdedit /enum all</span><br><span class="line">bcdedit /enum firmware</span><br><span class="line"><span class="comment">#&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x9879;</span></span><br><span class="line">bcdedit /<span class="built_in">set</span> {fwbootmgr} BOOTSEQUENCE {<span class="number">67</span>b01161-<span class="number">4</span>b5f-<span class="number">11</span>e6-<span class="number">8</span>f58-<span class="number">806</span>e6f6e6963}</span><br><span class="line"><span class="comment">#&#x8BBE;&#x7F6E;&#x542F;&#x52A8;&#x83DC;&#x5355;&#x9879;&#x987A;&#x5E8F; &#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x9694;</span></span><br><span class="line">bcdedit /<span class="built_in">set</span> {fwbootmgr} DISPLAYORDER {<span class="number">67</span>b01161-<span class="number">4</span>b5f-<span class="number">11</span>e6-<span class="number">8</span>f58-<span class="number">806</span>e6f6e6963} {bootmgr}</span><br><span class="line"><span class="comment">#&#x5220;&#x9664;&#x542F;&#x52A8;&#x9879;</span></span><br><span class="line">bcdedit /delete {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} /f</span><br><span class="line"><span class="comment">#win 10 &#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x6302;&#x8F7D;efi&#x5206;&#x533A;&#xFF0C;&#x65E0;&#x6548;</span></span><br><span class="line">mountvol z: /s</span><br></pre></td></tr></table></figure>
-</div>
-
-<p>
-&#x9664;&#x4E86;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x9879;&#x76EE;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x542F;&#x52A8;&#x9879;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x5426;&#x5219;&#x5F00;&#x673A;&#x7528;&#x5FEB;&#x6377;&#x952E;&#x8C03;&#x51FA;&#x83DC;&#x5355;&#x4E4B;&#x540E;&#xFF0C;&#x6392;&#x5728;&#x7B2C;&#x4E00;&#x7684;&#x9879;&#x76EE;&#x4F1A;&#x518D;&#x6B21;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x9879;&#x76EE;&#x3002;
-</p>
-</div>
-</div>
-<div id="outline-container-org6e7ea6f" class="outline-2">
-<h2 id="org6e7ea6f"><span class="section-number-2">7</span> Bash On Ubuntu on Windows</h2>
-<div class="outline-text-2" id="text-7">
-</div>
-<div id="outline-container-orgbd93d61" class="outline-3">
-<h3 id="orgbd93d61"><span class="section-number-3">7.1</span> &#x5B89;&#x88C5;Bash On Windows</h3>
-<div class="outline-text-3" id="text-7-1">
-<p>
-&#x6211;&#x5B89;&#x88C5;&#x7684;&#x662F;Windows 10 X64 Pro 14393&#xFF0C;&#x4ECE;14316&#x7248;&#x672C;&#x7684;Windows 10&#x5F00;&#x59CB;&#x589E;&#x52A0;&#x4E86;Windows SubSystem for Linux(Beta)&#xFF0C;&#x9002;&#x5408;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x733F;&#xFF0C;&#x4E0D;&#x7528;&#x5728;&#x53E6;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E4B;&#x95F4;&#x6765;&#x56DE;&#x5207;&#x6362;&#x4E86;&#x3002;Bash&#x7EC4;&#x4EF6;&#x9ED8;&#x8BA4;&#x662F;&#x5173;&#x95ED;&#x7684;&#xFF0C;&#x542F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5148;&#x9009;&#x4E2D;&#x201C;&#x5F00;&#x59CB;-&gt;&#x8BBE;&#x7F6E;-&gt;&#x66F4;&#x65B0;&#x548C;&#x5B89;&#x5168;-&gt;&#x9488;&#x5BF9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;-&gt;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x6A21;&#x5F0F;&#x201D;&#xFF0C;&#x7136;&#x540E;&#x6309; Win+X,F &#x6253;&#x5F00;&#x201C;&#x7A0B;&#x5E8F;&#x548C;&#x529F;&#x80FD;&#x201D;&#xFF0C;&#x70B9;&#x51FB;&#x5DE6;&#x4FA7;&#x7684;&#x201C;&#x542F;&#x7528;&#x6216;&#x5173;&#x95ED;Windows&#x529F;&#x80FD;&#x201D;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x5230;&#x5E76;&#x52FE;&#x9009; Windows Subsystem for Linux (Beta) &#xFF0C;&#x786E;&#x5B9A;&#x540E;&#x4F1A;&#x63D0;&#x793A;&#x91CD;&#x542F;&#x542F;&#x52A8;&#x7CFB;&#x7EDF;&#x3002;
-</p>
-
-<p>
-&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6309; Win+X,A &#x6253;&#x5F00;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#xFF08;&#x6216;&#x8005;&#x6309; Win+R &#x6253;&#x5F00;&#x8FD0;&#x884C;&#x5BF9;&#x8BDD;&#x6846;&#xFF09;&#xFF0C;&#x8F93;&#x5165; bash &#x56DE;&#x8F66;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x4F1A;&#x4ECE;&#x7F51;&#x4E0A;&#x4E0B;&#x8F7D;Ubuntu linux&#x7EC4;&#x4EF6;&#xFF0C;&#x6309;&#x63D0;&#x793A;&#x8F93;&#x5165;y&#x3002;
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#&#x5F7B;&#x5E95;&#x5220;&#x9664;</span></span><br><span class="line">lxrun /uninstall /full</span><br><span class="line"><span class="comment">#&#x91CD;&#x65B0;&#x5B89;&#x88C5;</span></span><br><span class="line">lxrun /install</span><br><span class="line"><span class="comment">#&#x5B89;&#x88C5;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x8BBE;&#x7F6E;root&#x4E3A;&#x9ED8;&#x8BA4;&#x7528;&#x6237;&#xFF0C;&#x9ED8;&#x8BA4;root&#x6CA1;&#x6709;&#x5BC6;&#x7801;</span></span><br><span class="line">lxrun /install /y</span><br><span class="line"><span class="comment">#&#x5982;&#x679C;&#x60F3;&#x6DFB;&#x52A0;&#x7528;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;adduser&#x6DFB;&#x52A0;&#x7528;&#x6237;&#xFF0C;&#x4E0D;&#x5FC5;&#x91CD;&#x88C5;</span></span><br><span class="line">adduser</span><br><span class="line"><span class="comment">#&#x8BBE;&#x7F6E;bash&#x9ED8;&#x8BA4;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5F53;&#x4F60;&#x521D;&#x6B21;&#x5B89;&#x88C5;&#x65F6;&#x5FD8;&#x8BB0;&#x6DFB;&#x52A0;&#x7528;&#x6237;&#xFF0C;&#x6216;&#x8005;&#x5FD8;&#x8BB0;&#x5BC6;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x7279;&#x522B;&#x6709;&#x7528;</span></span><br><span class="line">lxrun /setdefaultuser xxx</span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-<div id="outline-container-orga037b38" class="outline-3">
-<h3 id="orga037b38"><span class="section-number-3">7.2</span> &#x66F4;&#x65B0;Ubuntu</h3>
-<div class="outline-text-3" id="text-7-2">
-<p>
-&#x6211;&#x6BD4;&#x8F83;&#x5173;&#x5FC3;&#x7684;&#x662F;emacs&#x662F;&#x5426;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#xFF0C;Ubuntu&#x5B50;&#x7CFB;&#x7EDF;&#x7684;14.04.4 LTS&#xFF0C;&#x6E90;&#x91CC;&#x7684;emacs&#x76F8;&#x5BF9;&#x6BD4;&#x8F83;&#x65E7;&#xFF0C;&#x4E0D;&#x80FD;&#x652F;&#x6301;&#x6240;&#x6709;&#x7684;spacemas&#x7684;&#x7279;&#x6027;&#x3002;&#x60F3;&#x7F16;&#x8BD1;&#x65B0;&#x7248;&#x672C;&#x7684;emacs&#xFF0C;&#x63D0;&#x793A;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;
-Segmentation fault      (core dumped) ./temacs &#x2013;batch &#x2013;load loadup bootstrap
-&#x7F16;&#x8BD1;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#xFF0C;google&#x5230;&#x6709;&#x4EBA;&#x78B0;&#x5230;&#x7C7B;&#x4F3C;&#x7684;&#x9519;&#x8BEF;&#x5E76;&#x4E14;&#x81EA;&#x884C;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x4ED6;&#x653E;&#x51FA;&#x6765;deb&#x5305;&#xFF0C;&#x6211;&#x6D4B;&#x8BD5;&#x8FC7;&#x57FA;&#x672C;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x3002;
-<a href="https://s3-us-west-1.amazonaws.com/royseto-public/dpkg/emacs24.5.2_24.5.2-1_amd64.deb" target="_blank" rel="noopener">https://s3-us-west-1.amazonaws.com/royseto-public/dpkg/emacs24.5.2_24.5.2-1_amd64.deb</a>
-&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x7528;&#xFF0C;&#x4F46;&#x4ECD;&#x7136;&#x6709;&#x95EE;&#x9898;&#x3002;&#x6211;&#x5C1D;&#x8BD5;&#x865A;&#x62DF;&#x673A;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;Ubuntu 14.04&#xFF0C;&#x6839;&#x636E;&#x4E0B;&#x9762;&#x7684;&#x6559;&#x7A0B;&#xFF0C;&#x987A;&#x5229;&#x7F16;&#x8BD1;&#x6210;&#x529F;&#x3002;
-</p>
-
-<p>
-#&#x7F16;&#x8BD1;&#x6559;&#x7A0B;&#xFF0C;&#x9700;&#x8981;&#x7FFB;&#x5899;&#xFF0C;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x5230;&#x4E3A;&#x77E5;&#x7B14;&#x8BB0;
-<a href="https://gist.github.com/favadi/18438172892bc4178b27" target="_blank" rel="noopener">https://gist.github.com/favadi/18438172892bc4178b27</a>
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#&#x66F4;&#x6539;cn.archive&#x6E90;&#x4F1A;&#x5FEB;&#x4E00;&#x4E9B;</span></span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu trusty main restricted universe multiverse</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu trusty main restricted multiverse universe</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">sudo apt-get update </span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org615c94b" class="outline-3">
-<h3 id="org615c94b"><span class="section-number-3">7.3</span> &#x5347;&#x7EA7;&#x5230;ubuntu 16.04</h3>
-<div class="outline-text-3" id="text-7-3">
-<p>
-&#x6211;&#x81EA;&#x5DF1;&#x7528;&#x5F97;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x662F;emacs&#xFF0C;ubuntu 14.04&#x9ED8;&#x8BA4;&#x7684;emacs&#x662F;24.3&#xFF0C;spacemacs&#x5B98;&#x65B9;&#x76EE;&#x524D;&#x7684;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x4E0D;&#x652F;&#x6301;&#x4E86;&#xFF0C;&#x5347;&#x7EA7;&#x5230;Ubuntu 16.04&#x53EF;&#x4EE5;&#x5F7B;&#x5E95;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x3002;
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#&#x66F4;&#x6539;16.04&#x6E90;</span></span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu xenial main restricted universe multiverse</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu xenial main restricted universe multiverse</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu xenial-updates main restricted universe multiverse</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu xenial-updates main restricted universe multiverse</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu xenial-security main restricted universe multiverse</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu xenial-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get dist-upgrade</span><br></pre></td></tr></table></figure>
-</div>
-<p>
-&#x4E2D;&#x95F4;&#x51FA;&#x73B0;&#x4E24;&#x6B21;&#x9700;&#x8981;&#x4F60;&#x786E;&#x8BA4;&#x7684;&#xFF0C;&#x4F60;&#x90FD;yes&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x606D;&#x559C;&#x4F60;&#xFF0C;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x5347;&#x7EA7;&#x5230;ubuntu 16.04&#xFF0C;&#x4F46;&#x662F;&#x8FDB;&#x5165;bash&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x63D0;&#x793A;
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo: no tty present and no askpass program specified </span><br><span class="line"><span class="comment">#&#x9000;&#x51FA;bash</span></span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line">lxrun /setdefaultuser root</span><br><span class="line">vim /etc/sudoers</span><br><span class="line"><span class="comment">#&#x589E;&#x52A0;&#x884C; Defaults visiblepw</span></span><br><span class="line"><span class="comment">#&#x4E3A;&#x4F60;&#x7684;&#x7528;&#x6237;&#x6DFB;&#x52A0;root&#x6743;&#x9650;</span></span><br><span class="line">your_username ALL=(ALL) ALL </span><br><span class="line"><span class="comment">#&#x4FDD;&#x5B58;&#x9000;&#x51FA;</span></span><br><span class="line"><span class="comment">#&#x4FEE;&#x6539;sudoers&#x6743;&#x9650;&#xFF0C;&#x5426;&#x5219;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x9519;&#x8BEF;</span></span><br><span class="line">sudo: /etc/sudoers is world writable</span><br><span class="line">sudo: no valid sudoers sources found, quitting</span><br><span class="line">sudo: unable to initialize policy plugin</span><br><span class="line"><span class="comment">#&#x53D6;&#x6D88;&#x5199;&#x7684;&#x6743;&#x9650;</span></span><br><span class="line">chmod o-w /etc/sudoers</span><br><span class="line"></span><br><span class="line">lsb_release <span class="operator">-a</span></span><br><span class="line"><span class="comment">#No LSB modules are available.</span></span><br><span class="line"><span class="comment">#Distributor ID: Ubuntu</span></span><br><span class="line"><span class="comment">#Description:    Ubuntu 16.04 LTS</span></span><br><span class="line"><span class="comment">#Release:        16.04</span></span><br><span class="line"><span class="comment">#Codename:       xenial</span></span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-<div id="outline-container-orgb701b58" class="outline-3">
-<h3 id="orgb701b58"><span class="section-number-3">7.4</span> &#x5B89;&#x88C5;Emacs</h3>
-<div class="outline-text-3" id="text-7-4">
-<p>
-Ubuntu 16.04&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#x5F53;&#x4E2D;&#x7684;&#x662F;Emacs 24.5&#xFF0C;&#x4E0D;&#x4F1A;&#x518D;&#x51FA;&#x73B0;<a href="https://github.com/syl20bnr/spacemacs/issues/4443" target="_blank" rel="noopener">helm-flx do not support emacs-24,3</a>&#x7684;&#x95EE;&#x9898;&#x3002;&#x4F46;&#x901A;&#x8FC7;Xserver&#x542F;&#x52A8;&#x65F6;&#x53D1;&#x751F;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Couldn<span class="string">&apos;t open libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory</span></span><br></pre></td></tr></table></figure>
-</div>
-<p>
-&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x7CFB;&#x7EDF;&#x6CA1;&#x6709;&#x5B89;&#x88C5;libgl1-mesa-glx&#x8FD9;&#x4E2A;&#x5E93;&#x5BFC;&#x81F4;&#x7684;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x8003;<a href="http://stackoverflow.com/questions/17417211/android-error-libgl-so-cannot-open-shared-object-file-no-such-file-or-direct" target="_blank" rel="noopener">Android : error libGL.so: cannot open shared object file: No such file or directory</a>
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libgl1-mesa-glx</span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-<div id="outline-container-org3b34556" class="outline-3">
-<h3 id="org3b34556"><span class="section-number-3">7.5</span> &#x5B89;&#x88C5;Spacemacs</h3>
-<div class="outline-text-3" id="text-7-5">
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/syl20bnr/spacemacs ~/.emacs.d</span><br><span class="line">emacs --insecure</span><br></pre></td></tr></table></figure>
-</div>
-<p>
-&#x5B89;&#x88C5;&#x5305;&#x7684;&#x8FC7;&#x7A0B;&#x5F53;&#x4E2D;&#xFF0C;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x9519;&#x8BEF;:
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gnutls.c the tls connection was non-properly</span><br><span class="line">sudo apt-get install gnutls-bin</span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-<div id="outline-container-org1d96c65" class="outline-3">
-<h3 id="org1d96c65"><span class="section-number-3">7.6</span> &#x5B89;&#x88C5;&#x641C;&#x72D7;&#x8F93;&#x5165;&#x6CD5;</h3>
-<div class="outline-text-3" id="text-7-6">
-<p>
-&#x5C1D;&#x8BD5;&#x8FD0;&#x884C;fcitx -d&#xFF0C;&#x63D0;&#x793A;&#x51FA;&#x9519;X11&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4EE5;&#x4E3A;&#x662F;&#x6CA1;&#x6709;&#x5B89;&#x88C5;xserver&#xFF0C;&#x5B89;&#x88C5;xorg&#x540E;&#xFF0C;&#x9519;&#x8BEF;&#x4F9D;&#x65E7;&#xFF0C;&#x6682;&#x65F6;&#x653E;&#x5F03;&#x5B89;&#x88C5;&#x8F93;&#x5165;&#x6CD5;&#x3002;
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#&#x5B89;&#x88C5;xorg</span></span><br><span class="line">sudo apt-get install xorg</span><br><span class="line"><span class="comment">#&#x5B89;&#x88C5;sogou&#x8F93;&#x5165;&#x6CD5;</span></span><br><span class="line">sudo dpkg -i sogoupinyin.deb</span><br><span class="line"><span class="comment">#&#x5378;&#x8F7D;sogou&#x8F93;&#x5165;&#x6CD5;</span></span><br><span class="line">sudo apt-get remove fcitx* <span class="comment">#&#xFF08;&#x5982;&#x4E0D;&#x9700;&#x4FDD;&#x7559;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7528;purge&#xFF09;</span></span><br><span class="line">sudo apt-get autoremove <span class="comment">#&#xFF08;&#x81EA;&#x52A8;&#x5378;&#x8F7D;&#x4F9D;&#x8D56;&#x8F6F;&#x4EF6;&#xFF09;</span></span><br><span class="line">sudo dpkg &#x2013;get-selections | grep fcitx<span class="comment">#&#xFF08;&#x67E5;&#x8BE2;fcitx&#x76F8;&#x5173;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x662F;&#x5426;&#x5378;&#x8F7D;&#xFF09;</span></span><br></pre></td></tr></table></figure>
-</div>
-
-<p>
-&#x6298;&#x817E;&#x4E86;Bash On Ubuntu on Windows&#x4E00;&#x5929;&#x4E86;&#xFF0C;&#x611F;&#x89C9;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x975E;&#x5E38;&#x597D;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x5FAE;&#x8F6F;&#x628A;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#x505A;&#x597D;&#x4E86;&#xFF0C;&#x5206;&#x5206;&#x949F;&#x53EF;&#x4EE5;&#x626D;&#x8F6C;&#x4E7E;&#x5764;&#x3002;&#x5728;&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#x6216;&#x8005;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x662F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x5B50;&#x7CFB;&#x7EDF;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x3002;&#x7A0B;&#x5E8F;&#x5728;&#x5B50;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x8981;&#x6BD4;&#x865A;&#x62DF;&#x673A;&#x7684;&#x7CFB;&#x7EDF;&#x8981;&#x6162;&#x4E00;&#x4E9B;&#xFF0C;&#x8FD9;&#x662F;&#x6211;&#x5728;&#x7F16;&#x8BD1;Emacs&#x7684;&#x65F6;&#x5019;&#x4F53;&#x9A8C;&#x5230;&#x7684;&#x3002;&#x4F46;&#x662F;Ubuntu&#x5B50;&#x7CFB;&#x7EDF;&#x7684;&#x597D;&#x5904;&#x5728;&#x4E8E;&#xFF0C;&#x4E0D;&#x8FD0;&#x884C;&#x5B50;&#x7CFB;&#x7EDF;&#x7684;&#x7A0B;&#x5E8F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x592A;&#x4F1A;CPU&#x548C;&#x5185;&#x5B58;&#x7B49;&#x8D44;&#x6E90;&#x3002;&#x5B8C;&#x7F8E;&#x517C;&#x5BB9;&#x4E24;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5F88;&#x591A;&#x5DE5;&#x4F5C;&#x8981;&#x505A;&#xFF0C;&#x4F46;&#x662F;&#x5FC5;&#x987B;&#x8981;&#x4E2A;&#x5FAE;&#x8F6F;&#x70B9;&#x4E2A;&#x8D5E;&#xFF0C;Ubuntu&#x5B50;&#x7CFB;&#x7EDF;&#x7684;&#x8FD9;&#x4E2A;&#x60F3;&#x6CD5;&#x975E;&#x5E38;&#x68D2;&#xFF0C;&#x6211;&#x4EEC;&#x5E7F;&#x5927;&#x5C4C;&#x4E1D;&#x5C31;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;Windows&#x7684;&#x5E73;&#x53F0;&#x4E86;&#x3002;
-</p>
-
-<p>
-&#x901A;&#x8FC7;Xserver&#x8FD0;&#x884C;Firefox&#x3001;virt-manager&#x7B49;&#x5E94;&#x7528;&#x4F1A;&#x5D29;&#x6E83;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x3002;
-<a href="https://www.reddit.com/r/Windows10/comments/4rsmzp/bash_on_windows_getting_dbus_and_x_server_working/" target="_blank" rel="noopener">Getting dbus and X server working</a>
-</p>
-
-<p>
-Sublime Text 3&#x65E0;&#x6CD5;&#x6253;&#x5F00;&#x8DEF;&#x5F84;&#x5E26;&#x7A7A;&#x683C;&#x7684;&#x6587;&#x4EF6;
-&#x4FEE;&#x6539;&#x6CE8;&#x518C;&#x8868;&#xFF0C;&#x8DEF;&#x5F84;&#x6DFB;&#x52A0;&#x53CC;&#x5F15;&#x53F7;&#xFF0C;&#x5176;&#x4ED6;&#x7F16;&#x8F91;&#x5668;&#x4E5F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x8DEF;&#x5F84;&#x53C2;&#x6570;&#x9700;&#x8981;double quotes
-</p>
-<div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\Edit with Sublime Text]</span><br><span class="line"><span class="string">&quot;Icon&quot;</span>=<span class="string">&quot;D:\\Software\\Sublime_Text_3\\sublime_text.exe,0&quot;</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\Edit with Sublime Text\<span class="built_in">command</span>]</span><br><span class="line">@=<span class="string">&quot;D:\\Software\\Sublime_Text_3\\sublime_text.exe \&quot;%1\&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-<div id="outline-container-org31fb8aa" class="outline-3">
-<h3 id="org31fb8aa"><span class="section-number-3">7.7</span> &#x76EE;&#x524D;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</h3>
-<div class="outline-text-3" id="text-7-7">
-</div>
-<div id="outline-container-orgb4fa383" class="outline-4">
-<h4 id="orgb4fa383"><span class="section-number-4">7.7.1</span> &#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;cli&#x7684;&#x7A0B;&#x5E8F;</h4>
-<div class="outline-text-4" id="text-7-7-1">
-<p>
-nmap,mysql
-<a href="https://github.com/Microsoft/BashOnWindows/issues" target="_blank" rel="noopener">https://github.com/Microsoft/BashOnWindows/issues</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-org46ce79d" class="outline-2">
-<h2 id="org46ce79d"><span class="section-number-2">8</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
-<div class="outline-text-2" id="text-8">
-<ol class="org-ol">
-<li><a href="https://msdn.microsoft.com/en-us/commandline/wsl/about" target="_blank" rel="noopener">Bash on Ubuntu on Windows</a></li>
-<li><a href="https://blog.mussard.org.uk/2014/05/30/efi-dualboot-changing-efi-nvram-boot-order-from-windows/" target="_blank" rel="noopener">EFI Dualboot &#x2013; Changing EFI NVRAM boot order from Windows</a></li>
-<li><a href="http://www.cnblogs.com/Bob-wei/p/5364732.html" target="_blank" rel="noopener">Win10 14316 bash - Bob-wei</a></li>
-<li><a href="http://www.howtogeek.com/261188/how-to-uninstall-or-reinstall-windows-10s-ubuntu-bash-shell/" target="_blank" rel="noopener">How to Uninstall (or Reinstall) Windows 10&#x2019;s Ubuntu Bash Shell</a></li>
-<li><a href="https://www.variantweb.net/blog/running-fedora-on-windows-10-using-wsl/" target="_blank" rel="noopener">Running Fedora on Windows 10 using WSL</a></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-Last Updated 2018-10-13 &#x516D; 20:28.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
-</div>
-
-      <script>
-        window.disqusProxy={
-          shortname: 'wing-ho',
-          username: 'wing-ho',
-          server: 'disqus-proxy.callmewing.com',
-          port: 5509,
-          adminAvatar: '/avatars/admin-avatar.jpg',
-          identifier: '2016/07/17/玩转Window 10 Bash/',
-        };
-        window.disqus_config = function () {
-          this.page.url = window.location.href;
-          this.page.identifier = window.disqusProxy.identifier;
-        };
-      </script></div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2016/07/19/将Emacs写作环境转移到Windows/">将Emacs写作环境转移到Windows</a><a class="next" href="/2016/07/07/在Linux中运行ASP/">在Linux中运行ASP</a></div>
-      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
-      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
-      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
-      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
-      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
-    this.page.url = 'http://wing-ho.github.io/2016/07/17/玩转Window 10 Bash/';
-    this.page.identifier = '2016/07/17/玩转Window 10 Bash/';
-    this.page.title = '玩转Window 10 Bash';
-  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
-url: 'https://disqus.com/next/config.json',
-timeout: 2500,
-type: 'GET',
-success: function(){
-  var d = document;
-  var s = d.createElement('script');
-  s.src = '//wing-ho.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', + new Date());
-  
-  $('.disqus_click_btn').css('display', 'none');
-},
-error: function() {
-  $('.disqus_click_btn').css('display', 'block');
-}
-});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
-    (() => { // DON'T EDIT BELOW THIS LINE
-        var d = document;
-        var s = d.createElement('script');
-        s.src = '//wing-ho.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', + new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-    $('.disqus_click_btn').css('display','none');
-});</script><script type="text/javascript" id="disqus-count-script">$(function() {
-     var xhr = new XMLHttpRequest();
-     xhr.open('GET', '//disqus.com/next/config.json', true);
-     xhr.timeout = 2500;
-     xhr.onreadystatechange = function () {
-       if (xhr.readyState === 4 && xhr.status === 200) {
-         $('.post-meta .post-comments-count').show();
-         var s = document.createElement('script');
-         s.id = 'dsq-count-scr';
-         s.src = 'https://wing-ho.disqus.com/count.js';
-         s.async = true;
-         (document.head || document.body).appendChild(s);
-       }
-     };
-     xhr.ontimeout = function () { xhr.abort(); };
-     xhr.send(null);
-   });
-</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://wing-ho.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rapberry-Pi/">Rapberry Pi</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Router/">Router</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VirtualBox/">VirtualBox</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/redis/">深入理解Redis</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/02/把镜像从KVM迁移到VirtualBox/">把镜像从KVM迁移到VirtualBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/打造兼容BIOS和UEFI的启动盘/">打造兼容BIOS和UEFI的启动盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/批量下载喜马拉雅的免费专辑/">批量下载喜马拉雅的免费专辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/把电纸书打造成护眼开发神器/">把电纸书打造成护眼开发神器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/17/Hexo博客集成GitBook/">Hexo博客集成GitBook</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/用Wine运行那些你离不开的应用/">用Wine运行那些你离不开的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/将Emacs写作环境转移到Windows/">将Emacs写作环境转移到Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/genrong" title="本人CSDN博客" target="_blank">本人CSDN博客</a><ul></ul><a href="https://blog.codingnow.com" title="云风" target="_blank">云风</a><ul></ul><a href="http://www.ruanyifeng.com/blog" title="阮一峰" target="_blank">阮一峰</a><ul></ul><a href="http://www.yinwang.org" title="王垠" target="_blank">王垠</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Wing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
