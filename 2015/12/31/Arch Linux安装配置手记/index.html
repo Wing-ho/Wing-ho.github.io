@@ -1,0 +1,393 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="description" content="Wing's Blog"><title>Arch Linux安装配置手记 | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Arch Linux安装配置手记</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Arch Linux安装配置手记</h1><div class="post-meta">Dec 31, 2015<span> | </span><span class="category"><a href="/categories/Linux/">Linux</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2015/12/31/Arch Linux安装配置手记/" href="/2015/12/31/Arch Linux安装配置手记/#disqus_thread"></a><div class="post-content"><div id="content">
+
+<p>
+&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x4E00;&#x822C;&#x7684;linux&#x53D1;&#x884C;&#x7248;&#xFF0C;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x5E26;&#x6765;&#x5404;&#x79CD;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x51B3;&#x5B9A;&#x9009;&#x62E9;&#x91C7;&#x7528;&#x6EDA;&#x52A8;&#x5347;&#x7EA7;&#x7B56;&#x7565;&#x7684;Arch Linux&#x3002;&#x6298;&#x817E;Arch Linux&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;Arch Linux&#x786E;&#x5B9E;&#x662F;&#x6211;&#x6700;&#x559C;&#x6B22;&#x7684;Linux&#x7248;&#x672C;&#xFF0C;&#x5B98;&#x65B9;&#x7684;wiki&#x662F;&#x505A;&#x5F97;&#x6700;&#x597D;&#x7684;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x95EE;&#x9898;&#x4E0A;&#x9762;&#x90FD;&#x80FD;&#x627E;&#x5230;&#x7B54;&#x6848;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x6211;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x5F53;&#x4E2D;&#x78B0;&#x5230;&#x7684;&#x95EE;&#x9898;&#x7684;&#x6C47;&#x603B;&#x3002;
+</p>
+
+<div id="outline-container-orgbf47eb0" class="outline-2">
+<h2 id="orgbf47eb0"><span class="section-number-2">1</span> &#x5B89;&#x88C5;&#x7CFB;&#x7EDF;</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+&#x6839;&#x636E;<a href="https://bbs.archlinuxcn.org/viewtopic.php?id=1037" target="_blank" rel="noopener">arch Linux &#x5B89;&#x88C5;&#x6307;&#x5357;</a>&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B89;&#x88C5;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x78B0;&#x5230;&#x7684;&#x95EE;&#x9898;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;uefi&#x73AF;&#x5883;&#x4E0B;&#x5982;&#x4F55;&#x5B89;&#x88C5;&#x542F;&#x52A8;&#x5668;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5C31;&#x662F;&#x65E0;&#x7EBF;&#x7F51;&#x5361;&#x7684;&#x9A71;&#x52A8;&#x3002;
+&#x4EE5;&#x4E0B;&#x5C31;&#x662F;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x5F53;&#x4E2D;&#x7684;&#x6D41;&#x6C34;&#x8D26;&#x4E86;&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#&#x5B89;&#x88C5;sudo</span></span><br><span class="line">pacman -S sudo</span><br><span class="line"><span class="comment">#&#x6DFB;&#x52A0;yaourt&#x7684;&#x652F;&#x6301;</span></span><br><span class="line"><span class="comment">#&#x6700;&#x7B80;&#x5355;&#x5B89;&#x88C5;Yaourt&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x6DFB;&#x52A0;Yaourt&#x6E90;&#x81F3;&#x60A8;&#x7684; /etc/pacman.conf</span></span><br><span class="line">sudo pacman -Syu yaourt </span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5728;/etc/pacman.conf&#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x5185;&#x5BB9;:
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line"><span class="comment">#The Chinese Arch Linux communities packages.</span></span><br><span class="line"><span class="comment">#&#x4FE1;&#x4EFB;&#x6240;&#x6709;&#x5305;</span></span><br><span class="line">SigLevel = Optional TrustAll</span><br><span class="line"><span class="comment">#&#x53EA;&#x4FE1;&#x4EFB;</span></span><br><span class="line"><span class="comment">#SigLevel = Optional TrustedOnly</span></span><br><span class="line">Server   = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orga52eb5c" class="outline-2">
+<h2 id="orga52eb5c"><span class="section-number-2">2</span> &#x4E0A;&#x7F51;&#x95EE;&#x9898;</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+&#x5982;&#x679C;&#x4F60;gui&#x754C;&#x9762;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x7528;networkmanager&#x53EF;&#x80FD;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x4E00;&#x4E9B;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5BF9;console&#x66F4;&#x52A0;&#x719F;&#x6089;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;systemd-networkd&#xFF0C;&#x7528;wifi-menu&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5207;&#x6362;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x3002;
+</p>
+</div>
+<div id="outline-container-orge040b5d" class="outline-3">
+<h3 id="orge040b5d"><span class="section-number-3">2.1</span> &#x6709;&#x7EBF;&#x4E0A;&#x7F51;</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+udev&#x5BF9;&#x7F51;&#x5361;&#x7684;&#x547D;&#x540D;&#x89C4;&#x5219;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x7684;&#x7F51;&#x5361;&#x540D;&#x79F0;&#x662F;ens5&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x6362;&#x56DE;&#x539F;&#x6765;&#x7684;eth*&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x7684;&#x811A;&#x672C;&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo ip link <span class="built_in">set</span> ens5 up</span><br><span class="line">cat ]<span class="comment">#  /etc/udev/rules.d/99-rename-to-eth0.rules &lt;&lt; EOF</span></span><br><span class="line">SUBSYSTEM==<span class="string">&quot;net&quot;</span>, ACTION==<span class="string">&quot;add&quot;</span>, DRIVERS==<span class="string">&quot;?*&quot;</span>, ATTR{address}==<span class="string">&quot;<span class="variable">$(cat /sys/class/net/ens5/address)</span>&quot;</span>, ATTR{dev_id}==<span class="string">&quot;0x0&quot;</span>, ATTR{<span class="built_in">type</span>}==<span class="string">&quot;1&quot;</span>, KERNEL==<span class="string">&quot;eth*&quot;</span>, NAME=<span class="string">&quot;eth0&quot;</span></span><br><span class="line">EOF</span><br><span class="line">systemctl <span class="built_in">enable</span> dhcpcd</span><br><span class="line">sudo pacman -S networmanager networkmanager-pptp gnome-keyring</span><br><span class="line">systemctl <span class="built_in">enable</span> NetworkManager</span><br><span class="line">systemctl <span class="built_in">disable</span> dhcpcd</span><br><span class="line">systemctl start NetworkManager</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org68f2826" class="outline-3">
+<h3 id="org68f2826"><span class="section-number-3">2.2</span> &#x65E0;&#x7EBF;&#x4E0A;&#x7F51;</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+&#x6211;&#x7684;&#x65E0;&#x7EBF;&#x7F51;&#x5361;&#x662F;b4312&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x9A71;&#x52A8;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x9A71;&#x52A8;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lspci -vnn <span class="operator">-d</span> <span class="number">14</span>e4:</span><br><span class="line">sudo pacman -S b43-fwcutter</span><br><span class="line">sudo pacman -S dialog</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5BF9;&#x4E8E;&#x7ECF;&#x5E38;&#x5207;&#x6362;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x7684;&#x8BDD;&#xFF0C;&#x4F7F;&#x7528;NetworkManager&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x4F1A;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#xFF0C;&#x4F46;&#x662F;&#x542F;&#x52A8;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x6162;&#xFF0C;&#x83B7;&#x53D6;IP&#x5730;&#x5740;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x6162;&#xFF0C;&#x800C;&#x4E14;&#x9700;&#x8981;&#x7CFB;&#x7EDF;&#x5FC5;&#x987B;&#x767B;&#x9646;&#x8FC7;&#x4E00;&#x6B21;&#x624D;&#x80FD;&#x8FDE;&#x4E0A;&#x7F51;&#x7EDC;&#xFF0C;&#x5BF9;&#x4E8E;&#x7528;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x91CD;&#x542F;&#x540E;&#x5C31;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x5230;ip&#x5730;&#x5740;&#xFF0C;&#x53EA;&#x6709;dhcpcd&#x6216;&#x8005;systemd-networkd&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#xFF0C;&#x719F;&#x6089;systemd-networkd&#x4E4B;&#x540E;&#xFF0C;&#x5176;&#x5B9E;&#x4F7F;&#x7528;&#x4E0A;&#x5DEE;&#x522B;&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x5927;&#x3002;
+</p>
+</div>
+</div>
+<div id="outline-container-org13abc6b" class="outline-3">
+<h3 id="org13abc6b"><span class="section-number-3">2.3</span> &#x4F7F;&#x7528;systemd-networkd&#x66FF;&#x4EE3;networkmanager</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop NetworkManager</span><br><span class="line">systemctl <span class="built_in">enable</span> systemd-networkd</span><br><span class="line">systemctl start systemd-networkd</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+<div id="outline-container-orga2fc5d4" class="outline-4">
+<h4 id="orga2fc5d4"><span class="section-number-4">2.3.1</span> &#x6709;&#x7EBF;&#x8FDE;&#x63A5;</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+&#x53EF;&#x4EE5;&#x5728;/etc/systemd/network/&#x5EFA;&#x7ACB;.network&#x6587;&#x4EF6;&#xFF0C;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x5177;&#x4F53;&#x914D;&#x7F6E;&#x9879;&#x53C2;&#x8003;&#x6587;&#x7AE0;<a href="http://www.tuicool.com/articles/iAziue" target="_blank" rel="noopener">&#x5C1D;&#x9C9C;: &#x65B0;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x7BA1;&#x7406;&#x5DE5;&#x5177; systemd-networkd</a>
+&#x6211;&#x81EA;&#x5DF1;&#x7684;wired.network&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Match]</span><br><span class="line">Name=en*</span><br><span class="line"></span><br><span class="line">[Network]</span><br><span class="line">DHCP=yes</span><br><span class="line"><span class="comment">#Address=192.168.0.1/24</span></span><br><span class="line"><span class="comment">#Gateway=192.168.1.1</span></span><br><span class="line"><span class="comment">#DNS=192.168.1.1</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org48067e3" class="outline-4">
+<h4 id="org48067e3"><span class="section-number-4">2.3.2</span> &#x65E0;&#x7EBF;&#x8FDE;&#x63A5;</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+&#x53EF;&#x4EE5;&#x5728;/etc/netctl/&#x4E0B;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5177;&#x4F53;&#x914D;&#x7F6E;&#x9879;&#x53C2;&#x8003;&#x6587;&#x7AE0;<a href="https://wiki.archlinux.org/index.php/Netctl" target="_blank" rel="noopener">netctl&#x914D;&#x7F6E;&#x5DE5;&#x5177;&#x8BF4;&#x660E;</a>&#x3002;
+&#x901A;&#x8FC7;wifi-menu -o&#x8FDE;&#x63A5;&#x65E0;&#x7EBF;&#x70ED;&#x70B9;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;/etc/netctl/&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo netctl <span class="built_in">enable</span> &#x8BE5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;</span><br><span class="line">sudo netctl start &#x8BE5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;&#xFF0C;&#x4E0D;&#x6210;&#x529F;&#x7684;&#x65F6;&#x5019;&#x6CE8;&#x610F;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#x95EE;&#x9898;&#x3002;
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6a69d79" class="outline-2">
+<h2 id="org6a69d79"><span class="section-number-2">3</span> &#x5B89;&#x88C5;&#x5E38;&#x7528;&#x7684;&#x8F6F;&#x4EF6;</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S --needed --noconfirm sakura feh dex xdg-utils screenfetch scrot xcompmgr kdeaccessibility wmname alsa-utils gnome-alsamixer xorg-xbacklight xf86-input-synaptics cheese mpd mpc workrave xscreensaver networkmanager network-manager-applet mate-power-manager arandr xfce4-appfinder xfce4-screenshooter</span><br><span class="line">pcmanfm engrampa unrar zip unzip p7zip unace ntfs-<span class="number">3</span>g udisks udiskie lxsession lxappearance terminator conky gksu launchy</span><br><span class="line">gvim emacs firefox putty remmina synergy fcitx-im fcitx-configtool flashplugin</span><br></pre></td></tr></table></figure>
+</div>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yaourt -S dpkg fcitx-sogoupinyin</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org54dd1bd" class="outline-2">
+<h2 id="org54dd1bd"><span class="section-number-2">4</span> &#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S pcmanfm engrampa unrar zip unzip p7zip unace</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+unrar: for RAR uncompression
+zip: for ZIP archives
+unzip: for ZIP archives
+p7zip: 7zip compression utility
+arj: for ARJ archives
+unace: extraction tool for the proprietary ace archive format
+</p>
+</div>
+<div id="outline-container-org4a80dbe" class="outline-3">
+<h3 id="org4a80dbe"><span class="section-number-3">4.1</span> &#x6DFB;&#x52A0;&#x6302;&#x8F7D;ntfs&#x5206;&#x533A;&#x7684;&#x6743;&#x9650;</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+&#x53C2;&#x8003;<a href="https://wiki.archlinux.org/index.php/Polkit#Allow_mounting_a_filesystem_on_a_system_device_for_any_user" target="_blank" rel="noopener">Polkit</a>&#x8BF4;&#x660E;&#x6587;&#x6863;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/polkit-<span class="number">1</span>/rules.d/<span class="number">10</span>-enable-mount.rules</span><br><span class="line">sudo usermod XXX <span class="operator">-a</span>G storage</span><br></pre></td></tr></table></figure>
+</div>
+<div class="org-src-container">
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">polkit.addRule(<span class="function"><span class="keyword">function</span>(<span class="params">action, subject</span>) </span>{</span><br><span class="line">    <span class="keyword">if</span> (action.id == <span class="string">&quot;org.freedesktop.udisks2.filesystem-mount-system&quot;</span> &amp;&amp; subject.isInGroup(<span class="string">&quot;storage&quot;</span>)) {</span><br><span class="line">	<span class="keyword">return</span> polkit.Result.YES;</span><br><span class="line">    }</span><br><span class="line">});</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org13730ba" class="outline-2">
+<h2 id="org13730ba"><span class="section-number-2">5</span> &#x5B57;&#x4F53;</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#&#x5B89;&#x88C5;&#x5E38;&#x7528;&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x4F53;</span></span><br><span class="line">sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji wqy-microhei ttf-ms-fonts ttf-dejavu ttf-droid ttf-ubuntu-font-family</span><br><span class="line"><span class="comment">#&#x67E5;&#x770B;&#x5B89;&#x88C5;&#x8FC7;&#x7684;&#x5B57;&#x4F53;</span></span><br><span class="line"><span class="built_in">fc</span>-list</span><br><span class="line"><span class="comment">#&#x5B57;&#x4F53;&#x6E32;&#x67D3;</span></span><br><span class="line"><span class="comment">#&#x6539;&#x5584;&#x5B57;&#x4F53;&#x6E32;&#x67D3;&#x76F8;&#x5173;&#x7684;&#x5305;&#x6709;fontconfig-ubuntu,cario-ubuntu,freetype2-config&#xFF0C;&#x6211;&#x4F7F;&#x7528;&#x7684;&#x662F;cario-ubuntu</span></span><br><span class="line">yaourt -S cario-ubuntu</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org26e51f7" class="outline-2">
+<h2 id="org26e51f7"><span class="section-number-2">6</span> &#x53CC;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#x95EE;&#x9898;</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+&#x6DFB;&#x52A0;/etc/adjtime
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="number">0.0</span> <span class="number">0</span> <span class="number">0.0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line">LOCAL</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4a2244" class="outline-2">
+<h2 id="orgc4a2244"><span class="section-number-2">7</span> &#x914D;&#x7F6E;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+&#x4E00;&#x76F4;&#x60F3;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4E0A;&#x7F51;&#x672C;&#x4E5F;&#x7528;&#x4E0A;&#xFF0C;&#x60F3;&#x4E86;&#x5404;&#x79CD;&#x529E;&#x6CD5;&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x662F;xdmx&#xFF0C;&#x8BD5;&#x8FC7;&#x591A;&#x4E2A;awesome&#x3001;i3&#x3001;twm&#x3001;fvwm&#x7B49;&#xFF0C;&#x53EA;&#x6709;&#x540E;&#x4E24;&#x8005;&#x662F;&#x652F;&#x6301;xdmx&#x7684;&#xFF0C;&#x5176;&#x4ED6;wm&#x8FDE;&#x63A5;&#x4E0A;&#x4E86;&#xFF0C;&#x53EA;&#x662F;&#x9ED1;&#x5C4F;&#x800C;&#x5DF2;&#xFF0C;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4F53;&#x9A8C;&#x4E4B;&#x540E;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7528;xdmx&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x52A0;&#x5165;DISPALY=&#x4E0A;&#x7F51;&#x672C;IP&#x5730;&#x5740;:0&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x80FD;&#x5C06;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5728;&#x4E0A;&#x7F51;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5B9E;&#x5728;&#x611F;&#x53F9;Linux&#x5B9E;&#x5728;&#x7684;&#x662F;&#x592A;&#x725B;&#x903C;&#x7684;&#x3002;&#x7EFC;&#x5408;&#x5404;&#x4E2A;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#x7684;&#x7279;&#x6027;&#xFF0C;fvwm&#x57FA;&#x672C;&#x4E0A;&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x6211;&#x60F3;&#x8981;&#x7684;&#x591A;&#x6570;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x662F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7A0D;&#x5FAE;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x3002;
+</p>
+</div>
+<div id="outline-container-org0c55a31" class="outline-3">
+<h3 id="org0c55a31"><span class="section-number-3">7.1</span> awesome</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+&#x5B89;&#x88C5;awesome wm config&#x53CA;&#x5176;&#x4F9D;&#x8D56;
+<a href="https://github.com/pw4ever/awesome-wm-config" target="_blank" rel="noopener">https://github.com/pw4ever/awesome-wm-config</a>
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S awesome</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+Arch Linux&#x4E0B;&#x7684;urxvt&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x5751;&#xFF0C;aur&#x91CC;&#x6709;&#x591A;&#x4E2A;&#x7248;&#x672C;&#xFF0C;&#x6211;&#x4E0D;&#x5C0F;&#x5FC3;&#x5B89;&#x88C5;&#x4E86;&#x5176;&#x4ED6;&#x7248;&#x672C;&#xFF0C;&#x4E2D;&#x6587;&#x5B57;&#x4F53;&#x8D85;&#x5BBD;&#x7684;&#xFF0C;&#x5076;&#x5C14;&#x770B;&#x5230;&#x4E00;&#x7BC7;&#x300A;<a href="http://arch.acgtyrant.com/2013/12/13/which-urxvt-should-you-choose/" target="_blank" rel="noopener">&#x6709;&#x597D;&#x591A;&#x597D;&#x591A; urxvt&#xFF0C;&#x600E;&#x9EBC;&#x9078;&#x5462;&#xFF1F;</a>&#x300B;&#x624D;&#x627E;&#x5230;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;
+</p>
+</div>
+
+<div id="outline-container-org18688bb" class="outline-4">
+<h4 id="org18688bb"><span class="section-number-4">7.1.1</span> &#x89E3;&#x51B3;emacs&#x5728;awesome&#x7684;&#x6700;&#x5927;&#x5316;&#x65F6;&#x5E95;&#x90E8;&#x6709;&#x7A7A;&#x9699;</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+&#x6D88;&#x9664;&#x7A7A;&#x9699;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5728;rc.lua&#x6DFB;&#x52A0;RULE 
+</p>
+<div class="org-src-container">
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">{ rule = { class = <span class="string">&quot;Emacs&quot;</span> },</span><br><span class="line">     properties = { size_hints_honor = <span class="keyword">false</span> } },</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org15f01ce" class="outline-3">
+<h3 id="org15f01ce"><span class="section-number-3">7.2</span> fvwm</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+fvwm&#x5DF2;&#x7ECF;&#x662F;&#x975E;&#x5E38;&#x53E4;&#x8001;&#x7684;&#x6280;&#x672F;&#x4E86;&#xFF0C;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x662F;&#x5F88;&#x5C0F;&#x4F17;&#x7684;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#x3002;&#x4E0D;&#x662F;&#x4E3A;&#x4E86;&#x914D;&#x7F6E;xdmx&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4E5F;&#x4E0D;&#x4F1A;&#x63A5;&#x89E6;&#x5230;&#x8FD9;&#x4E2A;&#x6280;&#x672F;&#x3002;&#x591A;&#x6570;&#x63D0;&#x5230;xdmx&#x7684;&#x6587;&#x7AE0;&#x90FD;&#x662F;&#x4F7F;&#x7528;twm&#x4F5C;&#x4E3A;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#x7684;&#xFF0C;&#x4F46;&#x662F;twm&#x662F;&#x5728;&#x592A;&#x96BE;&#x770B;&#x4E86;&#x3002;&#x5728;<a href="http://xwinman.org/" target="_blank" rel="noopener">Window Managers for X</a>&#x8BD5;&#x904D;&#x4E86;&#x6240;&#x6709;&#x5E38;&#x89C1;&#x7684;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x53EA;&#x6709;fvwm&#x6BD4;&#x8F83;&#x7B26;&#x5408;&#x6211;&#x7684;&#x8981;&#x6C42;&#x7684;&#x3002;&#x539F;&#x56E0;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x652F;&#x6301;xdmx&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x662F;&#x652F;&#x6301;&#x5E73;&#x94FA;&#x5F0F;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x3002;fvwm&#x7684;&#x529F;&#x80FD;&#x5341;&#x5206;&#x4E30;&#x5BCC;&#xFF0C;&#x51E0;&#x4E4E;&#x80FD;&#x5B9E;&#x73B0;&#x4EFB;&#x4F55;&#x5173;&#x4E8E;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x65B9;&#x9762;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E0B;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x6781;&#x5176;&#x4E11;&#x964B;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x6162;&#x6162;&#x53BB;&#x8C03;&#x6559;&#xFF0C;&#x4F46;&#x662F;Robert Ulbricht&#x505A;&#x7684;fvwm&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6EE1;&#x8DB3;&#x4E86;&#x6211;&#x7684;&#x8FD9;&#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x8981;&#x6C42;&#x3002;&#x4ED6;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x516C;&#x5F00;&#x5728;github&#x4E0A;&#xFF0C;&#x5730;&#x5740;&#x5982;&#x4E0B;&#xFF1A;<a href="https://github.com/urob/fvwm-tiling" target="_blank" rel="noopener">A tiling window manager configuration for fvwm</a>&#xFF0C;&#x6211;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x5E73;&#x94FA;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x7A97;&#x53E3;&#x4F4D;&#x7F6E;&#x8BA1;&#x7B97;&#x6709;&#x8BEF;&#x5DEE;&#xFF0C;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x4FEE;&#x6B63;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/wing-ho/fvwm-tiling.git</span><br><span class="line">sudo pacman -S stalonetray screen dmenu mate-power-manager fcitx-im fcitx-configtool</span><br><span class="line"><span class="comment">#aur/fvwm+&#x662F;&#x6253;&#x597D;&#x4E86;&#x5404;&#x79CD;&#x8865;&#x4E01;&#x7684;&#x5305;</span></span><br><span class="line"><span class="comment">#aur/rxvt-unicode-fontspacing-noinc-vteclear-secondarywheel&#x6253;&#x597D;&#x4E86;&#x5404;&#x79CD;&#x8865;&#x4E01;&#x7684;&#x5305;</span></span><br><span class="line">yaourt -S fvwm+ aur/rxvt-unicode-fontspacing-noinc-vteclear-secondarywheel fcitx-sogoupinyin</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgae4dfaa" class="outline-3">
+<h3 id="orgae4dfaa"><span class="section-number-3">7.3</span> xfce4</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+&#x591A;&#x6570;&#x4EBA;&#x7528;&#x5F97;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x5C31;&#x662F;&#x7B14;&#x8BB0;&#x672C;&#x7684;&#x663E;&#x793A;&#x5668;&#xFF0C;&#x4E00;&#x822C;&#x5C31;&#x53EA;&#x6709;1366x768&#x7684;&#x5206;&#x8FA8;&#x7387;&#xFF0C;&#x5DE5;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x5C06;&#x5F53;&#x524D;&#x7684;&#x7A0B;&#x5E8F;&#x6700;&#x5927;&#x5316;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4EE5;&#x5E73;&#x94FA;&#x7684;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;&#x7A97;&#x53E3;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#x540C;&#x6837;&#x6BD4;&#x8F83;&#x8F7B;&#x91CF;&#x7684;xfce4&#x662F;&#x6211;&#x6BD4;&#x8F83;&#x63A8;&#x8350;&#x7684;&#x9009;&#x62E9;&#x3002;
+&#x9ED8;&#x8BA4;&#x7684;xfce4&#x4E3B;&#x9898;&#x6BD4;&#x8F83;&#x4E0D;&#x7B26;&#x5408;&#x6211;&#x7684;&#x5BA1;&#x7F8E;&#x8981;&#x6C42;&#xFF0C;&#x6211;&#x6BD4;&#x8F83;&#x559C;&#x6B22;&#x7684;Numix&#x7684;&#x9ED1;&#x8272;&#x4E3B;&#x9898;&#x548C;&#x56FE;&#x6807;&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yaourt -S numix-themes numix-circle-icon-theme-git</span><br><span class="line">sudo pacman -S xfce4 xfce4-goodies</span><br><span class="line">vim .xinitrc</span><br><span class="line"><span class="built_in">exec</span> startxfce4</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgedf33c3" class="outline-2">
+<h2 id="orgedf33c3"><span class="section-number-2">8</span> &#x914D;&#x7F6E;&#x84DD;&#x7259;&#x952E;&#x76D8;&#x548C;&#x84DD;&#x7259;&#x9F20;&#x6807;</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+&#x82F1;&#x6587;&#x597D;&#x7684;&#x670B;&#x53CB;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53C2;&#x8003;arch linux&#x7684;wiki&#xFF0C;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;&#x3002;
+</p>
+<ol class="org-ol">
+<li><a href="https://wiki.archlinux.org/index.php/Bluetooth_keyboard" target="_blank" rel="noopener">Bluetooth keyboard</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Bluetooth_mouse" target="_blank" rel="noopener">Bluetooth mouse</a></li>
+</ol>
+</div>
+<div id="outline-container-org7670383" class="outline-3">
+<h3 id="org7670383"><span class="section-number-3">8.1</span> &#x624B;&#x52A8;&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x952E;&#x76D8;&#x9F20;&#x6807;</h3>
+<div class="outline-text-3" id="text-8-1">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S rfkill</span><br><span class="line">sudo rfkill list</span><br><span class="line">sudo rfkill unblock bluetooth</span><br><span class="line"><span class="comment">#&#x914D;&#x7F6E;&#x84DD;&#x7259;&#x952E;&#x76D8;</span></span><br><span class="line">bluetoothctl</span><br><span class="line">[bluetooth]<span class="comment"># power on</span></span><br><span class="line">[bluetooth]<span class="comment"># agent KeyboardOnly</span></span><br><span class="line">[bluetooth]<span class="comment"># default-agent</span></span><br><span class="line">[bluetooth]<span class="comment"># pairable on</span></span><br><span class="line">[bluetooth]<span class="comment"># scan on</span></span><br><span class="line">[bluetooth]<span class="comment"># pair &lt;keyboard mac&gt;</span></span><br><span class="line">[bluetooth]<span class="comment"># trust &lt;keyboard mac&gt;</span></span><br><span class="line">[bluetooth]<span class="comment"># connect &lt;keyboard mac&gt;</span></span><br><span class="line">[bluetooth]<span class="comment"># quit</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#&#x914D;&#x7F6E;&#x84DD;&#x7259;&#x9F20;&#x6807;</span></span><br><span class="line">[bluetooth]<span class="comment"># list</span></span><br><span class="line">Controller &lt;controller mac&gt; BlueZ <span class="number">5.5</span> [default]</span><br><span class="line">[bluetooth]<span class="comment"># select &lt;controller mac&gt;</span></span><br><span class="line">[bluetooth]<span class="comment"># power on</span></span><br><span class="line">[bluetooth]<span class="comment"># scan on</span></span><br><span class="line">[bluetooth]<span class="comment"># agent on</span></span><br><span class="line">[bluetooth]<span class="comment"># devices</span></span><br><span class="line">Device &lt;mouse mac&gt; Name: Bluetooth Mouse</span><br><span class="line">[bluetooth]<span class="comment"># pair &lt;mouse mac&gt;</span></span><br><span class="line">[bluetooth]<span class="comment"># trust &lt;mouse mac&gt;</span></span><br><span class="line">[bluetooth]<span class="comment"># connect &lt;mouse mac&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x6BCF;&#x6B21;&#x90FD;&#x624B;&#x52A8;&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#xFF0C;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;systemd service
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ebf746" class="outline-3">
+<h3 id="org7ebf746"><span class="section-number-3">8.2</span> &#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x952E;&#x76D8;&#x9F20;&#x6807;</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+wiki&#x4E0A;&#x9762;&#x8BF4;&#x662F;udev rule&#x6216;&#x8005;systemd&#x670D;&#x52A1;&#x4EFB;&#x9009;&#x5176;&#x4E00;&#x5C31;&#x80FD;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#xFF0C;&#x4F46;&#x662F;&#x524D;&#x63D0;&#x662F;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7;bluetoothctl&#x624B;&#x52A8;&#x914D;&#x5BF9;&#x8FDE;&#x63A5;&#x8FC7;&#x5E76;&#x4E14;&#x4FE1;&#x4EFB;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x3002;
+</p>
+</div>
+<div id="outline-container-org7de11d9" class="outline-4">
+<h4 id="org7de11d9"><span class="section-number-4">8.2.1</span> &#x4F7F;&#x7528;systemd&#x670D;&#x52A1;&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x8BBE;&#x5907;</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<p>
+&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/etc/btkbd.conf
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Config file for btkbd.service</span></span><br><span class="line"><span class="comment"># change when required (e.g. keyboard hardware changes, more hci devices are connected)</span></span><br><span class="line">BTKBDMAC=&lt;mac_address_of_your_device&gt;</span><br><span class="line">HCIDEVICE=&lt;hci_device_identifier&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">#mac_address_of_your_device can be found with the scan on command of the bluetoothctl utility. </span></span><br><span class="line"><span class="comment">#hci_device_identifier can be found with:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#hcitool dev</span></span><br><span class="line"><span class="comment">#Devices:</span></span><br><span class="line"><span class="comment">#   hci0   E0:2A:82:34:0D:42</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5728;/etc/systemd/system/btkbd.service&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=systemd Unit to automatically start a Bluetooth keyboard</span><br><span class="line">Documentation=https://wiki.archlinux.org/index.php/Bluetooth_Keyboard</span><br><span class="line">Requires=dbus-org.bluez.service</span><br><span class="line">After=dbus-bluez.org.service</span><br><span class="line">ConditionPathExists=/etc/btkbd.conf</span><br><span class="line">ConditionPathExists=/usr/bin/hcitool</span><br><span class="line">ConditionPathExists=/usr/bin/hciconfig</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=oneshot</span><br><span class="line">EnvironmentFile=/etc/btkbd.conf</span><br><span class="line">ExecStart=/usr/bin/hciconfig <span class="variable">${HCIDEVICE}</span> up</span><br><span class="line"><span class="comment"># ignore errors on connect, spurious problems with bt? so start next command with -</span></span><br><span class="line">ExecStart=-/usr/bin/hcitool cc <span class="variable">${BTKBDMAC}</span></span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x7136;&#x540E;&#x7528;systemctl&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5F00;&#x542F;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x3002;
+</p>
+
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> btkbd.service</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org4e2b9dc" class="outline-4">
+<h4 id="org4e2b9dc"><span class="section-number-4">8.2.2</span> &#x4F7F;&#x7528;udev rule&#x542F;&#x52A8;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x670D;&#x52A1;</h4>
+<div class="outline-text-4" id="text-8-2-2">
+<p>
+&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;/etc/udev/rules.d/10-local.rules
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Set bluetooth power up</span></span><br><span class="line">ACTION==<span class="string">&quot;add&quot;</span>, KERNEL==<span class="string">&quot;hci0&quot;</span>, RUN+=<span class="string">&quot;/usr/bin/hciconfig hci0 up&quot;</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4881bd" class="outline-2">
+<h2 id="orgc4881bd"><span class="section-number-2">9</span> &#x96F6;&#x788E;&#x95EE;&#x9898;&#x6C47;&#x603B;</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org007c42a" class="outline-3">
+<h3 id="org007c42a"><span class="section-number-3">9.1</span> &#x4F7F;&#x7528;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x5F00;&#x673A;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x63D0;&#x793A;&#xFF1A;</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+Arch Linux &#x2013; Failed to start Verify integrity of password and group files
+systemctl status shadow.service
+&#x63D0;&#x793A;Failed to start Verify integrity of password and group files
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo userdel -r gdm</span><br><span class="line">systemctl start shadow.service</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org6c9c871" class="outline-3">
+<h3 id="org6c9c871"><span class="section-number-3">9.2</span> Archlinux &#x5B89;&#x88C5; yaourt &#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+&#x6709;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x53CA;&#x65F6;&#x8DDF;&#x8FDB;&#x5347;&#x7EA7;&#x7CFB;&#x7EDF;&#xFF0C;yaourt&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x6389;&#x94FE;&#x4E86;&#xFF0C;&#x65E0;&#x6CD5;&#x5347;&#x7EA7;&#x4E86;&#xFF0C;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;yaourt&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://aur.archlinux.org/package-query.git</span><br><span class="line"><span class="built_in">cd</span> package-query</span><br><span class="line">makepkg -si</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">git <span class="built_in">clone</span> https://aur.archlinux.org/yaourt.git</span><br><span class="line"><span class="built_in">cd</span> yaourt</span><br><span class="line">makepkg -si</span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6541abd" class="outline-2">
+<h2 id="org6541abd"><span class="section-number-2">10</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
+<div class="outline-text-2" id="text-10">
+<ol class="org-ol">
+<li><a href="https://wiki.archlinux.org/index.php?title=Beginners&apos;_guide" target="_blank" rel="noopener">Beginners&apos; guide</a></li>
+<li><a href="https://bbs.archlinuxcn.org/viewtopic.php?id=1037" target="_blank" rel="noopener">Arch Linux &#x5B89;&#x88C5;&#x6307;&#x5357;</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_69e5d8400102vp00.html" target="_blank" rel="noopener">archuLINUX201501&#x7248;&#xFF0C;&#x6700;&#x5C0F;&#x5316;&#x7CBE;&#x51CF;</a></li>
+<li><a href="http://blog.csdn.net/Listener_ri/article/details/45407783" target="_blank" rel="noopener">arch-linux+xfce4+lightdm+uefi&#x4E2A;&#x4EBA;&#x5B89;&#x88C5;&#x8BB0;&#x5F55;</a></li>
+<li><a href="https://bbs.archlinuxcn.org/viewtopic.php?id=3474" target="_blank" rel="noopener">win8.1&#x4E0E;archlinux(UEFI+GPT)&#x53CC;&#x7CFB;&#x7EDF;&#x5171;&#x5B58;&#x2014;&#x7A97;&#x53E3;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF08;awesome-slim&#xFF09;</a></li>
+<li><a href="http://arch.acgtyrant.com/2013/12/13/which-urxvt-should-you-choose/" target="_blank" rel="noopener">&#x6709;&#x597D;&#x591A;&#x597D;&#x591A; urxvt&#xFF0C;&#x600E;&#x9EBC;&#x9078;&#x5462;&#xFF1F;</a></li>
+<li><a href="https://archlinux.fr/yaourt-en" target="_blank" rel="noopener">&#x5B89;&#x88C5;yaourt&#x7BA1;&#x7406;&#x5668;</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+Last Updated 2018-10-14 &#x65E5; 09:06.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
+</div>
+
+      <script>
+        window.disqusProxy={
+          shortname: 'wing-ho',
+          username: 'wing-ho',
+          server: 'disqus-proxy.callmewing.com',
+          port: 5509,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2015/12/31/Arch Linux安装配置手记/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2016/01/18/Spacemacs配置备忘/">Spacemacs配置备忘</a><a class="next" href="/2015/12/28/Linux设置环境变量/">Linux设置环境变量</a></div>
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://wing-ho.github.io/2015/12/31/Arch Linux安装配置手记/';
+    this.page.identifier = '2015/12/31/Arch Linux安装配置手记/';
+    this.page.title = 'Arch Linux安装配置手记';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//wing-ho.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//wing-ho.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://wing-ho.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://wing-ho.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rapberry-Pi/">Rapberry Pi</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Router/">Router</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VirtualBox/">VirtualBox</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/redis/">深入理解Redis</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/02/把镜像从KVM迁移到VirtualBox/">把镜像从KVM迁移到VirtualBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/打造兼容BIOS和UEFI的启动盘/">打造兼容BIOS和UEFI的启动盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/批量下载喜马拉雅的免费专辑/">批量下载喜马拉雅的免费专辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/把电纸书打造成护眼开发神器/">把电纸书打造成护眼开发神器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/17/Hexo博客集成GitBook/">Hexo博客集成GitBook</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/用Wine运行那些你离不开的应用/">用Wine运行那些你离不开的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/将Emacs写作环境转移到Windows/">将Emacs写作环境转移到Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/genrong" title="本人CSDN博客" target="_blank">本人CSDN博客</a><ul></ul><a href="https://blog.codingnow.com" title="云风" target="_blank">云风</a><ul></ul><a href="http://www.ruanyifeng.com/blog" title="阮一峰" target="_blank">阮一峰</a><ul></ul><a href="http://www.yinwang.org" title="王垠" target="_blank">王垠</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Wing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

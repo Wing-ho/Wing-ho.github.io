@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="description" content="Wing's Blog"><title>Spacemacs配置备忘 | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Spacemacs配置备忘</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Spacemacs配置备忘</h1><div class="post-meta">Jan 18, 2016<span> | </span><span class="category"><a href="/categories/Emacs/">Emacs</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2016/01/18/Spacemacs配置备忘/" href="/2016/01/18/Spacemacs配置备忘/#disqus_thread"></a><div class="post-content"><div id="content">
+
+<p>
+&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4F1A;&#x4E0D;&#x5B9A;&#x671F;&#x66F4;&#x65B0;&#xFF0C;&#x628A;&#x914D;&#x7F6E;Spacemacs&#x8FC7;&#x7A0B;&#x4E2D;&#x78B0;&#x5230;&#x7684;&#x95EE;&#x9898;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#x3002; 
+</p>
+<div id="outline-container-org9852198" class="outline-2">
+<h2 id="org9852198"><span class="section-number-2">1</span> &#x544A;&#x522B;ESC</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+&#x5982;&#x679C;&#x662F;vim&#x7684;&#x8001;&#x7528;&#x6237;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;esc&#x952E;&#xFF0C;&#x79BB;&#x4F60;&#x7684;&#x952E;&#x76D8;&#x4E2D;&#x5FC3;&#x592A;&#x8FDC;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x6362;&#x6210;jk&#xFF0C;&#x5207;&#x6362;&#x901F;&#x5EA6;&#x5C31;&#x4F1A;&#x5FEB;&#x5F88;&#x591A;&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">defun</span> dotspacemacs/user-init <span class="list">()</span></span><br><span class="line">  <span class="list">(<span class="keyword">setq-default</span> evil-escape-delay <span class="number">0.2</span>)</span></span><br><span class="line">  <span class="list">(<span class="keyword">setq-default</span> evil-escape-key-sequence <span class="string">&quot;jk&quot;</span>)</span></span><br><span class="line">)</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x53C2;&#x8003;&#x6587;&#x7AE0;
+<a href="http://www.guanggua.com/question/10569165-how-to-map-jj-to-esc-in-emacs-evil-mode.html" target="_blank" rel="noopener">http://www.guanggua.com/question/10569165-how-to-map-jj-to-esc-in-emacs-evil-mode.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org1ec867e" class="outline-2">
+<h2 id="org1ec867e"><span class="section-number-2">2</span> &#x542F;&#x52A8;&#x540E;Flyspell mode&#x6709;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#xFF1A;</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">No word lists can be found fro the language <span class="string">&quot;zh_CN&quot;</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+Flyspell mode&#x53EA;&#x5BF9;&#x82F1;&#x6587;&#x6709;&#x6548;&#xFF0C;&#x662F;&#x6CA1;&#x6709;zh<sub>CN</sub> word lists&#x7684;
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;hello, woold&quot;</span> | aspell <span class="operator">-a</span> <span class="operator">-l</span> en</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;hello, woold&quot;</span> | aspell <span class="operator">-a</span> </span><br><span class="line">sudo pacman -S aspell-en</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc8ae544" class="outline-2">
+<h2 id="orgc8ae544"><span class="section-number-2">3</span> &#x907F;&#x514D;shell&#x4E0B;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x63D0;&#x793A;fontset &apos;tty&apos; does not exist.</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+&#x7528;if&#x51FD;&#x6570;&#x68C0;&#x6D4B;emacs&#x662F;&#x5426;&#x5728;shell&#x6A21;&#x5F0F;&#x4E0B;&#x8FD0;&#x884C;&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">if</span> window-system</span><br><span class="line">     <span class="list">(<span class="keyword">dolist</span> <span class="list">(<span class="keyword">charset</span> <span class="quoted">&apos;(kana han symbol cjk-misc bopomofo)</span>)</span></span><br><span class="line">       <span class="list">(<span class="keyword">set-fontset-font</span> <span class="list">(<span class="keyword">frame-parameter</span> <span class="literal">nil</span> <span class="quoted">&apos;font</span>)</span></span><br><span class="line">			 charset <span class="list">(<span class="keyword">font-spec</span> <span class="keyword">:family</span> <span class="string">&quot;&#x6587;&#x6CC9;&#x9A7F;&#x7B49;&#x5BBD;&#x5FAE;&#x7C73;&#x9ED1;&quot;</span></span><br><span class="line">					    <span class="keyword">:size</span> <span class="number">16</span>)</span>)</span>)</span>)</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orge4e9781" class="outline-2">
+<h2 id="orge4e9781"><span class="section-number-2">4</span> tern binary not found</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="https://github.com/syl20bnr/spacemacs/issues/7497" target="_blank" rel="noopener">https://github.com/syl20bnr/spacemacs/issues/7497</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org9ca8e8e" class="outline-2">
+<h2 id="org9ca8e8e"><span class="section-number-2">5</span> yasnippet&#x5305;&#x66F4;&#x65B0;&#x540E;&#xFF0C;&#x51FA;&#x73B0;&#x4E25;&#x91CD;&#x7684;&#x6545;&#x969C;</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+&#x4F7F;&#x7528;Rollback package update&#x53EF;&#x4EE5;&#x56DE;&#x6EDA;&#x5230;&#x66F4;&#x65B0;&#x524D;&#x7684;&#x5305;&#xFF0C;&#x56E0;&#x4E3A;&#x5BF9;spacemacs&#x8FD8;&#x4E0D;&#x662F;&#x5341;&#x5206;&#x719F;&#x6089;&#xFF0C;&#x8FD9;&#x4E2A;&#x6545;&#x969C;&#x6298;&#x817E;&#x4E86;&#x6211;&#x534A;&#x5929;&#xFF0C;&#x624D;&#x627E;&#x5230;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x540E;&#x66F4;&#x65B0;&#x4E0D;&#x7528;&#x90A3;&#x4E48;&#x52E4;&#x5FEB;&#x4E86;&#xFF0C;&#x66F4;&#x65B0;&#x51FA;&#x4E86;&#x95EE;&#x9898;&#x4E5F;&#x86EE;&#x6298;&#x78E8;&#x4EBA;&#x7684;&#x3002;
+</p>
+</div>
+</div>
+<div id="outline-container-org52b4e85" class="outline-2">
+<h2 id="org52b4e85"><span class="section-number-2">6</span> &#x53C2;&#x8003;&#x6587;&#x7AE0;&#xFF1A;</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+1.<a href="http://www.yy42.net/blog/?p=318" target="_blank" rel="noopener"> Linux &#x6280;&#x5DE7;&#xFF1A;&#x6D3B;&#x7528; Emacs &#x7684;&#x5355;&#x8BCD;&#x62FC;&#x5199;&#x68C0;&#x67E5;&#x529F;&#x80FD;</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+Last Updated 2018-10-14 &#x65E5; 09:06.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
+</div>
+
+      <script>
+        window.disqusProxy={
+          shortname: 'wing-ho',
+          username: 'wing-ho',
+          server: 'disqus-proxy.callmewing.com',
+          port: 5509,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2016/01/18/Spacemacs配置备忘/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2016/03/28/玩转HG255D路由/">玩转HG255D路由</a><a class="next" href="/2015/12/31/Arch Linux安装配置手记/">Arch Linux安装配置手记</a></div>
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://wing-ho.github.io/2016/01/18/Spacemacs配置备忘/';
+    this.page.identifier = '2016/01/18/Spacemacs配置备忘/';
+    this.page.title = 'Spacemacs配置备忘';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//wing-ho.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//wing-ho.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://wing-ho.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://wing-ho.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rapberry-Pi/">Rapberry Pi</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Router/">Router</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VirtualBox/">VirtualBox</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/redis/">深入理解Redis</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/02/把镜像从KVM迁移到VirtualBox/">把镜像从KVM迁移到VirtualBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/打造兼容BIOS和UEFI的启动盘/">打造兼容BIOS和UEFI的启动盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/批量下载喜马拉雅的免费专辑/">批量下载喜马拉雅的免费专辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/把电纸书打造成护眼开发神器/">把电纸书打造成护眼开发神器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/17/Hexo博客集成GitBook/">Hexo博客集成GitBook</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/用Wine运行那些你离不开的应用/">用Wine运行那些你离不开的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/将Emacs写作环境转移到Windows/">将Emacs写作环境转移到Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/genrong" title="本人CSDN博客" target="_blank">本人CSDN博客</a><ul></ul><a href="https://blog.codingnow.com" title="云风" target="_blank">云风</a><ul></ul><a href="http://www.ruanyifeng.com/blog" title="阮一峰" target="_blank">阮一峰</a><ul></ul><a href="http://www.yinwang.org" title="王垠" target="_blank">王垠</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Wing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

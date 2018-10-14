@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="msvalidate.01" content="882A4E15FB483D0DD65BAC2CD6F114BD"><meta name="description" content="Wing's Blog"><title>IISExpress整合ASP、ASP.net、PHP和Tomcat | Wing</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">IISExpress整合ASP、ASP.net、PHP和Tomcat</h1><a id="logo" href="/.">Wing</a><p class="description">大道至简</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/books/"><i class="fa fa-book"> 书籍</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">IISExpress整合ASP、ASP.net、PHP和Tomcat</h1><div class="post-meta">Nov 15, 2015<span> | </span><span class="category"><a href="/categories/Windows/">Windows</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2015/11/15/IISExpress整合ASP、ASP.net、PHP和Tomcat/" href="/2015/11/15/IISExpress整合ASP、ASP.net、PHP和Tomcat/#disqus_thread"></a><div class="post-content"><div id="content">
+
+<p>
+&#x4F30;&#x8BA1;&#x8FD8;&#x662F;&#x6709;&#x5F88;&#x591A;&#x8001;&#x7684;&#x670D;&#x52A1;&#x5668;&#x8FD8;&#x5728;&#x8FD0;&#x884C;&#x7740;Win2003&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;IIS 6&#x5728;&#x6574;&#x5408;&#x591A;&#x79CD;&#x6280;&#x672F;&#x5F88;&#x9EBB;&#x70E6;&#xFF0C;&#x5176;ISAPI&#x6269;&#x5C55;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x67D0;&#x4E00;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#xFF0C;IIS 7&#x7684;&#x6A21;&#x5757;&#x5316;&#x8BBE;&#x8BA1;&#xFF0C;&#x5176;&#x6269;&#x5C55;&#x6027;&#x8FDC;&#x80DC;&#x4E8E;IIS6&#xFF0C;Win2003&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x5B89;&#x88C5;IIS7&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;IIS Express 7.5&#xFF0C;&#x5B83;&#x7684;&#x529F;&#x80FD;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x53EA;&#x662F;&#x6CA1;&#x6709;&#x754C;&#x9762;&#x800C;&#x5DF2;&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x662F;&#x5229;&#x7528;IIS Express 7.5&#x5206;&#x522B;&#x6574;&#x5408;ASP&#x3001;ASP.net&#x3001;PHP&#x548C;Tomcat&#x7684;&#x914D;&#x7F6E;&#x6B65;&#x9AA4;&#x3002;
+</p>
+
+<p>
+IIS&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x8DEF;&#x5F84;
+</p>
+
+<ul class="org-ul">
+<li>IIS 5 &#x4E2D;&#xFF0C;IIS&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;&#xFF1A;C:\WINNT\system32\inetsrv\MetaBase.bin</li>
+<li>IIS 6 &#x4E2D;&#xFF0C;IIS &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;&#xFF1A;C:\WINDOWS\system32\inetsrv\MetaBase.xml</li>
+<li>IIS 7 &#x4E2D;&#xFF0C;IIS &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;&#xFF1A;C:\WINDOWS\system32\inetstr\config\applicationHost.config
+&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x628A;iis&#x5BF9;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x5173;&#x6389;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7;DirectoryEntry&#x7C7B;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x6B64;&#x6587;&#x4EF6;&#x5B9E;&#x73B0;&#x7A0B;&#x5E8F;&#x914D;&#x7F6E;IIS&#x3002;</li>
+<li>IIS Express&#x4E2D;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;&#xFF1A;C:\Users\&#x7528;&#x6237;&#x540D;\Documents\IISExpress\config\applicationHost.config</li>
+</ul>
+<p>
+IIS Express&#x76F8;&#x5F53;&#x4E8E;&#x6CA1;&#x6709;&#x754C;&#x9762;&#x7684;IIS&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x6765;&#x66FF;&#x4EE3;IIS 5&#x6216;&#x8005;IIS 6&#xFF0C;IIS Express&#x529F;&#x80FD;&#x4E0E;IIS 7&#x662F;&#x76F8;&#x5F53;&#x7684;&#xFF0C;&#x76EE;&#x524D;&#x7248;&#x672C;&#x7684;&#x7248;&#x672C;&#x6709;:
+IIS Express 7.5&#x53CA;&#x4EE5;&#x4E0A;&#x90FD;&#x9700;&#x8981;.NET Framework 4.0
+&#x7CFB;&#x7EDF;&#x8981;&#x6C42;&#xFF1A;Windows 7, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Vista, Windows XP
+</p>
+
+<p>
+IIS Express 8.0
+&#x7CFB;&#x7EDF;&#x8981;&#x6C42;&#xFF1A;Windows 7, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista Service Pack 1
+</p>
+<div id="outline-container-org7ffbbb1" class="outline-2">
+<h2 id="org7ffbbb1"><span class="section-number-2">1</span> &#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x7684;IISExpress 7.5</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Vista&#x7248;&#x672C;&#x4EE5;&#x4E0B;&#x7684;&#x7CFB;&#x7EDF;&#x9009;&#x62E9;7.5&#xFF0C;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;8.0 [&#x70B9;&#x51FB;&#x4E0B;&#x8F7D;](<a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=1038" target="_blank" rel="noopener">https://www.microsoft.com/zh-CN/download/details.aspx?id=1038</a>)
+IIS Express&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x5E76;&#x53D1;&#x8FDE;&#x63A5;&#x6570;&#x662F;&#x6709;&#x4E00;&#x5B9A;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x627E;&#x5230;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&quot;applicationHost.config&quot;&#xFF0C;&#x4FEE;&#x6539;maxConnections&#x5C5E;&#x6027;&#x3002;
+</p>
+<div class="org-src-container">
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">sites</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Other sites --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">site</span> <span class="attribute">name</span>=<span class="value">&quot;YourSiteName&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;YourSiteId&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Existing elements --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">limits</span> <span class="attribute">maxBandwidth</span>=<span class="value">&quot;65536&quot;</span> <span class="attribute">maxConnections</span>=<span class="value">&quot;1024&quot;</span> <span class="attribute">connectionTimeout</span>=<span class="value">&quot;00:01:00&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">site</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Remaining sites --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">site</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org50ab3b0" class="outline-2">
+<h2 id="org50ab3b0"><span class="section-number-2">2</span> &#x6574;&#x5408;ASP</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+&#x6253;&#x5F00;IIS Express&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;C:\Documents and Settings\$YourName$\My Documents\IISExpress\config\applicationHost.config
+</p>
+
+<p>
+&#x627E;&#x5230;&lt;system.applicationHost&gt;&#x548C;&lt;system.webServer&gt;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;
+</p>
+<div class="org-src-container">
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">system.applicationHost</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">sites</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">site</span> <span class="attribute">name</span>=<span class="value">&quot;website&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;834668867&quot;</span> <span class="attribute">serverAutoStart</span>=<span class="value">&quot;true&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">application</span> <span class="attribute">path</span>=<span class="value">&quot;/&quot;</span> <span class="attribute">applicationPool</span>=<span class="value">&quot;Clr2ClassicAppPool&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">virtualDirectory</span> <span class="attribute">path</span>=<span class="value">&quot;/&quot;</span> <span class="attribute">physicalPath</span>=<span class="value">&quot;D:\website&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">virtualDirectory</span> <span class="attribute">path</span>=<span class="value">&quot;/jakarta&quot;</span> <span class="attribute">physicalPath</span>=<span class="value">&quot;d:\jk\isapi&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">bindings</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">binding</span> <span class="attribute">protocol</span>=<span class="value">&quot;http&quot;</span> <span class="attribute">bindingInformation</span>=<span class="value">&quot;*:80:&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="title">bindings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">site</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">sites</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">system.applicationHost</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">asp</span></span><br><span class="line">      <span class="attribute">enableParentPaths</span>=<span class="value">&quot;true&quot;</span></span><br><span class="line">      <span class="attribute">bufferingOn</span>=<span class="value">&quot;true&quot;</span></span><br><span class="line">      <span class="attribute">errorsToNTLog</span>=<span class="value">&quot;true&quot;</span></span><br><span class="line">      <span class="attribute">appAllowDebugging</span>=<span class="value">&quot;true&quot;</span></span><br><span class="line">      <span class="attribute">appAllowClientDebug</span>=<span class="value">&quot;true&quot;</span></span><br><span class="line">      <span class="attribute">scriptErrorSentToBrowser</span>=<span class="value">&quot;true&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">session</span> <span class="attribute">allowSessionState</span>=<span class="value">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">cache</span> <span class="attribute">diskTemplateCacheDirectory</span>=<span class="value">&quot;%TEMP%\iisexpress\ASP Compiled Templates&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">limits</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">asp</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">system.webServer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org90a79ab" class="outline-2">
+<h2 id="org90a79ab"><span class="section-number-2">3</span> &#x6574;&#x5408;PHP</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+1.[&#x4E0B;&#x8F7D;php-5.2.17-Win32-VC6-x86.zip](<a href="http://windows.php.net/downloads/releases/archives/php-5.2.17-Win32-VC6-x86.zip" target="_blank" rel="noopener">http://windows.php.net/downloads/releases/archives/php-5.2.17-Win32-VC6-x86.zip</a>) &#x9700;&#x8981;&#x914D;&#x7F6E;&#x7684;&#x7A0B;&#x5E8F;&#x662F;&#x5F88;&#x591A;&#x5E74;&#x524D;&#x5199;&#x7684;&#xFF0C;&#x5F53;&#x65F6;&#x662F;&#x9488;&#x5BF9;5.2.17&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x66F4;&#x65B0;&#x7684;&#x7248;&#x672C;&#x5E94;&#x8BE5;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x4EE5;&#x4E0B;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x3002;PHP 5.&#xFF14;&#x7248;&#x672C;&#x662F;&#x7528;VC9&#x7F16;&#x5199;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x53E6;&#x5916;&#x5B89;&#x88C5;VC9&#x8FD0;&#x884C;&#x73AF;&#x5883;[Microsoft Visual C++ 2008 Redistributable Package](<a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=29" target="_blank" rel="noopener">http://www.microsoft.com/zh-cn/download/details.aspx?id=29</a>)&#x3002;
+</p>
+
+<p>
+2.&#x6211;&#x7684;&#x6587;&#x6863;/IISExpress&#x76EE;&#x5F55;&#x91CC;&#x9762;&#x6709;&#x4E2A;applicationHost.
+</p>
+<div class="org-src-container">
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">defaultDocument</span> <span class="attribute">enabled</span>=<span class="value">&quot;true&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">files</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">value</span>=<span class="value">&quot;Default.htm&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">value</span>=<span class="value">&quot;Default.asp&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">value</span>=<span class="value">&quot;index.htm&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">value</span>=<span class="value">&quot;index.html&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">value</span>=<span class="value">&quot;iisstart.htm&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">value</span>=<span class="value">&quot;default.aspx&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">value</span>=<span class="value">&quot;index.php&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">files</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">defaultDocument</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+3.&#x627E;&#x5230;&lt;fastcgi/&gt;&#x8282;&#x70B9;&#xFF0C;&#x6DFB;&#x52A0;
+</p>
+<div class="org-src-container">
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">fastCgi</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">application</span> <span class="attribute">fullPath</span>=<span class="value">&quot;D:\PHP\php-cgi.exe&quot;</span> <span class="attribute">monitorChangesTo</span>=<span class="value">&quot;php.ini&quot;</span> <span class="attribute">activityTimeout</span>=<span class="value">&quot;600&quot;</span> <span class="attribute">requestTimeout</span>=<span class="value">&quot;600&quot;</span> <span class="attribute">instanceMaxRequests</span>=<span class="value">&quot;10000&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">environmentVariables</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">environmentVariable</span> <span class="attribute">name</span>=<span class="value">&quot;PHP_FCGI_MAX_REQUESTS&quot;</span> <span class="attribute">value</span>=<span class="value">&quot;10000&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">environmentVariable</span> <span class="attribute">name</span>=<span class="value">&quot;PHPRC&quot;</span> <span class="attribute">value</span>=<span class="value">&quot;D:\PHP&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">environmentVariables</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">fastCgi</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+4.&#x627E;&#x5230;&lt;handlers&gt;&#x8282;&#x70B9;&#xFF0C;&#x6DFB;&#x52A0;
+</p>
+<div class="org-src-container">
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">add</span> <span class="attribute">name</span>=<span class="value">&quot;PHP53_via_FastCGI&quot;</span> <span class="attribute">path</span>=<span class="value">&quot;*.php&quot;</span> <span class="attribute">verb</span>=<span class="value">&quot;GET,HEAD,POST&quot;</span> <span class="attribute">modules</span>=<span class="value">&quot;FastCgiModule&quot;</span> <span class="attribute">scriptProcessor</span>=<span class="value">&quot;D:\PHP\php-cgi.exe&quot;</span> <span class="attribute">resourceType</span>=<span class="value">&quot;Either&quot;</span>  /&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x5C24;&#x5176;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x662F;&#xFF0C;&#x8FD9;&#x4E00;&#x53E5;&#x6700;&#x597D;&#x52A0;&#x5728;&#x6700;&#x524D;&#x9762;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5728;&lt;handlles&gt;&#x4E0B;&#x9762;&#x7684;&#x7B2C;&#x4E00;&#x53E5;&#xFF0C;&#x907F;&#x514D;&#x88AB;&#x5176;&#x5B83;Handle&#x62A2;&#x5148;&#x5904;&#x7406;&#x4E86;&#x3002;&#x4EE5;&#x4E0A;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;D:\php\php-cgi.exe&#x7684;&#x90E8;&#x5206;&#x66FF;&#x6362;&#x6210;&#x81EA;&#x5DF1;&#x7684;php&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;php-cgi.exe&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+</p>
+
+<p>
+5.&#x5728;&lt;site&gt;&#x8282;&#x70B9;&#x4E0B;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x7AD9;&#x70B9;&#x4FE1;&#x606F;&#xFF0C;&#x6216;&#x76F4;&#x63A5;&#x7528;appcmd.exe add site&#x6765;&#x6DFB;&#x52A0;&#x7AD9;&#x70B9;&#x3002;
+</p>
+
+<p>
+6.&#x627E;&#x5230;&#x8BF8;&#x5982;wordpress&#x7684;&#x5B89;&#x88C5;&#x6587;&#x4EF6;&#x5939;,&#x521B;&#x5EFA;&#x4E00;&#x4E2A;web.config&#x6587;&#x4EF6;&#xFF0C;&#x5728;configuration&#x914D;&#x7F6E;&#x8282;&#x4E0B;&#xFF0C;&#x6DFB;&#x52A0;Gzip&#x538B;&#x7F29;&#x89C4;&#x5219;&#x3002;
+</p>
+
+<p>
+7.&#x540C;&#x6837;&#x5728;web.config&#x4E2D;&#xFF0C;Wordpress&#x7684;rewrite&#x5B8C;&#x6574;&#x7684;web.config&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;
+</p>
+<div class="org-src-container">
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">rewrite</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">rules</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">rule</span> <span class="attribute">name</span>=<span class="value">&quot;wordpress&quot;</span> <span class="attribute">patternSyntax</span>=<span class="value">&quot;Wildcard&quot;</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="title">match</span> <span class="attribute">url</span>=<span class="value">&quot;*&quot;</span> /&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="title">conditions</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">input</span>=<span class="value">&quot;{REQUEST_FILENAME}&quot;</span> <span class="attribute">matchType</span>=<span class="value">&quot;IsFile&quot;</span> <span class="attribute">negate</span>=<span class="value">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="title">add</span> <span class="attribute">input</span>=<span class="value">&quot;{REQUEST_FILENAME}&quot;</span> <span class="attribute">matchType</span>=<span class="value">&quot;IsDirectory&quot;</span> <span class="attribute">negate</span>=<span class="value">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">	  <span class="tag">&lt;/<span class="title">conditions</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="title">action</span> <span class="attribute">type</span>=<span class="value">&quot;Rewrite&quot;</span> <span class="attribute">url</span>=<span class="value">&quot;index.php&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">rule</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="title">rules</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">rewrite</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">system.webServer</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">urlCompression</span> <span class="attribute">doStaticCompression</span>=<span class="value">&quot;true&quot;</span> <span class="attribute">doDynamicCompression</span>=<span class="value">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">system.webServer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+&#x8FD9;&#x6837;&#x5C31;&#x5B8C;&#x5168;&#x914D;&#x7F6E;&#x5B8C;&#x6BD5;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x5728;IIS7 Express&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x627E;&#x5230;IISExpress.exe&#xFF0C;&#x76F4;&#x63A5;&#x53CC;&#x51FB;&#x8FD0;&#x884C;&#xFF0C;&#x6216;&#x8005;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x6765;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x52A0;&#x8F7D;&#x54EA;&#x4E2A;&#x7AD9;&#x70B9;&#x3002; &#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;IISExpress&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x6DFB;&#x52A0;&#x5230;Path&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x3002;
+</p>
+
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iisexpress.exe /site:<span class="string">&quot;&#x7AD9;&#x70B9;&#x540D;&#x79F0;1&quot;</span></span><br><span class="line">iisexpress.exe /site:<span class="string">&quot;&#x7AD9;&#x70B9;&#x540D;&#x79F0;2&quot;</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1757a17" class="outline-2">
+<h2 id="org1757a17"><span class="section-number-2">4</span> &#x6574;&#x5408;tomcat</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+1.&#x5B89;&#x88C5;tomcat &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x7F51;&#x7AD9;&#x662F;&#x7528;tomcat 6.x&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x76EE;&#x524D;&#x6700;&#x9AD8;&#x7248;&#x672C;&#x662F;6.0.45&#xFF0C;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://tomcat.apache.org/download-60.cgi" target="_blank" rel="noopener">http://tomcat.apache.org/download-60.cgi</a>&#x3002; &#x6211;&#x628A;tomcat&#x5B89;&#x88C5;&#x5230;&#x4E86;d: 2.&#x4E0B;&#x8F7D;tomcat-connector &#x5C06;IIS&#x7684;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x5230;tomcat&#x4E0A;&#x9700;&#x8981;tomcat-connector&#xFF0C;&#x76EE;&#x524D;&#x6700;&#x9AD8;&#x7248;&#x672C;&#x662F;1.2.40&#xFF0C;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://mirror.bit.edu.cn/apache/tomcat/tomcat-connectors/jk/binaries/windows/" target="_blank" rel="noopener">http://mirror.bit.edu.cn/apache/tomcat/tomcat-connectors/jk/binaries/windows/</a> &#x628A;connector&#x89E3;&#x538B;&#x5230;d:\jk
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">d:\jk</td>
+<td class="org-left">&#xA0;</td>
+<td class="org-left">&#xA0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x251C;&#x2500;&#x2500;</td>
+<td class="org-left">conf</td>
+<td class="org-left">&#xA0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2502;&#xA0;&#xA0;</td>
+<td class="org-left">&#x251C;&#x2500;&#x2500;</td>
+<td class="org-left">uriworkermap.properties</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2502;&#xA0;&#xA0;</td>
+<td class="org-left">&#x2514;&#x2500;&#x2500;</td>
+<td class="org-left">workers.properties</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x251C;&#x2500;&#x2500;</td>
+<td class="org-left">isapi</td>
+<td class="org-left">&#xA0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2502;&#xA0;&#xA0;</td>
+<td class="org-left">&#x251C;&#x2500;&#x2500;</td>
+<td class="org-left">isapi_redirect.dll</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2502;&#xA0;&#xA0;</td>
+<td class="org-left">&#x251C;&#x2500;&#x2500;</td>
+<td class="org-left">isapi.redirect.properties</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2502;&#xA0;&#xA0;</td>
+<td class="org-left">&#x2514;&#x2500;&#x2500;</td>
+<td class="org-left">web.config</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x251C;&#x2500;&#x2500;</td>
+<td class="org-left">logs</td>
+<td class="org-left">&#xA0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2514;&#x2500;&#x2500;</td>
+<td class="org-left">tomcat_isapi.reg</td>
+<td class="org-left">&#xA0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+uriworkermap.properties
+</p>
+<div class="org-src-container">
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">workers.tomcat_home=D:\Tomcat\</span><br><span class="line">workers.java_home=C:\Program Files\Java\jre1.6.0_04</span><br><span class="line">ps=\</span><br><span class="line">worker.list=ajp13</span><br><span class="line">worker.ajp13.port=8009</span><br><span class="line">worker.ajp13.host=localhost</span><br><span class="line">worker.ajp13.type=ajp13</span><br><span class="line">worker.ajp13.lbfactor=1</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+workers.properties
+</p>
+<div class="org-src-container">
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">/$your_website_url/*=ajp13</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+isapi.redirect.properties
+</p>
+<div class="org-src-container">
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Configuration file for the Jakarta ISAPI Redirector</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The path to the ISAPI Redirector Extension, relative to the website</span></span><br><span class="line"><span class="comment"># This must be in a virtual directory with execute privileges</span></span><br><span class="line"><span class="setting">extension_uri=<span class="value">/jakarta/isapi_redirect.dll</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Full path to the log file for the ISAPI Redirector</span></span><br><span class="line"><span class="setting">log_file=<span class="value">d:\jk\logs\isapi_redirect.log</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Log level (debug, info, warn, error or trace)</span></span><br><span class="line"><span class="setting">log_level=<span class="value">info</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Full path to the workers.properties file</span></span><br><span class="line"><span class="setting">worker_file=<span class="value">d:\jk\conf\workers.properties</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Full path to the uriworkermap.properties file</span></span><br><span class="line"><span class="setting">worker_mount_file=<span class="value">d:\jk\conf\uriworkermap.properties</span></span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+web.config
+</p>
+<div class="org-src-container">
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">handlers</span> <span class="attribute">accessPolicy</span>=<span class="value">&quot;Read, Write, Execute&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">system.webServer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+tomcat_isapi.reg
+</p>
+<div class="org-src-container">
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Jakarta Isapi Redirector\1.0]</span><br><span class="line">&quot;extension_uri&quot;=&quot;/jakarta/isapi_redirect.dll&quot;</span><br><span class="line">&quot;log_file&quot;=&quot;D://jk//logs//isapi.log&quot;</span><br><span class="line">&quot;log_level&quot;=&quot;debug&quot;</span><br><span class="line">&quot;worker_file&quot;=&quot;D://jk//conf//workers.properties&quot;</span><br><span class="line">&quot;worker_mount_file&quot;=&quot;D://jk//conf//uriworkermap.properties&quot;</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org17d4cb4" class="outline-2">
+<h2 id="org17d4cb4"><span class="section-number-2">5</span> &#x540E;&#x8BB0;</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+&#x5728;&#x4F7F;&#x7528;Nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x65B9;&#x6848;&#x6D41;&#x884C;&#x4E4B;&#x540E;&#xFF0C;&#x5DF2;&#x7ECF;&#x5F88;&#x5C11;&#x518D;&#x4F7F;&#x7528;&#x8FD9;&#x6837;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x6848;&#x4E86;&#xFF0C;&#x628A;&#x540C;&#x4E00;&#x57DF;&#x540D;&#x4E0B;&#x7684;&#x5B50;&#x7AD9;&#x70B9;URL&#x6620;&#x5C04;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x66F4;&#x7B80;&#x5355;&#x548C;&#x58EE;&#x5065;&#xFF0C;&#x800C;&#x4E14;&#x66F4;&#x5BB9;&#x6613;&#x6574;&#x5408;&#x4E0D;&#x540C;&#x7684;&#x6280;&#x672F;&#x3002;
+</p>
+</div>
+</div>
+<div id="outline-container-org302d5bf" class="outline-2">
+<h2 id="org302d5bf"><span class="section-number-2">6</span> &#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li><a href="http://www.cnblogs.com/William_Fire/archive/2013/05/27/3101374.html" target="_blank" rel="noopener">Windows2003&#x4E0A;&#x4F7F;&#x7528;IIS7 Express&#x4F7F;&#x7528;FastCgi&#x8FD0;&#x884C;php</a></li>
+<li><a href="https://stackoverflow.com/questions/8731334/configure-maximum-number-of-requests-in-iis-express" target="_blank" rel="noopener">Configure Maximum Number of Requests in IIS Express</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+Last Updated 2018-10-14 &#x65E5; 09:06.<br>Created by <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.1.1 (<a href="https://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.14)
+</div>
+
+      <script>
+        window.disqusProxy={
+          shortname: 'wing-ho',
+          username: 'wing-ho',
+          server: 'disqus-proxy.callmewing.com',
+          port: 5509,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2015/11/15/IISExpress整合ASP、ASP.net、PHP和Tomcat/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script></div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2015/11/20/实现简单的ASP MVC框架/">实现简单的ASP MVC框架</a><a class="next" href="/2015/11/14/玩转树莓派/">玩转树莓派</a></div>
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://wing-ho.github.io/2015/11/15/IISExpress整合ASP、ASP.net、PHP和Tomcat/';
+    this.page.identifier = '2015/11/15/IISExpress整合ASP、ASP.net、PHP和Tomcat/';
+    this.page.title = 'IISExpress整合ASP、ASP.net、PHP和Tomcat';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//wing-ho.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//wing-ho.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://wing-ho.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://wing-ho.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rapberry-Pi/">Rapberry Pi</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Router/">Router</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VirtualBox/">VirtualBox</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/redis/">深入理解Redis</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/逆向PT632_G2光猫固件/">逆向PT632 G2光猫固件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/02/把镜像从KVM迁移到VirtualBox/">把镜像从KVM迁移到VirtualBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/10/把开发环境装进你的口袋/">把开发环境装进你的口袋</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/07/打造兼容BIOS和UEFI的启动盘/">打造兼容BIOS和UEFI的启动盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/批量下载喜马拉雅的免费专辑/">批量下载喜马拉雅的免费专辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/把电纸书打造成护眼开发神器/">把电纸书打造成护眼开发神器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/17/Hexo博客集成GitBook/">Hexo博客集成GitBook</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/用Wine运行那些你离不开的应用/">用Wine运行那些你离不开的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/将Emacs写作环境转移到Windows/">将Emacs写作环境转移到Windows</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://blog.csdn.net/genrong" title="本人CSDN博客" target="_blank">本人CSDN博客</a><ul></ul><a href="https://blog.codingnow.com" title="云风" target="_blank">云风</a><ul></ul><a href="http://www.ruanyifeng.com/blog" title="阮一峰" target="_blank">阮一峰</a><ul></ul><a href="http://www.yinwang.org" title="王垠" target="_blank">王垠</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Wing.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

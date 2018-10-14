@@ -8,15 +8,15 @@
     </url>
 
     <url>
-        <loc>http://wing-ho.github.io/categories/Emacs/</loc>
-        <lastmod>2018-09-10T02:24:18.427Z</lastmod>
+        <loc>http://wing-ho.github.io/categories/VirtualBox/</loc>
+        <lastmod>2018-09-10T02:24:18.719Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://wing-ho.github.io/categories/Hexo/</loc>
-        <lastmod>2018-09-10T02:24:20.215Z</lastmod>
+        <loc>http://wing-ho.github.io/categories/Router/</loc>
+        <lastmod>2018-09-10T02:24:19.891Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -29,8 +29,57 @@
     </url>
 
     <url>
+        <loc>http://wing-ho.github.io/categories/Android/</loc>
+        <lastmod>2018-10-01T10:08:00.431Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/categories/JavaScript/</loc>
+        <lastmod>2018-10-01T10:22:34.258Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/categories/Rapberry-Pi/</loc>
+        <lastmod>2018-10-05T03:37:35.847Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/categories/Hexo/</loc>
+        <lastmod>2018-10-10T00:47:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/categories/Redis/</loc>
+        <lastmod>2018-10-10T11:29:01.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/categories/Windows/</loc>
+        <lastmod>2018-10-11T07:10:07.124Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://wing-ho.github.io/categories/Linux/</loc>
-        <lastmod>2018-10-01T09:13:19.013Z</lastmod>
+        <lastmod>2018-10-12T09:30:21.294Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/categories/Emacs/</loc>
+        <lastmod>2018-10-13T16:09:48.747Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -8,6 +8,142 @@
     </url>
 
     <url>
+        <loc>http://wing-ho.github.io/2015/12/26/%E4%BD%BF%E7%94%A8Org%20Mode%E5%86%99%E5%8D%9A%E5%AE%A2/</loc>
+        <lastmod>2018-10-13T16:09:48.747Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2018/10/03/%E9%80%86%E5%90%91PT632_G2%E5%85%89%E7%8C%AB%E5%9B%BA%E4%BB%B6/</loc>
+        <lastmod>2018-10-12T09:30:21.294Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/11/15/IISExpress%E6%95%B4%E5%90%88ASP%E3%80%81ASP.net%E3%80%81PHP%E5%92%8CTomcat/</loc>
+        <lastmod>2018-10-11T07:10:07.124Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2017/03/12/%E7%94%A8Wine%E8%BF%90%E8%A1%8C%E9%82%A3%E4%BA%9B%E4%BD%A0%E7%A6%BB%E4%B8%8D%E5%BC%80%E7%9A%84%E5%BA%94%E7%94%A8/</loc>
+        <lastmod>2018-10-10T23:36:02.746Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2016/07/19/%E5%B0%86Emacs%E5%86%99%E4%BD%9C%E7%8E%AF%E5%A2%83%E8%BD%AC%E7%A7%BB%E5%88%B0Windows/</loc>
+        <lastmod>2018-10-10T23:33:05.627Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2018/10/06/redis/</loc>
+        <lastmod>2018-10-10T11:29:01.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2017/04/17/Hexo%E5%8D%9A%E5%AE%A2%E9%9B%86%E6%88%90GitBook/</loc>
+        <lastmod>2018-10-10T00:47:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/11/14/%E7%8E%A9%E8%BD%AC%E6%A0%91%E8%8E%93%E6%B4%BE/</loc>
+        <lastmod>2018-10-05T03:37:35.847Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2018/10/02/%E6%8A%8A%E9%95%9C%E5%83%8F%E4%BB%8EKVM%E8%BF%81%E7%A7%BB%E5%88%B0VirtualBox/</loc>
+        <lastmod>2018-10-03T05:02:52.843Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2016/04/09/Firefox%E4%B8%AD%E6%96%87%E7%89%88%E5%92%8C%E8%8B%B1%E6%96%87%E7%89%88%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+        <lastmod>2018-10-01T11:18:30.923Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/12/05/%E9%80%9A%E8%BF%87%E7%BD%91%E7%BB%9C%E6%89%A9%E5%B1%95%E4%BD%A0%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%88%B0%E5%85%B6%E4%BB%96%E4%B8%BB%E6%9C%BA%E4%B8%8A/</loc>
+        <lastmod>2018-10-01T11:15:25.718Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2016/07/07/%E5%9C%A8Linux%E4%B8%AD%E8%BF%90%E8%A1%8CASP/</loc>
+        <lastmod>2018-10-01T10:22:34.258Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/11/20/%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84ASP%20MVC%E6%A1%86%E6%9E%B6/</loc>
+        <lastmod>2018-10-01T10:22:13.958Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2017/08/09/%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD%E5%96%9C%E9%A9%AC%E6%8B%89%E9%9B%85%E7%9A%84%E5%85%8D%E8%B4%B9%E4%B8%93%E8%BE%91/</loc>
+        <lastmod>2018-10-01T10:20:53.899Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2018/05/07/%E6%89%93%E9%80%A0%E5%85%BC%E5%AE%B9BIOS%E5%92%8CUEFI%E7%9A%84%E5%90%AF%E5%8A%A8%E7%9B%98/</loc>
+        <lastmod>2018-10-01T10:13:14.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2018/05/10/%E6%8A%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E8%A3%85%E8%BF%9B%E4%BD%A0%E7%9A%84%E5%8F%A3%E8%A2%8B/</loc>
+        <lastmod>2018-10-01T10:08:11.503Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2017/04/29/%E6%8A%8A%E7%94%B5%E7%BA%B8%E4%B9%A6%E6%89%93%E9%80%A0%E6%88%90%E6%8A%A4%E7%9C%BC%E5%BC%80%E5%8F%91%E7%A5%9E%E5%99%A8/</loc>
+        <lastmod>2018-10-01T10:08:00.431Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://wing-ho.github.io/2015/10/21/%E5%AE%89%E8%A3%85Ubuntu%2015.10%E4%B9%8B%E5%90%8E%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
         <lastmod>2018-10-01T09:13:19.013Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,8 +168,56 @@
     </url>
 
     <url>
+        <loc>http://wing-ho.github.io/2016/07/17/%E7%8E%A9%E8%BD%ACWindow%2010%20Bash/</loc>
+        <lastmod>2018-09-10T02:24:19.923Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2016/03/28/%E7%8E%A9%E8%BD%ACHG255D%E8%B7%AF%E7%94%B1/</loc>
+        <lastmod>2018-09-10T02:24:19.891Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/11/09/%E7%88%B1%E4%B8%8AEmacs/</loc>
+        <lastmod>2018-09-10T02:24:19.863Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2016/06/22/%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E6%96%B9%E6%A1%88/</loc>
+        <lastmod>2018-09-10T02:24:19.843Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/12/25/%E5%B9%B3%E9%93%BA%E5%BC%8F%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+        <lastmod>2018-09-10T02:24:19.331Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://wing-ho.github.io/2015/11/01/%E5%AE%89%E8%A3%85Linux%20Mint%2017.2/</loc>
         <lastmod>2018-09-10T02:24:18.967Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/12/27/%E5%9F%BA%E4%BA%8Eorg-mode%E7%9A%84%E5%8D%A1%E7%89%87%E8%AE%B0%E5%BF%86%E5%B7%A5%E5%85%B7org-drill/</loc>
+        <lastmod>2018-09-10T02:24:18.787Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -48,8 +232,40 @@
     </url>
 
     <url>
+        <loc>http://wing-ho.github.io/2016/03/29/Virtualbox%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8C%E7%89%A9%E7%90%86%E5%88%86%E5%8C%BA%E7%9A%84%E7%B3%BB%E7%BB%9F/</loc>
+        <lastmod>2018-09-10T02:24:18.719Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/12/28/Linux%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+        <lastmod>2018-09-10T02:24:18.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://wing-ho.github.io/2015/12/08/Spacemacs%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
         <lastmod>2018-09-10T02:24:18.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2016/01/18/Spacemacs%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/</loc>
+        <lastmod>2018-09-10T02:24:18.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://wing-ho.github.io/2015/12/31/Arch%20Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%89%8B%E8%AE%B0/</loc>
+        <lastmod>2018-09-10T02:24:18.407Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
